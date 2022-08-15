@@ -1,0 +1,123 @@
+<!doctype html>
+<html ng-app="myApp">
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-route.min.js"></script>
+    <link href="angularjs.css" rel="stylesheet" type="text/css" />
+    <script src="app\lib\angular.min.js"></script>
+    <script src="app\app.js"></script>
+    <script>
+      
+    </script>
+    
+  </head>
+  <body>
+    
+    
+    <link rel="stylesheet"href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="testingcss.css">
+
+    <a href="#/">Production 1</a>
+    <a href="#/prod2">Production 2</a>
+    <a href="#/prod3">Production 3</a>
+    <a href="#/allprod">All Production</a>
+    <a href="#/test">Test</a>
+    <button><a href="#/test2">Test2</a></button>
+
+    <script type="text/ng-template" id="pages/prod1.html">
+      <h1>Production 1</h1>
+      <h3>{{message}}</h3>
+      <div id="container">
+        <iframe id="embed" src="http://localhost:8080/ajax_with_php/" scrolling="no"></iframe>
+          </div>
+    </script>
+
+    <script type="text/ng-template" id="pages/prod2.html">
+      <h1>Production 2</h1>
+      <h3>{{message}}</h3>
+            <div id="container">
+              <iframe id="embed2" src="http://localhost:8080/ajax_with_php/" scrolling="no"></iframe>
+            </div>
+    </script>
+
+    <script type="text/ng-template" id="pages/prod3.html">
+      <h1>Production 3</h1>
+      <h3>{{message}}</h3>
+      <div id="container">
+        <iframe id="embed3" src="http://localhost:8080/ajax_with_php/" scrolling="no"></iframe>
+    </div>
+  </script>
+    
+    <script type="text/ng-template" id="pages/allprod.html">
+      <h1>All Production</h1>
+      <h3>{{message}}</h3>
+      <div id="container">
+        <iframe src="http://localhost:8080/ajax_with_php/slideshow.html" height="830px" width="1020px" scrolling="no"></iframe>
+    </div>
+    </script>
+
+    <script type="text/ng-template" id="pages/test.html">
+      <h1>test</h1>
+      <input type="text" ng-model="exampletype" placeholder="enter anything"/>
+      <p>the example you enter is : {{exampletype}}</p>
+    </script>
+<!------------------------------------------------------------------------------------------------------->
+    
+    <script type="text/ng-template" id="pages/test2.html">
+      <h1>Test 2</h1>
+      <ng-include src="'header.html'"></ng-include>
+      <div class="content">
+      <div ng-controller="Testnumber">
+      <button ng-click="order = 'name'">Order by Name</button>
+      <button ng-click="order = 'type'">Order by Type</button>
+      <input type="text" ng-model="search" placeholder="Search for an another" />
+      <ul>
+        <li ng-repeat="another in anothers | orderBy: order | filter:search " ng-show="another.available">
+          <h3>{{another.name}} - {{another.owner}} - {{another.rate | currency: '$'}}</h3>
+          <div class="remove" ng-click="removeAnother(another)">x</div>
+          <span class="type" style="background: {{another.typebackground}}">{{another.type}} type</span>
+        </li>
+      </ul>
+      <form ng-submit="addAnother()">
+        <input type="text" placeholder="Name" ng-model="newanother.name"/>
+        <input type="text" placeholder="Type" ng-model="newanother.type"/>
+        <input type="text" placeholder="Rate" ng-model="newanother.rate"/>
+        <input type="Submit" placeholder="Add New Variable"/>
+      </form>
+    </div>
+  </div>
+    </script>
+
+<!------------------------------------------------------------------------------------------------------->
+    <div ng-view></div>
+
+    <script src="app.js"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+    
+    <link rel="stylesheet" href="testingcss.css">
+    <script>
+      const swiper = new Swiper('.swiper', {
+        loop: true,
+        autoplay: {
+          delay: 10000,
+          disableOnInteraction: false,
+          },
+        // If we need pagination
+        pagination: {
+          el: '.swiper-pagination',
+        },
+
+        // Navigation arrows
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+      });
+    </script>
+  </body>
+</html>
+<!--https://stackoverflow.com/questions/36268111/how-to-launch-an-html-page-using-angularjs-->
+<!--https://www.delftstack.com/howto/angular/redirect-to-another-page-angularjs/-->
+
+<!--for slide image website https://blog.stackfindover.com/automatic-image-slide-in-html-css-->

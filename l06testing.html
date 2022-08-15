@@ -1,0 +1,61 @@
+<style>
+
+
+
+.btnforsvg {
+  width: 60px;
+  height: 60px;
+  border: 2px solid #232323;
+  border-radius: 50px;
+  cursor: pointer;
+  overflow: hidden;
+  background: #eee;
+  color: #232323;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  transition: width 0.2s ease-in-out;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  transform: translate(-50%, -50%);
+}
+
+.btnforsvg:hover {
+  width: 250px;
+  height:200px;
+
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.5);
+}
+
+.btnforsvg:hover .text {
+  opacity: 1;
+  top: 0;
+}
+
+.btnforsvg .icon {
+  width: 60px;
+  height: 60px;
+  padding: 15px 10px;
+  display: inline-block;
+}
+
+.btnforsvg .icon img {
+  width: 40px;
+  height: 30px;
+}
+
+.btnforsvg .text {
+  position: relative;
+  top: 10px;
+  text-align: center;
+  opacity: 0;
+  line-height: 60px;
+  transition: top 0.4s ease-in-out 0.3s, opacity 0.2s ease-in-out 0.3s;
+}
+</style>
+
+
+<div class="btnforsvg">
+    <div class="icon"><img src="media/robotarm.gif" alt=""></div>
+    <div class="text"><img src="media/robotarm.gif" alt="" style="width:100%;height:100%;margin:auto -70px;"></div>
+  </div>

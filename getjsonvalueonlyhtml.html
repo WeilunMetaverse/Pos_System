@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html>
+<body>
+<style>
+	
+
+	/* (A) CONTAINER */
+	#grid-layout {
+	/* (A1) GRID LAYOUT */
+	display: grid;
+	grid-gap: 10px;
+ 
+	/* (A2) DESIGN YOUR GRID TEMPLATE */
+	grid-template-areas:
+	"head head head"
+	"main main side"
+	"foot foot foot";
+	}
+
+	/* (B) GRID CELLS */
+	.cell { padding: 10px; }
+ 
+	/* (C) ASSIGN THE AREAS */
+	.head {
+	  grid-area: head;
+	  background: #ffe5db;
+	}
+	.main {
+	  grid-area: main;
+	  background: #e3ffdb;
+	}
+	.side {
+	  grid-area: side;
+	  background: #dbf8ff;
+	  text-align: center;
+	}
+	.foot {
+	  grid-area: foot;
+	  background: #ebebeb;
+	}
+	
+	.circle{
+    	width:40px;
+    	height:40px;
+    	margin: 5px;
+	border-radius: 25px;
+	z-index: 5;
+	}
+	
+	
+	.box {
+  	float: left;
+  	height: 50px;
+  	width: 120px;
+  	margin-bottom: 15px;
+  	border: 1px solid black;
+  	clear: both;
+	border-radius: 10px;
+	z-index: 5;
+	}
+	
+	.boxbig {
+  	float: left;
+  	height: 765px;
+  	width: 850px;
+  	margin-bottom: 30px;
+  	border: 1px solid black;
+  	clear: both;
+	z-index: 5;
+	}
+	
+    /*Dep 0*/
+	.position0{
+	position:absolute; 
+	left:1200px; 
+	top:200px;
+	}
+	/*-------*/
+
+	/*Dep 1*/
+	.position1{
+	position:absolute; 
+	left:1450px; 
+	top:500px;
+	}
+	/*-------*/
+
+	/*Dep 2*/
+	.position2{
+	position:absolute; 
+	left:1550px; 
+	top:350px;
+	}
+	/*-------*/
+
+	/*Dep 3*/
+	.position3{
+	position:absolute; 
+	left:1250px; 
+	top:450px;
+	}
+	/*-------*/
+
+	/*Dep 4*/
+	.position4{
+	position:absolute; 
+	left:1300px; 
+	top:300px;
+	}
+	/*-------*/
+
+	/*Dep 5*/
+	.position5{
+	position:absolute; 
+	left:1000px; 
+	top:450px;
+	}
+	/*-------*/
+	
+	.grey {
+  	background-color: #E1ECFA;
+	}
+	.green{
+	background:green;
+	}
+	.yellow{
+	background:yellow;
+	}
+	.red{
+	background:red;
+	}
+
+	.container {
+  	display: grid;
+  	background-color: #eee;
+  	height: 440px;  
+  	/* This makes .left width 60% and .right 40%*/
+  	grid-template-columns: 60% 40%;
+  	grid-gap: 40px; /* 40px gap between .left and .right */
+  	width: 60%;
+  	margin: 0 auto;
+  	text-align: center;
+	}
+
+	.left {
+  	background-color: yellow;
+	}
+
+	.right {
+  	background-color: orange;
+	}
+
+	
+
+</style>
+
+<head>
+    <title>Interior Status Design</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+   </head>
+
+   <body>
+
+	<div id="grid-layout">
+  	<div class="cell head">
+	<b style="color:black;font-size:30px;text-transform:uppercase;">BUILDING STATUS</b>
+	<marquee>This is just a Prototype of The Interior Status Design</marquee> 
+	</div>
+  	
+	<div class="cell main">
+	<b style="color:blue;font-size:30px;text-transform:uppercase;">Current Status of All Departments</b>
+	<div class="boxbig">
+
+	<div class="container">
+	<div class="left">
+    <br>
+    <b style="color:black;font-size:30px;text-transform:uppercase;margin:20px;">DEPARTMENT 0 </b>
+    <br><br><br>
+	<b style="color:black;font-size:30px;text-transform:uppercase;margin:20px;">DEPARTMENT 1 </b>
+	<br><br><br>
+	<b style="color:black;font-size:30px;text-transform:uppercase;margin:5px;">DEPARTMENT 2</b>
+	<br><br><br>
+	<b style="color:black;font-size:30px;text-transform:uppercase; margin:5px;">DEPARTMENT 3</b>
+	<br><br><br>
+	<b style="color:black;font-size:30px;text-transform:uppercase;margin:5px;">DEPARTMENT 4</b>
+	<br><br><br>
+	<b style="color:black;font-size:30px;text-transform:uppercase;margin:5px;">DEPARTMENT 5</b></div>
+	
+
+  	<div class="right">
+    <div id="adep0" class="circle green" style="margin: 0 auto; margin-top: 13px;"></div>
+    <b id="adep0w" style="margin:5px;">Condition : </b>
+	<div id="adep1" class="circle green" style="margin: 0 auto; margin-top: 13px;"></div>
+	<b id="adep1w" style="margin:5px;">Condition : </b>
+	<div id="adep2" class="circle red" style="margin: 0 auto; margin-top: 13px;"></div>
+	<b id="adep2w" style="margin:5px;">Condition : </b>
+	<div id="adep3" class="circle yellow" style="margin: 0 auto; margin-top: 13px;"></div>
+	<b id="adep3w" style="margin:5px;">Condition : </b>
+	<div id="adep4" class="circle red" style="margin: 0 auto; margin-top: 13px;"></div>
+	<b id="adep4w" style="margin:5px;">Condition : </b>
+	<div id="adep5" class="circle green" style="margin: 0 auto; margin-top: 13px;"></div>
+	<b id="adep5w" style="margin:5px;">Condition : </b></div></div></div>
+	<br>
+	
+
+	
+	</div>
+	<div class="cell side">
+    <div class="box position0 grey" style="color:#0C8FA6;font-size:15px;text-transform:uppercase;">Dep 0</div>
+    <div id="dep0" class="circle position0 green"></div>
+
+	<div class="box position1 grey" style="color:#0C8FA6;font-size:15px;text-transform:uppercase;">Dep 1</div>
+	<div id="dep1" class="circle position1 green"></div>
+
+	<div class="box position2 grey" style="color:#0C8FA6;font-size:15px;text-transform:uppercase;">Dep 2</div>
+	<div id="dep2" class="circle position2 red"></div>
+
+	<div class="box position3 grey" style="color:#0C8FA6;font-size:15px;text-transform:uppercase;">Dep 3</div>
+	<div id="dep3" class="circle position3 yellow"></div>
+
+	<div class="box position4 grey" style="color:#0C8FA6;font-size:15px;text-transform:uppercase;">Dep 4</div>
+	<div id="dep4" class="circle position4 red"></div>
+
+	<div class="box position5 grey" style="color:#0C8FA6;font-size:15px;text-transform:uppercase;">Dep 5</div>
+	<div id="dep5" class="circle position5 green"></div>
+	
+	<img id="image3d" src="media/factory_floor_plan_layout.jpg" alt="Interior Design Factory" width="1000" height="800"></div>
+
+    <div class="cell foot">Footer</div>
+    </div>
+
+	<div id="div1">
+		<ul></ul>
+	</div>
+    
+    <p id="123">asdasdsad</p>
+  	<script>
+	// console.log("Hello")
+
+	/*$.getJSON("http://43.74.21.94/v1/angularjs/prodprogress/prod1,prod2,prod3&output=JSON", function( data ) {
+ 	console.log(data);});
+	
+	/*import json; 
+
+	with open('prod1_prod2_prod3.json') as f:
+  	data = json.load(f);*/
+      /*setInterval(function(){
+  
+
+       $(document).ready(function () { 
+
+        // FETCHING DATA FROM JSON FILE
+        $.getJSON("prod1_prod2_prod3.json",
+        
+        function (data) { console.log(data);});
+        
+        });
+        }, 30000);*/
+
+        //setInterval(function(){
+		///yourUrl = "http://43.74.21.94/v1/angularjs/prodprogress/prod1,prod2,prod3&output=JSON";
+		///var json_obj = JSON.parse(Get(yourUrl));
+		///console.log("Status : "+json_obj.status);
+		/*function getJSONP(url, success) { //works//
+
+		var ud = '_' + +new Date,
+			script = document.createElement('script'),
+			head = document.getElementsByTagName('head')[0] 
+				|| document.documentElement;
+
+		window[ud] = function(data) {
+			head.removeChild(script);
+			success && success(data);
+		};
+
+		script.src = url.replace('callback=?', 'callback=' + ud);
+		head.appendChild(script);
+
+		}
+
+		getJSONP('http://43.74.21.94/v1/angularjs/prodprogress/prod1,prod2,prod3&output=JSON', function(obj){
+		 $.each(obj, function(index,value){
+			$("#div1").append("<ul>"+index+": "+value.status+"</ul><br>");
+		 })
+		console.log(obj);
+		});*/
+		
+		var settings = {
+          'cache': false,
+          'dataType': "jsonp",
+          "async": true,
+          "crossDomain": true,
+          "url": "http://43.74.21.94/v1/angularjs/prodprogress/prod1,prod2,prod3&output=JSON",
+          "method": "GET",
+          "headers": {
+              "accept": "application/json",
+              "Access-Control-Allow-Origin":"http://43.74.21.94/v1/angularjs/prodprogress/prod1,prod2,prod3"
+          }
+      }
+
+      $.ajax(settings).done(function (response) {
+          console.log(response);
+		   console.log("fail");
+      });
+
+		/*var xhttp = new XMLHttpRequest();
+		xhttp.onreadystatechange = function(){
+			if(this.readyState == 4 && this.status ==200){
+				console.log(xhttp.responseText);
+			}else{
+				console.log("error");
+			}
+		};
+		xhttp.open("GET", 'http://43.74.21.94/v1/angularjs/prodprogress/prod1,prod2,prod3&output=JSON');
+		xhttp.send();
+		*/
+		
+        $.getJSON("http://43.74.21.94/v1/angularjs/prodprogress/prod1,prod2,prod3&output=JSON", //
+        
+        function (obj) { 
+            $.each(obj,function(index,value){
+                $("ul").append(index+": "+value.status+"<br><br>");
+				
+                if(index==0){
+                    if(value.status=="Offline"){
+                        document.getElementById('dep0').className = "circle position0 red";
+                        document.getElementById('adep0').className = "circle red";
+                        document.getElementById("adep0w").textContent=" Condition: Offline";
+                        //var text_class = document.getElementById('dep1').className; if we want to list the word!!
+                        //console.log("Offline");
+                    }
+                    else if(value.status=="Stop"){
+                        document.getElementById('dep0').className = "circle position0 yellow";
+                        document.getElementById('adep0').className = "circle yellow";
+                        document.getElementById("adep0w").textContent=" Condition: Stop";
+                        //console.log("Stop");
+                    }
+                    else{
+                        document.getElementById('dep0').className = "circle position0 green";
+                        document.getElementById('adep0').className = "circle green";
+                        document.getElementById("adep0w").textContent=" Condition: Run";
+                        //console.log("Run");
+                    }
+                }
+                if(index==1){
+                    if(value.status=="Offline"){
+                        document.getElementById('dep1').className = "circle position1 red";
+                        document.getElementById('adep1').className = "circle red";
+                        document.getElementById("adep1w").textContent=" Condition: Offline";
+                        //console.log("Offline");
+                    }
+                    else if(value.status=="Stop"){
+                        document.getElementById('dep1').className = "circle position1 yellow";
+                        document.getElementById('adep1').className = "circle yellow";
+                        document.getElementById("adep1w").textContent=" Condition: Stop";
+                        //console.log("Stop");
+                    }
+                    else{
+                        document.getElementById('dep1').className = "circle position1 green";
+                        document.getElementById('adep1').className = "circle green";
+                        document.getElementById("adep1w").textContent=" Condition: Run";
+                        //console.log("Run");
+                    }
+                }
+                if(index==2){
+                    if(value.status=="Offline"){
+                        document.getElementById('dep2').className = "circle position2 red";
+                        document.getElementById('adep2').className = "circle red";
+                        document.getElementById("adep2w").textContent=" Condition: Offline";
+                        //console.log("Offline");
+                    }
+                    else if(value.status=="Stop"){
+                        document.getElementById('dep2').className = "circle position2 yellow";
+                        document.getElementById('adep2').className = "circle yellow";
+                        document.getElementById("adep2w").textContent=" Condition: Stop";
+                        //console.log("Stop");
+                    }
+                    else{
+                        document.getElementById('dep2').className = "circle position2 green";
+                        document.getElementById('adep2').className = "circle green";
+                        document.getElementById("adep2w").textContent=" Condition: Run";
+                        //console.log("Run");
+                    }
+                }
+                if(index==3){
+                    if(value.status=="Offline"){
+                        document.getElementById('dep3').className = "circle position3 red";
+                        document.getElementById('adep3').className = "circle red";
+                        document.getElementById("adep3w").textContent=" Condition: Offline";
+                        //console.log("Offline");
+                    }
+                    else if(value.status=="Stop"){
+                        document.getElementById('dep3').className = "circle position3 yellow";
+                        document.getElementById('adep3').className = "circle yellow";
+                        document.getElementById("adep3w").textContent=" Condition: Stop";
+                        //console.log("Stop");
+                    }
+                    else{
+                        document.getElementById('dep3').className = "circle position3 green";
+                        document.getElementById('adep3').className = "circle green";
+                        document.getElementById("adep3w").textContent=" Condition: Run";
+                        //console.log("Run");
+                    }
+                }
+                if(index==4){
+                    if(value.status=="Offline"){
+                        document.getElementById('dep4').className = "circle position4 red";
+                        document.getElementById('adep4').className = "circle red";
+                        document.getElementById("adep4w").textContent=" Condition: Offline";
+                        //console.log("Offline");
+                    }
+                    else if(value.status=="Stop"){
+                        document.getElementById('dep4').className = "circle position4 yellow";
+                        document.getElementById('adep4').className = "circle yellow";
+                        document.getElementById("adep4w").textContent=" Condition: Stop";
+                        //console.log("Stop");
+                    }
+                    else{
+                        document.getElementById('dep4').className = "circle position4 green";
+                        document.getElementById('adep4').className = "circle green";
+                        document.getElementById("adep4w").textContent=" Condition: Run";
+                        //console.log("Run");
+                    }
+                }
+                if(index==5){
+                    if(value.status=="Offline"){
+                        document.getElementById('dep5').className = "circle position5 red";
+                        document.getElementById('adep5').className = "circle red";
+                        document.getElementById("adep5w").textContent=" Condition: Offline";
+                        //console.log("Offline");
+                    }
+                    else if(value.status=="Stop"){
+                        document.getElementById('dep5').className = "circle position5 yellow";
+                        document.getElementById('adep5').className = "circle yellow";
+                        document.getElementById("adep5w").textContent=" Condition: Stop";
+                        //console.log("Stop");
+                    }
+                    else{
+                        document.getElementById('dep5').className = "circle position5 green";
+                        document.getElementById('adep5').className = "circle green";
+                        document.getElementById("adep5w").textContent=" Condition: Run";
+                        //console.log("Run");
+                    }
+                }
+                
+                
+            });
+           });
+
+        //}, 60000);
+           
+        setInterval(function(){
+        $.getJSON("http://43.74.21.94/v1/angularjs/prodprogress/prod1,prod2,prod3&output=JSON",
+        
+        function (obj) { 
+            $.each(obj,function(key,value){
+                $("ul").update(key+": "+value.status+"<br><br>");
+                
+            });
+           });
+           
+        }, 60000);
+    
+		
+        
+    //var container =$('div.container');
+    //$('input#get').click(function(){
+    $.ajax({
+        type: 'GET',
+		headers:'Access-Control-Allow-Origin',
+        url: 'http://43.74.21.94/v1/angularjs/prodprogress/prod1,prod2,prod3&output=JSON',
+        dataType: 'json',
+        success: function(data){
+
+			console.log(data);
+            
+           $.each(data, function(index, item){
+                $.each(item,function(key,value){
+                    container.append(key + ': ' + value + '</br>');
+                });
+                container.append('<br/></br>');
+            })
+        }
+    });
+
+    
+//})    
+  	</script>
+
+</body>
+</body>
+</html>

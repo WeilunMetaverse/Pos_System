@@ -1,0 +1,2101 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            body {
+  background: #eee;
+}
+
+div.wrapper23 {
+  position: relative;
+  top: 50px;
+  left: -16px;
+  width: 120px;
+  height: 27px;
+  background-color: #fff;
+}
+div.popup23 {
+  display: none;
+  position: relative;
+  background-color: #fff;
+  background-size: 256px 256px;
+  word-wrap: break-word;
+  text-align: left;
+}
+a.reviews {
+  font-size: 15px;
+  color: black;
+  position: relative;
+  text-align: center;
+  line-height: 25px;
+  z-index: 2;
+  padding-left: 10px;
+  text-decoration:none;
+  
+}
+a.reviews:hover,
+a:active {
+  color: blue;
+  
+
+}
+
+.popup23 {
+  padding: 0px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  width: 250px;
+  background: #fff;
+  border-radius: 5px;
+  margin-top: -25px;
+  z-index: 1;
+}
+
+.wrapper23:hover .popup23 {
+  display: block;
+  
+}
+.wrapper23:hover .reviews {
+  color: blue;
+}
+
+
+        </style>
+        <style>
+            body {
+    margin: 0;
+    background: #fafafa;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  p {
+    line-height: 1.4;
+    margin-bottom: 5px;
+  }
+  
+  .find-serial-btn {
+    background: orange;
+    border: none;
+    color: white;
+    outline: none;
+    cursor: pointer;
+
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+
+    margin: -5px 10px;
+    width: 50px;
+    height:50px;
+    
+  }
+  
+  .find-serial-btn:hover {
+    background: darkorange;
+  }
+  
+  .btn-container {
+    width: 50px;
+    max-width: 50px;
+    margin: 0px auto 0px;
+    text-align: center;
+    position: relative;
+    margin:10px 30px;
+    z-index: 1;
+    opacity: 1;
+  }
+  
+  .popup:after,
+  .popup:before {
+    bottom: 100%;
+    left: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    opacity: 1;
+    
+  }
+  
+  .popup:after {
+    border-color: rgba(255, 255, 255, 0);
+    border-bottom-color: white;
+    border-width: 10px;
+    margin-left: -10px;
+    
+    
+  }
+  
+  .popup:before {
+    border-color: rgba(0, 0, 0, 0);
+    border-bottom-color: #f0f0f0;
+    border-width: 11px;
+    margin-left: -11px;
+    
+  }
+  
+  .popup {
+    background: white;
+    color: #333;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .18);
+    margin-bottom: 10px;
+    padding: 30px 8px 8px;
+    text-align: left;
+    position: absolute;
+    top: 55px;
+    width:400px;
+    margin:auto -167px;
+    z-index: 1;
+    opacity: 0;
+    
+  }
+  
+  .clicked {
+    z-index: 100;
+    opacity: 1;
+    animation: .6s fadeInDown ease both;
+  }
+  
+  @keyframes fadeInDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-25px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .popup .close {
+    position: absolute;
+    right: 10px;
+    top: -10px;
+    font-size: 40px;
+    cursor: pointer;
+    color: #777;
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  .popup .close:hover {
+    color: orange;
+    transition: .2s ease-in;
+  }
+  
+  .popup img {
+    max-width: 100%;
+    margin: 0 auto;
+    display: block;
+  }
+          </style>
+
+        <style>
+            @import url(https://fonts.googleapis.com/css?family=Noto+Sans:400,700);
+    
+            notificationpop,
+            buttonpop {
+            position: absolute;
+            font: normal normal normal 14px/28px "Noto Sans", sans-serif;
+            }
+    
+            notificationpop {
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            width: 28px;
+            height: 28px;
+            text-align: center;
+            background: red;
+            border-radius: 100%;
+            color: white;
+            transition: background .4s ease;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            user-select: none;
+            
+            }
+    
+            notificationpop:hover {
+            cursor: pointer;
+            background: red;
+            }
+    
+            buttonpop {
+            left: calc(50% - 32px);
+            bottom: 50px;
+            border: 0;
+            border-radius: 4px;
+            padding: 1px 14px;
+            color: #52D96A;
+            background: transparent;
+            border: 2px solid transparent;
+            transition: border .2s ease;
+            
+            }
+    
+            buttonpop:hover {
+            border: 2px solid #52D96A;
+            cursor: pointer;
+            }
+    
+            buttonpop:focus {
+            outline: none
+            }
+    
+            .animatepop {
+            animation: scaleup 0.7s infinite;
+            }
+    
+            @-webkit-keyframes scaleup {
+            0%,
+            100% {
+                width: 30px;
+                height: 30px;
+                line-height: 30px;
+            }
+            50% {
+                width: 40px;
+                height: 40px;
+                line-height: 40px;
+            }
+            }
+    
+            @keyframes scaleup {
+            0%,
+            100% {
+                width: 30px;
+                height: 30px;
+                line-height: 30px;
+            }
+            50% {
+                width: 40px;
+                height: 40px;
+                line-height: 40px;
+            }
+            }
+    
+            
+        </style>
+        <style>
+            *, *::after, *::before {
+            box-sizing: border-box;
+            }
+
+            .modal {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            transition: 200ms ease-in-out;
+            border: 1px solid black;
+            border-radius: 10px;
+            z-index: 10;
+            background-color: white;
+            width: 500px;
+            height: 400px;
+            max-width: 80%;
+            }
+
+            .modal.active {
+            transform: translate(-50%, -50%) scale(1);
+            }
+
+            .modal-header {
+            padding: 10px 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid black;
+            }
+
+            .modal-header .title {
+            font-size: 1.25rem;
+            font-weight: bold;
+            }
+
+            .modal-header .close-button {
+            cursor: pointer;
+            border: none;
+            outline: none;
+            background: none;
+            font-size: 1.25rem;
+            font-weight: bold;
+            }
+
+            .modal-body {
+            padding: 10px 15px;
+            }
+
+            #overlay {
+            position: fixed;
+            opacity: 0;
+            transition: 200ms ease-in-out;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, .5);
+            pointer-events: none;
+            }
+
+            #overlay.active {
+            opacity: 1;
+            pointer-events: all;
+            }
+        </style>
+        
+        <style>
+            @import "compass/css3";
+            body {
+                background-color: #3B4257;
+
+                color: #fff;
+                font-size: 15px;
+                margin-top: 30px;
+                text-transform: uppercase;
+                letter-spacing: 5px;
+                font-weight: 900;
+                }
+
+                .flex-container {
+                padding: 0;
+                margin: 0 20px; /*move the whole alignment to right*/
+                list-style: none;
+                
+                
+                display: -webkit-box;
+                display: -moz-box;
+                display: -ms-flexbox;
+                display: -webkit-flex;
+                display: flex;
+                
+                -webkit-flex-flow: row wrap;
+                /*justify-content: space-around;*/
+                /*justify-content: center;*/
+                }
+
+                .wrapper {
+                
+                perspective: 800px; /*800px*/
+                transform: scale(0.7);
+                margin: auto 0;
+                
+                }
+
+                /*.wrapper:first-child .container {
+                -webkit-animation: boxFlip 4.5s infinite;
+                -moz-animation: boxFlip 4.5s infinite;
+                animation: boxFlip 4.5s infinite;
+                -webkit-animation-timing-function: cubic-bezier(0.29, 1.53, 0.33, 1.01);
+                -moz-animation-timing-function: cubic-bezier(0.29, 1.53, 0.33, 1.01);
+                animation-timing-function: cubic-bezier(0.29, 1.53, 0.33, 1.01);
+
+                }*/
+
+                .container {
+                display: flex;
+                width: 130px;
+                height: 145px;
+                    
+                margin: 5px -16px;
+                text-align: center;
+                font-size: 18px;
+                position: relative;
+                font-family: Cambria;
+
+                
+                -webkit-backface-visibility: visible;
+                backface-visibility: visible;
+                -webkit-transform-style: preserve-3d;
+                -moz-transform-style: preserve-3d;
+                -ms-transform-style: preserve-3d;
+                -o-transform-style: preserve-3d;
+                transform-style: preserve-3d;
+
+                transform-origin: 50% 50%;
+                transition: all 1s ease-in-out;
+                transform: rotateY(0deg) translateZ(65px);
+                /*transition: all 1s ease-in-out;*/
+                /*transition: all 0.4s cubic-bezier(0.29, 1.53, 0.33, 1.01);*/
+                
+                }
+
+                .do-flip {
+                transition: all 1s ease-in-out;
+                transform: rotateY(90deg) translateZ(65px);
+                
+                }
+
+                .back{
+                
+                transform: rotateY(0deg) translateZ(65px);
+                }
+
+
+
+                .container p { /*texture container*/
+                position: relative;
+                top: 0%;
+                transform: translateY(0%);
+                margin: 0;
+                padding: 0 20px;  
+          
+                }
+
+                button:hover {
+                opacity: 0.5;
+                background-color: blue;
+                }
+                /*.container:hover {
+                transform: rotateY(90deg) translateZ(125px);
+                
+                }*/
+
+                .box_front, .box_bottom {
+                display: block;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                z-index: 0;
+                border: 1px solid black;
+                border-radius: 10%;
+                }
+
+                .box_front {
+                background-color: #20B886;
+                }
+
+                .box_bottom {
+                background-color: #C4C7CC;
+                color: #3B4257;
+                transform: translate3D(-65px, 0px, -65px) rotateY(-90deg);
+                opacity: 0.1;
+                }
+
+                p {
+                    color:black;
+                    font-family: Cambria;
+                    font-size: 15px;
+                }
+
+                
+                
+
+         
+        </style>
+
+        <style>
+
+
+            .containera {
+            background: #FFF;
+            width: 400px;
+            margin: auto;
+            }
+
+            h1a {
+            text-align: center;
+            color: #222;
+            }
+
+            .chart {
+            position: relative;
+            padding: 1em;
+            background: #222;
+            border-radius: 5px;
+            font-size: 16px;
+            }
+            .chart * {
+            box-sizing: border-box;
+            }
+            .chart:after {
+            content: "";
+            position: absolute;
+            left: 25%;
+            top: 7.5%;
+            transform: translateX(100%);
+            width: 4px;
+            background: #FFF;
+            height: 86%;
+            border-radius: 2px;
+            }
+            .chart .part {
+            display: flex;
+            height: 3em;
+            }
+            .chart .part > .label {
+            flex: 1;
+            flex-basis: 25%;
+            text-align: right;
+            padding-right: 1em;
+            margin: 0.5em 0;
+            height: 2em;
+            line-height: 2em;
+            color: #FFF;
+            font-weight: 600;
+            }
+            .chart .part .bar {
+            flex: 3;
+            flex-basis: 75%;
+            position: relative;
+            margin: 0.5em 0;
+            }
+            .chart .part .bar:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            border-radius: 0 2px 2px 0;
+            -webkit-animation: grow 0.5s;
+                    animation: grow 0.5s;
+            }
+            .chart .part .bar.red:after {
+            background: #f22;
+            }
+            .chart .part .bar.blue:after {
+            background: #56a;
+            }
+            .chart .part .bar.green:after {
+            background: #2a5;
+            }
+            .chart .part .bar.grey:after {
+            background: grey;
+            }
+            .chart .part .bar .label {
+            position: absolute;
+            top: 50%;
+            left: 0.5em;
+            transform: translateX(0%) translateY(-50%);
+            z-index: 1;
+            color: #FFF;
+            font-weight: 600;
+            }
+            .chart .part.percent-1 .bar:after {
+            width: 1%;
+            }
+            .chart .part.percent-2 .bar:after {
+            width: 2%;
+            }
+            .chart .part.percent-3 .bar:after {
+            width: 3%;
+            }
+            .chart .part.percent-4 .bar:after {
+            width: 4%;
+            }
+            .chart .part.percent-5 .bar:after {
+            width: 5%;
+            }
+            .chart .part.percent-6 .bar:after {
+            width: 6%;
+            }
+            .chart .part.percent-7 .bar:after {
+            width: 7%;
+            }
+            .chart .part.percent-8 .bar:after {
+            width: 8%;
+            }
+            .chart .part.percent-9 .bar:after {
+            width: 9%;
+            }
+            .chart .part.percent-10 .bar:after {
+            width: 10%;
+            }
+            .chart .part.percent-11 .bar:after {
+            width: 11%;
+            }
+            .chart .part.percent-12 .bar:after {
+            width: 12%;
+            }
+            .chart .part.percent-13 .bar:after {
+            width: 13%;
+            }
+            .chart .part.percent-14 .bar:after {
+            width: 14%;
+            }
+            .chart .part.percent-15 .bar:after {
+            width: 15%;
+            }
+            .chart .part.percent-16 .bar:after {
+            width: 16%;
+            }
+            .chart .part.percent-17 .bar:after {
+            width: 17%;
+            }
+            .chart .part.percent-18 .bar:after {
+            width: 18%;
+            }
+            .chart .part.percent-19 .bar:after {
+            width: 19%;
+            }
+            .chart .part.percent-20 .bar:after {
+            width: 20%;
+            }
+            .chart .part.percent-21 .bar:after {
+            width: 21%;
+            }
+            .chart .part.percent-22 .bar:after {
+            width: 22%;
+            }
+            .chart .part.percent-23 .bar:after {
+            width: 23%;
+            }
+            .chart .part.percent-24 .bar:after {
+            width: 24%;
+            }
+            .chart .part.percent-25 .bar:after {
+            width: 25%;
+            }
+            .chart .part.percent-26 .bar:after {
+            width: 26%;
+            }
+            .chart .part.percent-27 .bar:after {
+            width: 27%;
+            }
+            .chart .part.percent-28 .bar:after {
+            width: 28%;
+            }
+            .chart .part.percent-29 .bar:after {
+            width: 29%;
+            }
+            .chart .part.percent-30 .bar:after {
+            width: 30%;
+            }
+            .chart .part.percent-31 .bar:after {
+            width: 31%;
+            }
+            .chart .part.percent-32 .bar:after {
+            width: 32%;
+            }
+            .chart .part.percent-33 .bar:after {
+            width: 33%;
+            }
+            .chart .part.percent-34 .bar:after {
+            width: 34%;
+            }
+            .chart .part.percent-35 .bar:after {
+            width: 35%;
+            }
+            .chart .part.percent-36 .bar:after {
+            width: 36%;
+            }
+            .chart .part.percent-37 .bar:after {
+            width: 37%;
+            }
+            .chart .part.percent-38 .bar:after {
+            width: 38%;
+            }
+            .chart .part.percent-39 .bar:after {
+            width: 39%;
+            }
+            .chart .part.percent-40 .bar:after {
+            width: 40%;
+            }
+            .chart .part.percent-41 .bar:after {
+            width: 41%;
+            }
+            .chart .part.percent-42 .bar:after {
+            width: 42%;
+            }
+            .chart .part.percent-43 .bar:after {
+            width: 43%;
+            }
+            .chart .part.percent-44 .bar:after {
+            width: 44%;
+            }
+            .chart .part.percent-45 .bar:after {
+            width: 45%;
+            }
+            .chart .part.percent-46 .bar:after {
+            width: 46%;
+            }
+            .chart .part.percent-47 .bar:after {
+            width: 47%;
+            }
+            .chart .part.percent-48 .bar:after {
+            width: 48%;
+            }
+            .chart .part.percent-49 .bar:after {
+            width: 49%;
+            }
+            .chart .part.percent-50 .bar:after {
+            width: 50%;
+            }
+            .chart .part.percent-51 .bar:after {
+            width: 51%;
+            }
+            .chart .part.percent-52 .bar:after {
+            width: 52%;
+            }
+            .chart .part.percent-53 .bar:after {
+            width: 53%;
+            }
+            .chart .part.percent-54 .bar:after {
+            width: 54%;
+            }
+            .chart .part.percent-55 .bar:after {
+            width: 55%;
+            }
+            .chart .part.percent-56 .bar:after {
+            width: 56%;
+            }
+            .chart .part.percent-57 .bar:after {
+            width: 57%;
+            }
+            .chart .part.percent-58 .bar:after {
+            width: 58%;
+            }
+            .chart .part.percent-59 .bar:after {
+            width: 59%;
+            }
+            .chart .part.percent-60 .bar:after {
+            width: 60%;
+            }
+            .chart .part.percent-61 .bar:after {
+            width: 61%;
+            }
+            .chart .part.percent-62 .bar:after {
+            width: 62%;
+            }
+            .chart .part.percent-63 .bar:after {
+            width: 63%;
+            }
+            .chart .part.percent-64 .bar:after {
+            width: 64%;
+            }
+            .chart .part.percent-65 .bar:after {
+            width: 65%;
+            }
+            .chart .part.percent-66 .bar:after {
+            width: 66%;
+            }
+            .chart .part.percent-67 .bar:after {
+            width: 67%;
+            }
+            .chart .part.percent-68 .bar:after {
+            width: 68%;
+            }
+            .chart .part.percent-69 .bar:after {
+            width: 69%;
+            }
+            .chart .part.percent-70 .bar:after {
+            width: 70%;
+            }
+            .chart .part.percent-71 .bar:after {
+            width: 71%;
+            }
+            .chart .part.percent-72 .bar:after {
+            width: 72%;
+            }
+            .chart .part.percent-73 .bar:after {
+            width: 73%;
+            }
+            .chart .part.percent-74 .bar:after {
+            width: 74%;
+            }
+            .chart .part.percent-75 .bar:after {
+            width: 75%;
+            }
+            .chart .part.percent-76 .bar:after {
+            width: 76%;
+            }
+            .chart .part.percent-77 .bar:after {
+            width: 77%;
+            }
+            .chart .part.percent-78 .bar:after {
+            width: 78%;
+            }
+            .chart .part.percent-79 .bar:after {
+            width: 79%;
+            }
+            .chart .part.percent-80 .bar:after {
+            width: 80%;
+            }
+            .chart .part.percent-81 .bar:after {
+            width: 81%;
+            }
+            .chart .part.percent-82 .bar:after {
+            width: 82%;
+            }
+            .chart .part.percent-83 .bar:after {
+            width: 83%;
+            }
+            .chart .part.percent-84 .bar:after {
+            width: 84%;
+            }
+            .chart .part.percent-85 .bar:after {
+            width: 85%;
+            }
+            .chart .part.percent-86 .bar:after {
+            width: 86%;
+            }
+            .chart .part.percent-87 .bar:after {
+            width: 87%;
+            }
+            .chart .part.percent-88 .bar:after {
+            width: 88%;
+            }
+            .chart .part.percent-89 .bar:after {
+            width: 89%;
+            }
+            .chart .part.percent-90 .bar:after {
+            width: 90%;
+            }
+            .chart .part.percent-91 .bar:after {
+            width: 91%;
+            }
+            .chart .part.percent-92 .bar:after {
+            width: 92%;
+            }
+            .chart .part.percent-93 .bar:after {
+            width: 93%;
+            }
+            .chart .part.percent-94 .bar:after {
+            width: 94%;
+            }
+            .chart .part.percent-95 .bar:after {
+            width: 95%;
+            }
+            .chart .part.percent-96 .bar:after {
+            width: 96%;
+            }
+            .chart .part.percent-97 .bar:after {
+            width: 97%;
+            }
+            .chart .part.percent-98 .bar:after {
+            width: 98%;
+            }
+            .chart .part.percent-99 .bar:after {
+            width: 99%;
+            }
+            .chart .part.percent-100 .bar:after {
+            width: 100%;
+            }
+
+            @-webkit-keyframes grow {
+            from {
+                width: 0;
+            }
+            }
+
+            @keyframes grow {
+            from {
+                width: 0;
+            }
+            }
+        </style>
+        <!--<link rel="stylesheet" href="popup.css"/>-->
+        <script defer src="popup.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+        <script src="library/js/scripts.js"></script>
+        <script src="vendor/jquery/jquery.slim.min.js"></script>
+        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="library/js/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <!--<img src="media/samplelayout.PNG" alt="" style="margin: -10px 22px;">-->
+        <!--<img src="media/newlayout4.JPG" alt="" style="margin: -10px 22px;">-->
+
+        <img src="media/backim9.jpg" alt="" style="position:absolute;width:100%;height:100%;margin: -40px auto ;">
+
+        <p style="position:relative;margin:auto 30px; margin-top: 40px;font-family: Cambria; font-size: 20px; color:white;text-decoration: underline;">ASSEMBLY</p>
+        
+        <div class="flex-container">
+
+        <div class='wrapper'style="z-index: 91;">
+        
+            <div class='container' >
+                <div  class='box_front' style="background-color: #33CC33;">
+                    <img src="media/x2.png" alt="" style="width:120px;height:120px;margin: 10px 0px;">
+                <p></p>
+                </div>
+                <div  class='box_bottom' style="background-color: #33CC33;">
+                    <img src="media/x2.png" alt="" style="width:120px;height:120px;margin: 10px 0px;">
+                <p></p>
+                </div>
+            </div>
+        
+        </div>
+            
+        <div class='wrapper' style="z-index: 100;">
+            
+                <div id="containerstation1" class='container'>
+                    
+                    <div id="boxfront1" class='box_front'>
+                        <img src="media/human2.png" alt="" style="width:40px;height:40px;z-index: 1;margin:5px 50px;"></button>
+                        <div class="wrapper23" style="z-index:1;margin:-50px 20px;background:white;border-radius: 15%;">
+                            <a class="reviews" style="position:relative;">[1]<br><p id="stationname1" style="color: white;">CUC9</p></a>
+                            <div class="popup23" style="z-index:1;">
+                            <div><p style="color: black;font-size: 15;z-index:1;">
+                                <p id="station1a" style="font-size: 20px;"></p>
+                                <p id="station1b"></p>
+                                <p id="station1c"></p>
+                                <p id="station1d"></p>
+                                <p id="station1e"></p>
+                            </p>
+                            </div>
+                            </div>
+                        </div>
+                    <p style="margin: 120px 5px;"><img src="media/computer2.png" alt="" style="width:40px;height:40px;z-index: 1;margin:5px 50px;"></p>
+                    
+                    </div>
+                    <div id="boxfront1b" class='box_bottom' style="background:#20B886;">
+                        <img src="media/human2.png" alt="" style="width:40px;height:40px;z-index: 1;margin:5px 50px;"></button>
+                        <div class="wrapper23" style="z-index:1;margin:-50px 20px;background:white;border-radius: 15%;">
+                            <a class="reviews" style="position:relative;">[1]<br><p id="stationname1i" style="color: white;">>>></p></a>
+                            <div class="popup23" style="z-index:1;">
+                            <div><p style="color: black;font-size: 15;z-index:1;">
+                                <p id="station1ai"></p>
+                                <p id="station1bi"></p>
+                                <p id="station1ci"></p>
+                                <p id="station1di"></p>
+                                <p id="station1ei"></p>
+                            </p>
+                            </div>
+                            </div>
+                        </div>
+                    <p style="margin: 120px 5px;"><img src="media/computer2.png" alt="" style="width:40px;height:40px;z-index: 1;margin:5px 50px;"></p>
+                    </div>
+                </div>
+
+        </div>
+                
+        <div class='wrapper' style="z-index: 99;">
+            
+                <div  id="containerstation2" class='container'>
+                    <div  class='box_front'>
+                        <img src="media/robotarm2.png" alt="" style="width:40px;height:40px;z-index: 1;margin:5px 50px;"></button>
+                        <div class="wrapper23" style="z-index:1;margin:-50px 20px;background:white;border-radius: 15%;">
+                            <a class="reviews" style="position:relative;">[2]<br><p id="stationname2" style="color: white;">PANEL1</p></a>
+                            <div class="popup23" style="z-index:1;">
+                            <div><p style="color: black;font-size: 15;z-index:1;">Station:PANEL1 <br>Total IN:1000 <br>Pass:998 <br>Fail:2 <br>Last Stop: 3 mins</p></div>
+                            </div>
+                        </div>
+                    <p></p>
+                    </div>
+                    <div  class='box_bottom' style="background:#20B886;">
+                        <img src="media/robotarm2.png" alt="" style="width:40px;height:40px;z-index: 1;margin:5px 50px;"></button>
+                        <div class="wrapper23" style="z-index:1;margin:-50px 20px;background:white;border-radius: 15%;">
+                            <a class="reviews" style="position:relative;">[2]<br><p id="stationname2i" style="color: white;">>>></p></a>
+                            <div class="popup23" style="z-index:1;">
+                            <div><p style="color: black;font-size: 15;z-index:1;">Station:PANEL1 <br>Total IN:1000 <br>Pass:998 <br>Fail:2 <br>Last Stop: 3 mins</p></div>
+                            </div>
+                        </div>
+                    <p></p>
+                    </div>
+                </div>
+        
+        </div>
+
+        <div class='wrapper' style="z-index: 98;">
+            
+                <div id="containerstation3" class='container'>
+                    <div  class='box_front'>
+                        <img src="media/robotarm2.png" alt="" style="width:40px;height:40px;z-index: 1;margin:5px 50px;"></button>
+                            <div class="wrapper23" style="z-index:1;margin:-50px 20px;background:white;border-radius: 15%;">
+                                <a class="reviews" style="position:relative;">[3]<br><p id="stationname3" style="color: white;">MICIF</p></a>
+                                <div class="popup23" style="z-index:1;">
+                                <div><p style="color: black;font-size: 15;z-index:1;">Station:MICIF BOARD <br>Total IN:1000 <br>Pass:999 <br>Fail:1 <br>Last Stop: 2 mins</p></div>
+                                </div>
+                            </div>
+                    <p></p>
+                    </div>
+                    <div  class='box_bottom' style="background:#20B886;">
+                        <img src="media/robotarm2.png" alt="" style="width:40px;height:40px;z-index: 1;margin:5px 50px;"></button>
+                        <div class="wrapper23" style="z-index:1;margin:-50px 20px;background:white;border-radius: 15%;">
+                            <a class="reviews" style="position:relative;">[3]<br><p id="stationname3i" style="color: white;">>>></p></a>
+                            <div class="popup23" style="z-index:1;">
+                            <div><p style="color: black;font-size: 15;z-index:1;">Station:MICIF BOARD <br>Total IN:1000 <br>Pass:999 <br>Fail:1 <br>Last Stop: 2 mins</p></div>
+                            </div>
+                        </div>
+                    <p></p>
+                    </div>
+                </div>
+          
+        </div>
+
+        <div class='wrapper'style="z-index: 97;">
+            
+                <div id="containerstation4" class='container'>
+                    <div  class='box_front' style="z-index: -1;">
+                    <img src="media/human2.png" alt="" style="width:40px;height:40px;z-index: 1;margin:5px 50px;"></button>
+                        <div class="wrapper23" style="z-index:1;margin:-50px 20px;background:white;border-radius: 15%;">
+                            <a class="reviews" style="position:relative;">[4]<br><p id="stationname4" style="color: white;">DW3</p></a>
+                            <div class="popup23" style="z-index:1;">
+                            <div><p style="color: black;font-size: 15;z-index:1;">Station:DW3 <br>Total IN:1000 <br>Pass:996 <br>Fail:4 <br>Last Stop: 5 mins</p></div>
+                            </div>
+                        </div>
+                    <p></p>
+                    </div>
+                    <div  class='box_bottom' style="background:red;">
+                    <notificationpop id="displaypop4" style="position:absolute;display:none;margin:-50px 48px;">!</notificationpop>
+                    <img src="media/human2.png" alt="" style="width:40px;height:40px;z-index: 1;margin:5px 50px;"></button>
+                            <div class="wrapper23" style="z-index:1;margin:-50px 20px;background:white;border-radius: 15%;">
+                                <a class="reviews" style="position:relative;">[4]<br><p id="stationname4i" style="color: white;">[ERROR]</p></a>
+                                <div class="popup23" style="z-index:1;">
+                                <div><p style="color: black;font-size: 15;z-index:1;">Station:DW3 <br>Total IN:1000 <br>Pass:996 <br>Fail:4 <br>Last Stop: 5 mins <p style="color:red;">ERROR due to ????</p></p></div>
+                                </div>
+                            </div>
+                    <p></p>
+                    </div>
+                </div>
+          
+        </div>
+
+        <div class='wrapper'style="z-index: 96;">
+            
+                <div id="containerstation5" class='container' >
+                    <div  class='box_front' style="z-index: 0;">
+                         
+                            <img src="media/robotarm2.png" alt="" style="width:40px;height:40px;z-index: 1;margin:5px 50px;"></button>
+                            <div class="wrapper23" style="z-index:1;margin:-50px 20px;background:white;border-radius: 15%;">
+                                <a class="reviews" style="position:relative;">[5]<br><p id="stationname5" style="color: white;">BOARD3</p></a>
+                                <div class="popup23" style="z-index:1;">
+                                <div><p style="color: black;font-size: 15;z-index:1;">Station:BOARD3 <br>Total IN:1000 <br>Pass:998 <br>Fail:2 <br>Last Stop: 3 mins</p></div>
+                                </div>
+                            </div>
+                                
+                    <p></p>
+                    </div>
+                    <div  class='box_bottom'>
+                        <img src="media/robotarm2.png" alt="" style="width:40px;height:40px;z-index: 1;margin:5px 50px;"></button>
+                            <div class="wrapper23" style="z-index:1;margin:-50px 20px;background:white;border-radius: 15%;">
+                                <a class="reviews" style="position:relative;">[5]<br><p id="stationname5i" style="color: white;">>>></p></a>
+                                <div class="popup23" style="z-index:1;">
+                                <div><p style="color: black;font-size: 15;z-index:1;">Station:BOARD3 <br>Total IN:1000 <br>Pass:998 <br>Fail:2 <br>Last Stop: 3 mins</p></div>
+                                </div>
+                            </div>
+	                       
+                    <p></p>
+                    </div>
+                </div>
+          
+        </div>
+
+            <div class='wrapper'style="z-index: 95;">
+                
+                <div id="containerstation6" class='container' >
+                    <div  class='box_front' style="z-index: 0;">
+                        
+                            <img src="media/robotarm2.png" alt="" style="width:40px;height:40px;z-index: 1;margin:5px 50px;"></button>
+                            <div class="wrapper23" style="z-index:1;margin:-50px 20px;background:white;border-radius: 15%;">
+                                <a class="reviews" style="position:relative;">[6]<br><p id="stationname6" style="color: white;">BRACKET</p></a>
+                                <div class="popup23" style="z-index:1;">
+                                <div><p style="color: black;font-size: 15;z-index:1;">Station:BRACKET4 <br>Total IN:1000 <br>Pass:998 <br>Fail:2 <br>Last Stop: 3 mins</p></div>
+                                </div>
+                            </div>
+                               
+                    <p></p>
+                    </div>
+                    <div  class='box_bottom'>
+                        <img src="media/robotarm2.png" alt="" style="width:40px;height:40px;z-index: 1;margin:5px 50px;"></button>
+                            <div class="wrapper23" style="z-index:1;margin:-50px 20px;background:white;border-radius: 15%;">
+                                <a class="reviews" style="position:relative;">[6]<br><p id="stationname6i" style="color: white;">>>></p></a>
+                                <div class="popup23" style="z-index:1;">
+                                <div><p style="color: black;font-size: 15;z-index:1;">Station:BRACKET4 <br>Total IN:1000 <br>Pass:998 <br>Fail:2 <br>Last Stop: 3 mins</p></div>
+                                </div>
+                            </div>
+                        
+                    <p></p>
+                    </div>
+                </div>
+        
+            </div>
+
+            <div class='wrapper'style="z-index: 94;">
+            
+                <div id="containerstation7" class='container' >
+                    <div  class='box_front' style="z-index: 0;">
+                         
+                            <img src="media/robotarm2.png" alt="" style="width:40px;height:40px;z-index: 1;margin:5px 50px;"></button>
+                            <div class="wrapper23" style="z-index:1;margin:-50px 20px;background:white;border-radius: 15%;">
+                                <a class="reviews" style="position:relative;">[7]<br><p id="stationname7" style="color: white;">REAR</p></a>
+                                <div class="popup23" style="z-index:1;">
+                                <div><p style="color: black;font-size: 15;z-index:1;">Station:REAR COVER5 <br>Total IN:1000 <br>Pass:998 <br>Fail:2 <br>Last Stop: 3 mins</p></div>
+                                </div>
+                            </div>
+                                
+                    <p></p>
+                    </div>
+                    <div  class='box_bottom'>
+                        <img src="media/robotarm2.png" alt="" style="width:40px;height:40px;z-index: 1;margin:5px 50px;"></button>
+                            <div class="wrapper23" style="z-index:1;margin:-50px 20px;background:white;border-radius: 15%;">
+                                <a class="reviews" style="position:relative;">[7]<br><p id="stationname7i" style="color: white;">>>></p></a>
+                                <div class="popup23" style="z-index:1;">
+                                <div><p style="color: black;font-size: 15;z-index:1;">Station:REAR COVER5 <br>Total IN:1000 <br>Pass:998 <br>Fail:2 <br>Last Stop: 3 mins</p></div>
+                                </div>
+                            </div>
+	                       
+                    <p></p>
+                    </div>
+                </div>
+          
+            </div>
+
+            <div class='wrapper'style="z-index: 93;">
+            
+                <div id="containerstation8" class='container' >
+                    <div  class='box_front' style="z-index: 0;">
+                    
+                         
+                            <img src="media/robotarm2.png" alt="" style="width:40px;height:40px;z-index: 1;margin:5px 50px;"></button>
+                            <div class="wrapper23" style="z-index:1;margin:-50px 20px;background:white;border-radius: 15%;">
+                                <a class="reviews" style="position:relative;">[8]<br><p id="stationname8" style="color: white;">SC</p></a>
+                                <div class="popup23" style="z-index:1;">
+                                <div><p style="color: black;font-size: 15;z-index:1;">Station:SC <br>Total IN:1000 <br>Pass:998 <br>Fail:2 <br>Last Stop: 3 mins</p></div>
+                                </div>
+                            </div>
+                                
+                    <p></p>
+                    </div>
+                    <div  class='box_bottom'>
+                        <img src="media/robotarm2.png" alt="" style="width:40px;height:40px;z-index: 1;margin:5px 50px;"></button>
+                            <div class="wrapper23" style="z-index:1;margin:-50px 20px;background:white;border-radius: 15%;">
+                                <a class="reviews" style="position:relative;">[8]<br><p id="stationname8i" style="color: white;">>>></p></a>
+                                <div class="popup23" style="z-index:1;">
+                                <div><p style="color: black;font-size: 15;z-index:1;">Station:SC <br>Total IN:1000 <br>Pass:998 <br>Fail:2 <br>Last Stop: 3 mins</p></div>
+                                </div>
+                            </div>
+	                       
+                    <p></p>
+                    </div>
+                </div>
+          
+            </div>
+
+            <div class='wrapper'style="z-index: 92;">
+            
+                <div  class='container' >
+                    <div  class='box_front' style="background-color: #33CC33;">
+                        <img src="media/x2.png" alt="" style="width:120px;height:120px;margin: 10px 0px;">
+                    <p></p>
+                    </div>
+                    <div  class='box_bottom' style="background-color: #33CC33;">
+                        <img src="media/x2.png" alt="" style="width:120px;height:120px;margin: 10px 0px;">
+                    <p></p>
+                    </div>
+                </div>
+          
+            </div>
+
+            <div class='wrapper'style="z-index: 91;">
+            
+                <div  class='container' >
+                    <div  class='box_front' style="background-color: #33CC33;">
+                        <img src="media/x2.png" alt="" style="width:120px;height:120px;margin: 10px 0px;">
+                    <p></p>
+                    </div>
+                    <div  class='box_bottom' style="background-color: #33CC33;">
+                        <img src="media/x2.png" alt="" style="width:120px;height:120px;margin: 10px 0px;">
+                    <p></p>
+                    </div>
+                </div>
+          
+            </div>
+
+            <div class='wrapper'style="z-index: 90;">
+            
+                <div id="containerstation9" class='container' >
+                    <div  class='box_front' style="z-index: 0;">
+                    
+                         
+                            <img src="media/human2.png" alt="" style="width:40px;height:40px;z-index: 1;margin:5px 50px;"></button>
+                            <div class="wrapper23" style="z-index:1;margin:-50px 20px;background:white;border-radius: 15%;">
+                                <a class="reviews" style="position:relative;">[1]<br><p id="stationname9" style="color: white;">MULTI</p></a>
+                                <div class="popup23" style="z-index:1;">
+                                <div><p style="color: black;font-size: 15;z-index:1;">Station:MULTILABEL <br>Total IN:1000 <br>Pass:998 <br>Fail:2 <br>Last Stop: 3 mins</p></div>
+                                </div>
+                            </div>
+                                
+                    <p style="margin: 120px 5px;"><img src="media/computer2.png" alt="" style="width:40px;height:40px;z-index: 1;margin:5px 50px;">
+                    <img src="media/barcode2.png" alt="" style="position:absolute;width:35px;height:35px;z-index: 1;margin:-45px -55px;">
+                    </p>
+                    </div>
+                    <div  class='box_bottom'>
+                        <img src="media/human2.png" alt="" style="width:40px;height:40px;z-index: 1;margin:5px 50px;"></button>
+                            <div class="wrapper23" style="z-index:1;margin:-50px 20px;background:white;border-radius: 15%;">
+                                <a class="reviews" style="position:relative;">[1]<br><p id="stationname9i" style="color: white;">>>></p></a>
+                                <div class="popup23" style="z-index:1;">
+                                <div><p style="color: black;font-size: 15;z-index:1;">Station:MULTILABEL <br>Total IN:1000 <br>Pass:998 <br>Fail:2 <br>Last Stop: 3 mins</p></div>
+                                </div>
+                            </div>
+	                       
+                    <p style="margin: 120px 5px;"><img src="media/computer2.png" alt="" style="width:40px;height:40px;z-index: 1;margin:5px 50px;">
+                    <img src="media/barcode2.png" alt="" style="position:absolute;width:35px;height:35px;z-index: 1;margin:-45px -55px;"></p>
+                    </div>
+                </div>
+          
+            </div>
+
+            <div class='wrapper'style="z-index: 89;">
+            
+                <div id="containerstation10" class='container' >
+                    <div  class='box_front' style="z-index: 0;">
+                    
+                         
+                            <img src="media/robotarm2.png" alt="" style="width:40px;height:40px;z-index: 1;margin:5px 50px;"></button>
+                            <div class="wrapper23" style="z-index:1;margin:-50px 20px;background:white;border-radius: 15%;">
+                                <a class="reviews" style="position:relative;">[2]<br><p id="stationname10" style="color: white;">MIC</p></a>
+                                <div class="popup23" style="z-index:1;">
+                                <div><p style="color: black;font-size: 15;z-index:1;">Station:MIC <br>Total IN:1000 <br>Pass:998 <br>Fail:2 <br>Last Stop: 3 mins</p></div>
+                                </div>
+                            </div>
+                                
+                    <p style="margin: 120px 5px;"></p>
+                    </div>
+                    <div  class='box_bottom'>
+                        <img src="media/robotarm2.png" alt="" style="width:40px;height:40px;z-index: 1;margin:5px 50px;"></button>
+                            <div class="wrapper23" style="z-index:1;margin:-50px 20px;background:white;border-radius: 15%;">
+                                <a class="reviews" style="position:relative;">[2]<br><p id="stationname10i" style="color: white;">>>></p></a>
+                                <div class="popup23" style="z-index:1;">
+                                <div><p style="color: black;font-size: 15;z-index:1;">Station:MIC <br>Total IN:1000 <br>Pass:998 <br>Fail:2 <br>Last Stop: 3 mins</p></div>
+                                </div>
+                            </div>
+	                       
+                    <p style="margin: 120px 5px;"></p>
+                    </div>
+                </div>
+          
+            </div>
+
+            <div class='wrapper'style="z-index: 88;">
+            
+                <div id="containerstation11" class='container' >
+                    <div  class='box_front' style="z-index: 0;">
+                    
+                         
+                            <img src="media/robotarm2.png" alt="" style="width:40px;height:40px;z-index: 1;margin:5px 50px;"></button>
+                            <div class="wrapper23" style="z-index:1;margin:-50px 20px;background:white;border-radius: 15%;">
+                                <a class="reviews" style="position:relative;">[3]<br><p id="stationname11" style="color: white;">LED6</p></a>
+                                <div class="popup23" style="z-index:1;">
+                                <div><p style="color: black;font-size: 15;z-index:1;">Station:LED6 <br>Total IN:1000 <br>Pass:998 <br>Fail:2 <br>Last Stop: 3 mins</p></div>
+                                </div>
+                            </div>
+                                
+                    <p style="margin: 120px 5px;"></p>
+                    </div>
+                    <div  class='box_bottom'>
+                        <img src="media/robotarm2.png" alt="" style="width:40px;height:40px;z-index: 1;margin:5px 50px;"></button>
+                        
+                            <div class="wrapper23" style="z-index:1;margin:-50px 20px;background:white;border-radius: 15%;">
+                                <a class="reviews" style="position:relative;">[3]<br><p id="stationname11i" style="color: white;">>>></p></a>
+                                <div class="popup23" style="z-index:1;">
+                                <div><p style="color: black;font-size: 15;z-index:1;">Station:LED6 <br>Total IN:1000 <br>Pass:998 <br>Fail:2 <br>Last Stop: 3 mins</p></div>
+                                </div>
+                            </div>
+	                       
+                    <p style="margin: 120px 5px;"></p>
+                    </div>
+                </div>
+          
+            </div>
+
+            <div class='wrapper'style="z-index: 87;">
+            
+                <div id="containerstation12" class='container' >
+                    <div  class='box_front' style="z-index: 0;">
+                    
+                         
+                            <img src="media/robotarm2.png" alt="" style="width:40px;height:40px;z-index: 1;margin:5px 50px;"></button>
+                            <div class="wrapper23" style="z-index:1;margin:-50px 20px;background:white;border-radius: 15%;">
+                                <a class="reviews" style="position:relative;">[4]<br><p id="stationname12" style="color: white;">ST</p></a>
+                                <div class="popup23" style="z-index:1;">
+                                <div><p style="color: black;font-size: 15;z-index:1;">Station:SHOCKTEST7 <br>Total IN:1000 <br>Pass:998 <br>Fail:2 <br>Last Stop: 3 mins</p></div>
+                                </div>
+                            </div>
+                                
+                    <p style="margin: 120px 5px;"></p>
+                    </div>
+                    <div  class='box_bottom'>
+                        <img src="media/robotarm2.png" alt="" style="width:40px;height:40px;z-index: 1;margin:5px 50px;"></button>
+                        
+                            <div class="wrapper23" style="z-index:1;margin:-50px 20px;background:white;border-radius: 15%;">
+                                <a class="reviews" style="position:relative;">[4]<br><p id="stationname12i" style="color: white;">>>></p></a>
+                                <div class="popup23" style="z-index:1;">
+                                <div><p style="color: black;font-size: 15;z-index:1;">Station:SHOCKTEST7 <br>Total IN:1000 <br>Pass:998 <br>Fail:2 <br>Last Stop: 3 mins</p></div>
+                                </div>
+                            </div>
+	                       
+                    <p style="margin: 120px 5px;"></p>
+                    </div>
+                </div>
+          
+            </div>
+
+            <div class='wrapper'style="z-index: 86;">
+            
+                <div id="containerstation13" class='container' >
+                    <div  class='box_front' style="z-index: 0;">
+                    
+                         
+                            <img src="media/robotarm2.png" alt="" style="width:40px;height:40px;z-index: 1;margin:5px 50px;"></button>
+                            <div class="wrapper23" style="z-index:1;margin:-50px 20px;background:white;border-radius: 15%;">
+                                <a class="reviews" style="position:relative;">[5]<br><p id="stationname13" style="color: white;">EXCITER</p></a>
+                                <div class="popup23" style="z-index:1;">
+                                <div><p style="color: black;font-size: 15;z-index:1;">Station:EXCITER <br>Total IN:1000 <br>Pass:998 <br>Fail:2 <br>Last Stop: 3 mins</p></div>
+                                </div>
+                            </div>
+                                
+                    <p style="margin: 120px 5px;"><img src="media/computer2.png" alt="" style="width:40px;height:40px;z-index: 1;margin:5px 50px;">
+                    
+                    </p>
+                    </div>
+                    <div  class='box_bottom'>
+                        <img src="media/robotarm2.png" alt="" style="width:40px;height:40px;z-index: 1;margin:5px 50px;"></button>
+                        
+                            <div class="wrapper23" style="z-index:1;margin:-50px 20px;background:white;border-radius: 15%;">
+                                <a class="reviews" style="position:relative;">[5]<br><p id="stationname13i" style="color: white;">>>></p></a>
+                                <div class="popup23" style="z-index:1;">
+                                <div><p style="color: black;font-size: 15;z-index:1;">Station:EXCITER <br>Total IN:1000 <br>Pass:998 <br>Fail:2 <br>Last Stop: 3 mins</p></div>
+                                </div>
+                            </div>
+	                       
+                    <p style="margin: 120px 5px;"><img src="media/computer2.png" alt="" style="width:40px;height:40px;z-index: 1;margin:5px 50px;">
+                        
+                    </p>
+                    </div>
+                </div>
+          
+            </div>
+
+            <div class='wrapper'style="z-index: 85;">
+            
+                <div id="containerstation14" class='container' >
+                    <div  class='box_front' style="z-index: 0;">
+                    
+                         
+                            <img src="media/human2.png" alt="" style="width:40px;height:40px;z-index: 1;margin:5px 50px;"></button>
+                            <div class="wrapper23" style="z-index:1;margin:-50px 20px;background:white;border-radius: 15%;">
+                                <a class="reviews" style="position:relative;">[6]<br><p id="stationname14" style="color: white;">WB</p></a>
+                                <div class="popup23" style="z-index:1;">
+                                <div><p style="color: black;font-size: 15;z-index:1;">Station:WB <br>Total IN:1000 <br>Pass:998 <br>Fail:2 <br>Last Stop: 3 mins</p></div>
+                                </div>
+                            </div>
+                                
+                    <p style="margin: 120px 5px;"><img src="media/computer2.png" alt="" style="width:40px;height:40px;z-index: 1;margin:5px 50px;">
+                    <img src="media/barcode2.png" alt="" style="position:absolute;width:35px;height:35px;z-index: 1;margin:-45px -55px;">
+                    </p>
+                    </div>
+                    <div  class='box_bottom'>
+                        <img src="media/human2.png" alt="" style="width:40px;height:40px;z-index: 1;margin:5px 50px;"></button>
+                        
+                            <div class="wrapper23" style="z-index:1;margin:-50px 20px;background:white;border-radius: 15%;">
+                                <a class="reviews" style="position:relative;">[6]<br><p id="stationname14i" style="color: white;">>>></p></a>
+                                <div class="popup23" style="z-index:1;">
+                                <div><p style="color: black;font-size: 15;z-index:1;">Station:WB <br>Total IN:1000 <br>Pass:998 <br>Fail:2 <br>Last Stop: 3 mins</p></div>
+                                </div>
+                            </div>
+	                       
+                    <p style="margin: 120px 5px;"><img src="media/computer2.png" alt="" style="width:40px;height:40px;z-index: 1;margin:5px 50px;">
+                        <img src="media/barcode2.png" alt="" style="position:absolute;width:35px;height:35px;z-index: 1;margin:-45px -55px;">
+                    </p>
+                    </div>
+                </div>
+          
+            </div>
+
+            <div class='wrapper'style="z-index: 84;">
+            
+                <div id="containerstation15" class='container' >
+                    <div  class='box_front' style="z-index: 0;">
+                    
+                         
+                            <img src="media/human2.png" alt="" style="width:40px;height:40px;z-index: 1;margin:5px 50px;"></button>
+                            <div class="wrapper23" style="z-index:1;margin:-50px 20px;background:white;border-radius: 15%;">
+                                <a class="reviews" style="position:relative;">[7]<br><p id="stationname15" style="color: white;">PNL</p></a>
+                                <div class="popup23" style="z-index:1;">
+                                <div><p style="color: black;font-size: 15;z-index:1;">Station:PNL CHK 1 <br>Total IN:1000 <br>Pass:998 <br>Fail:2 <br>Last Stop: 3 mins</p></div>
+                                </div>
+                            </div>
+                                
+                    <p style="margin: 120px 5px;">
+                    </p>
+                    </div>
+                    <div  class='box_bottom'>
+                        <img src="media/human2.png" alt="" style="width:40px;height:40px;z-index: 1;margin:5px 50px;"></button>
+                        
+                            <div class="wrapper23" style="z-index:1;margin:-50px 20px;background:white;border-radius: 15%;">
+                                <a class="reviews" style="position:relative;">[7]<br><p id="stationname15i" style="color: white;">>>></p></a>
+                                <div class="popup23" style="z-index:1;">
+                                <div><p style="color: black;font-size: 15;z-index:1;">Station:PNL CHK 1 <br>Total IN:1000 <br>Pass:998 <br>Fail:2 <br>Last Stop: 3 mins</p></div>
+                                </div>
+                            </div>
+	                       
+                    <p style="margin: 120px 5px;">
+                    </p>
+                    </div>
+                </div>
+          
+            </div>
+
+            <div class='wrapper'style="z-index: 83;">
+            
+                <div id="containerstation16" class='container' >
+                    <div  class='box_front' style="z-index: 0;">
+                    
+                         
+                            <img src="media/robotarm2.png" alt="" style="width:40px;height:40px;z-index: 1;margin:5px 50px;"></button>
+                            <div class="wrapper23" style="z-index:1;margin:-50px 20px;background:white;border-radius: 15%;">
+                                <a class="reviews" style="position:relative;">[8]<br><p id="stationname16" style="color: white;">PNL</p></a>
+                                <div class="popup23" style="z-index:1;">
+                                <div><p style="color: black;font-size: 15;z-index:1;">Station:PNL CHK 2 <br>Total IN:1000 <br>Pass:998 <br>Fail:2 <br>Last Stop: 3 mins</p></div>
+                                </div>
+                            </div>
+                                
+                    <p style="margin: 120px 5px;"><img src="media/computer2.png" alt="" style="width:40px;height:40px;z-index: 1;margin:5px 50px;">
+
+                    </p>
+                    </div>
+                    <div  class='box_bottom'>
+                        <img src="media/robotarm2.png" alt="" style="width:40px;height:40px;z-index: 1;margin:5px 50px;"></button>
+                        
+                            <div class="wrapper23" style="z-index:1;margin:-50px 20px;background:white;border-radius: 15%;">
+                                <a class="reviews" style="position:relative;">[8]<br><p id="stationname16i" style="color: white;">>>></p></a>
+                                <div class="popup23" style="z-index:1;">
+                                <div><p style="color: black;font-size: 15;z-index:1;">Station:PNL CHK 2 <br>Total IN:1000 <br>Pass:998 <br>Fail:2 <br>Last Stop: 3 mins</p></div>
+                                </div>
+                            </div>
+	                       
+                    <p style="margin: 120px 5px;"><img src="media/computer2.png" alt="" style="width:40px;height:40px;z-index: 1;margin:5px 50px;">
+
+                    </p>
+                    </div>
+                </div>
+          
+            </div>
+
+            <div class='wrapper'style="z-index: 82;">
+            
+                <div id="containerstation17" class='container' >
+                    <div  class='box_front' style="z-index: 0;">
+                    
+                         
+                            <img src="media/robotarm2.png" alt="" style="width:40px;height:40px;z-index: 1;margin:5px 50px;"></button>
+                            <div class="wrapper23" style="z-index:1;margin:-50px 20px;background:white;border-radius: 15%;">
+                                <a class="reviews" style="position:relative;">[9]<br><p id="stationname17" style="color: white;margin:auto -10px;">HARMONY</p></a>
+                                <div class="popup23" style="z-index:1;">
+                                <div><p style="color: black;font-size: 15;z-index:1;">Station:HARMONY <br>Total IN:1000 <br>Pass:998 <br>Fail:2 <br>Last Stop: 3 mins</p></div>
+                                </div>
+                            </div>
+                                
+                    <p style="margin: 120px 5px;"><img src="media/computer2.png" alt="" style="width:40px;height:40px;z-index: 1;margin:5px 50px;">
+
+                    </p>
+                    </div>
+                    <div  class='box_bottom'>
+                        <img src="media/robotarm2.png" alt="" style="width:40px;height:40px;z-index: 1;margin:5px 50px;"></button>
+                        
+                            <div class="wrapper23" style="z-index:1;margin:-50px 20px;background:white;border-radius: 15%;">
+                                <a class="reviews" style="position:relative;">[9]<br><p id="stationname17i" style="color: white;">>>></p></a>
+                                <div class="popup23" style="z-index:1;">
+                                <div><p style="color: black;font-size: 15;z-index:1;">Station:HARMONY <br>Total IN:1000 <br>Pass:998 <br>Fail:2 <br>Last Stop: 3 mins</p></div>
+                                </div>
+                            </div>
+	                       
+                    <p style="margin: 120px 5px;"><img src="media/computer2.png" alt="" style="width:40px;height:40px;z-index: 1;margin:5px 50px;">
+
+                    </p>
+                    </div>
+                </div>
+          
+            </div>
+
+            <div class='wrapper'style="z-index: 81;">
+            
+                <div id="containerstation18" class='container' >
+                    <div  class='box_front' style="z-index: 0;">
+                    
+                         
+                            <img src="media/robotarm2.png" alt="" style="width:40px;height:40px;z-index: 1;margin:5px 50px;"></button>
+                            <div class="wrapper23" style="z-index:1;margin:-50px 20px;background:white;border-radius: 15%;">
+                                <a class="reviews" style="position:relative;">[10]<br><p id="stationname18" style="color: white;">PACK</p></a>
+                                <div class="popup23" style="z-index:1;">
+                                <div><p style="color: black;font-size: 15;z-index:1;">Station:PACK120 <br>Total IN:1000 <br>Pass:998 <br>Fail:2 <br>Last Stop: 3 mins</p></div>
+                                </div>
+                            </div>
+                                
+                    <p style="margin: 120px 5px;"><img src="media/computer2.png" alt="" style="width:40px;height:40px;z-index: 1;margin:5px 50px;">
+
+                    </p>
+                    </div>
+                    <div  class='box_bottom'>
+                        <img src="media/robotarm2.png" alt="" style="width:40px;height:40px;z-index: 1;margin:5px 50px;"></button>
+                        
+                            <div class="wrapper23" style="z-index:1;margin:-50px 20px;background:white;border-radius: 15%;">
+                                <a class="reviews" style="position:relative;">[10]<br><p id="stationname18i" style="color: white;">>>></p></a>
+                                <div class="popup23" style="z-index:1;">
+                                <div><p style="color: black;font-size: 15;z-index:1;">Station:PACK120 <br>Total IN:1000 <br>Pass:998 <br>Fail:2 <br>Last Stop: 3 mins</p></div>
+                                </div>
+                            </div>
+	                       
+                    <p style="margin: 120px 5px;"><img src="media/computer2.png" alt="" style="width:40px;height:40px;z-index: 1;margin:5px 50px;">
+
+                    </p>
+                    </div>
+                </div>
+          
+            </div>
+
+            <div class='wrapper'style="z-index: 80;">
+            
+                <div id="containerstation19" class='container' >
+                    <div  class='box_front' style="z-index: 0;">
+                    
+                         
+                            <img src="media/robotarm2.png" alt="" style="width:40px;height:40px;z-index: 1;margin:5px 50px;"></button>
+                            <div class="wrapper23" style="z-index:1;margin:-50px 20px;background:white;border-radius: 15%;">
+                                <a class="reviews" style="position:relative;">[11]<br><p id="stationname19" style="color: white;">PACK</p></a>
+                                <div class="popup23" style="z-index:1;">
+                                <div><p style="color: black;font-size: 15;z-index:1;">Station:PACK221 <br>Total IN:1000 <br>Pass:998 <br>Fail:2 <br>Last Stop: 3 mins</p></div>
+                                </div>
+                            </div>
+                                
+                    <p style="margin: 120px 5px;"><img src="media/computer2.png" alt="" style="width:40px;height:40px;z-index: 1;margin:5px 50px;">
+
+                    </p>
+                    </div>
+                    <div  class='box_bottom'>
+                        <img src="media/robotarm2.png" alt="" style="width:40px;height:40px;z-index: 1;margin:5px 50px;"></button>
+                        
+                            <div class="wrapper23" style="z-index:1;margin:-50px 20px;background:white;border-radius: 15%;">
+                                <a class="reviews" style="position:relative;">[11]<br><p id="stationname19i" style="color: white;">>>></p></a>
+                                <div class="popup23" style="z-index:1;">
+                                <div><p style="color: black;font-size: 15;z-index:1;">Station:PACK221 <br>Total IN:1000 <br>Pass:998 <br>Fail:2 <br>Last Stop: 3 mins</p></div>
+                                </div>
+                            </div>
+	                       
+                    <p style="margin: 120px 5px;"><img src="media/computer2.png" alt="" style="width:40px;height:40px;z-index: 1;margin:5px 50px;">
+
+                    </p>
+                    </div>
+                </div>
+          
+            </div>
+
+            <div class='wrapper'style="z-index: 79;">
+            
+                <div id="containerstation20" class='container' >
+                    <div  class='box_front' style="z-index: 0;">
+                    
+                         
+                            <img src="media/robotarm2.png" alt="" style="width:40px;height:40px;z-index: 1;margin:5px 50px;"></button>
+                            <div class="wrapper23" style="z-index:1;margin:-50px 20px;background:white;border-radius: 15%;">
+                                <a class="reviews" style="position:relative;">[12]<br><p id="stationname20" style="color: white;">PROMPTS</p></a>
+                                <div class="popup23" style="z-index:1;">
+                                <div><p style="color: black;font-size: 15;z-index:1;">Station:PROMPTS22 <br>Total IN:1000 <br>Pass:998 <br>Fail:2 <br>Last Stop: 3 mins</p></div>
+                                </div>
+                            </div>
+                                
+                    <p style="margin: 120px 5px;"><img src="media/computer2.png" alt="" style="width:40px;height:40px;z-index: 1;margin:5px 50px;">
+
+                    </p>
+                    </div>
+                    <div  class='box_bottom'>
+                        <img src="media/robotarm2.png" alt="" style="width:40px;height:40px;z-index: 1;margin:5px 50px;"></button>
+                        
+                            <div class="wrapper23" style="z-index:1;margin:-50px 20px;background:white;border-radius: 15%;">
+                                <a class="reviews" style="position:relative;">[12]<br><p id="stationname20i" style="color: white;">>>></p></a>
+                                <div class="popup23" style="z-index:1;">
+                                <div><p style="color: black;font-size: 15;z-index:1;">Station:PROMPTS <br>Total IN:1000 <br>Pass:998 <br>Fail:2 <br>Last Stop: 3 mins</p></div>
+                                </div>
+                            </div>
+	                       
+                    <p style="margin: 120px 5px;"><img src="media/computer2.png" alt="" style="width:40px;height:40px;z-index: 1;margin:5px 50px;">
+
+                    </p>
+                    </div>
+                </div>
+          
+            </div>
+
+            <div class='wrapper'style="z-index: 78;">
+            
+                <div id="containerstation21" class='container' >
+                    <div  class='box_front' style="z-index: 0;">
+                    
+                         
+                            <img src="media/robotarm2.png" alt="" style="width:40px;height:40px;z-index: 1;margin:5px 50px;"></button>
+                            <div class="wrapper23" style="z-index:1;margin:-50px 20px;background:white;border-radius: 15%;">
+                                <a class="reviews" style="position:relative;">[13]<br><p id="stationname21" style="color: white;">IM</p></a>
+                                <div class="popup23" style="z-index:1;">
+                                <div><p style="color: black;font-size: 15;z-index:1;">Station:IM29 <br>Total IN:1000 <br>Pass:998 <br>Fail:2 <br>Last Stop: 3 mins</p></div>
+                                </div>
+                            </div>
+                                
+                    <p style="margin: 120px 5px;"><img src="media/computer2.png" alt="" style="width:40px;height:40px;z-index: 1;margin:5px 50px;">
+
+                    </p>
+                    </div>
+                    <div  class='box_bottom'>
+                        <img src="media/robotarm2.png" alt="" style="width:40px;height:40px;z-index: 1;margin:5px 50px;"></button>
+                        
+                            <div class="wrapper23" style="z-index:1;margin:-50px 20px;background:white;border-radius: 15%;">
+                                <a class="reviews" style="position:relative;">[13]<br><p id="stationname21i" style="color: white;">>>></p></a>
+                                <div class="popup23" style="z-index:1;">
+                                <div><p style="color: black;font-size: 15;z-index:1;">Station:IM29 <br>Total IN:1000 <br>Pass:998 <br>Fail:2 <br>Last Stop: 3 mins</p></div>
+                                </div>
+                            </div>
+	                       
+                    <p style="margin: 120px 5px;"><img src="media/computer2.png" alt="" style="width:40px;height:40px;z-index: 1;margin:5px 50px;">
+
+                    </p>
+                    </div>
+                </div>
+          
+            </div>
+
+            <div class='wrapper'style="z-index: 77;">
+            
+                <div id="containerstation22" class='container' >
+                    <div  class='box_front' style="z-index: 0;">
+                    
+                         
+                            <img src="media/robotarm2.png" alt="" style="width:40px;height:40px;z-index: 1;margin:5px 50px;"></button>
+                            <div class="wrapper23" style="z-index:1;margin:-50px 20px;background:white;border-radius: 15%;">
+                                <a class="reviews" style="position:relative;">[14]<br><p id="stationname22" style="color: white;">HIPOT</p></a>
+                                <div class="popup23" style="z-index:1;">
+                                <div><p style="color: black;font-size: 15;z-index:1;">Station:HIPOT <br>Total IN:1000 <br>Pass:998 <br>Fail:2 <br>Last Stop: 3 mins</p></div>
+                                </div>
+                            </div>
+                                
+                    <p style="margin: 120px 5px;"><img src="media/computer2.png" alt="" style="width:40px;height:40px;z-index: 1;margin:5px 50px;">
+
+                    </p>
+                    </div>
+                    <div  class='box_bottom'>
+                        <img src="media/robotarm2.png" alt="" style="width:40px;height:40px;z-index: 1;margin:5px 50px;"></button>
+                        
+                            <div class="wrapper23" style="z-index:1;margin:-50px 20px;background:white;border-radius: 15%;">
+                                <a class="reviews" style="position:relative;">[14]<br><p id="stationname22i" style="color: white;">>>></p></a>
+                                <div class="popup23" style="z-index:1;">
+                                <div><p style="color: black;font-size: 15;z-index:1;">Station:HIPOT <br>Total IN:1000 <br>Pass:998 <br>Fail:2 <br>Last Stop: 3 mins</p></div>
+                                </div>
+                            </div>
+	                       
+                    <p style="margin: 120px 5px;"><img src="media/computer2.png" alt="" style="width:40px;height:40px;z-index: 1;margin:5px 50px;">
+
+                    </p>
+                    </div>
+                </div>
+          
+            </div>
+
+            <div class='wrapper'style="z-index: 76;">
+            
+                <div id="containerstation23" class='container' >
+                    <div  class='box_front' style="z-index: 0;">
+                    
+                         
+                            <img src="media/human2.png" alt="" style="width:40px;height:40px;z-index: 1;margin:5px 50px;"></button>
+                            <div class="wrapper23" style="z-index:1;margin:-50px 20px;background:white;border-radius: 15%;">
+                                <a class="reviews" style="position:relative;">[15]<br><p id="stationname23" style="color: white;">SC</p></a>
+                                <div class="popup23" style="z-index:1;">
+                                <div><p style="color: black;font-size: 15;z-index:1;">Station:SC <br>Total IN:1000 <br>Pass:998 <br>Fail:2 <br>Last Stop: 3 mins</p></div>
+                                </div>
+                            </div>
+                                
+                    <p style="margin: 120px 5px;">
+                    </p>
+                    </div>
+                    <div  class='box_bottom'>
+                        <img src="media/human2.png" alt="" style="width:40px;height:40px;z-index: 1;margin:5px 50px;"></button>
+                        
+                            <div class="wrapper23" style="z-index:1;margin:-50px 20px;background:white;border-radius: 15%;">
+                                <a class="reviews" style="position:relative;">[15]<br><p id="stationname23i" style="color: white;">>>></p></a>
+                                <div class="popup23" style="z-index:1;">
+                                <div><p style="color: black;font-size: 15;z-index:1;">Station:SC <br>Total IN:1000 <br>Pass:998 <br>Fail:2 <br>Last Stop: 3 mins</p></div>
+                                </div>
+                            </div>
+	                       
+                    <p style="margin: 120px 5px;">
+                    </p>
+                    </div>
+                </div>
+          
+            </div>
+
+            <div class='wrapper'style="z-index: 75;">
+            
+                <div id="containerstation24" class='container' >
+                    <div  class='box_front' style="z-index: 0;">
+                    
+                         
+                            <img src="media/robotarm2.png" alt="" style="width:40px;height:40px;z-index: 1;margin:5px 50px;"></button>
+                            <div class="wrapper23" style="z-index:1;margin:-50px 20px;background:white;border-radius: 15%;">
+                                <a class="reviews" style="position:relative;">[16]<br><p id="stationname24" style="color: white;">SC</p></a>
+                                <div class="popup23" style="z-index:1;">
+                                <div><p style="color: black;font-size: 15;z-index:1;">Station:SC <br>Total IN:1000 <br>Pass:998 <br>Fail:2 <br>Last Stop: 3 mins</p></div>
+                                </div>
+                            </div>
+                                
+                    <p style="margin: 120px 5px;"><img src="media/computer2.png" alt="" style="width:40px;height:40px;z-index: 1;margin:5px 50px;">
+
+                    </p>
+                    </div>
+                    <div  class='box_bottom'>
+                        <img src="media/robotarm2.png" alt="" style="width:40px;height:40px;z-index: 1;margin:5px 50px;"></button>
+                        
+                            <div class="wrapper23" style="z-index:1;margin:-50px 20px;background:white;border-radius: 15%;">
+                                <a class="reviews" style="position:relative;">[16]<br><p id="stationname24i" style="color: white;">>>></p></a>
+                                <div class="popup23" style="z-index:1;">
+                                <div><p style="color: black;font-size: 15;z-index:1;">Station:SC <br>Total IN:1000 <br>Pass:998 <br>Fail:2 <br>Last Stop: 3 mins</p></div>
+                                </div>
+                            </div>
+	                       
+                    <p style="margin: 120px 5px;"><img src="media/computer2.png" alt="" style="width:40px;height:40px;z-index: 1;margin:5px 50px;">
+
+                    </p>
+                    </div>
+                </div>
+          
+            </div>
+
+            <div class='wrapper'style="z-index: 74;">
+            
+                <div id="containerstation25" class='container' >
+                    <div  class='box_front' style="z-index: 0;">
+                    
+                         
+                            <img src="media/human2.png" alt="" style="width:40px;height:40px;z-index: 1;margin:5px 50px;"></button>
+                            <div class="wrapper23" style="z-index:1;margin:-50px 20px;background:white;border-radius: 15%;">
+                                <a class="reviews" style="position:relative;">[17]<br><p id="stationname25" style="color: white;">SC</p></a>
+                                <div class="popup23" style="z-index:1;">
+                                <div><p style="color: black;font-size: 15;z-index:1;">Station:SC <br>Total IN:1000 <br>Pass:998 <br>Fail:2 <br>Last Stop: 3 mins</p></div>
+                                </div>
+                            </div>
+                                
+                    <p style="margin: 120px 5px;"><img src="media/computer2.png" alt="" style="width:40px;height:40px;z-index: 1;margin:5px 50px;">
+
+                    </p>
+                    </div>
+                    <div  class='box_bottom'>
+                        <img src="media/human2.png" alt="" style="width:40px;height:40px;z-index: 1;margin:5px 50px;"></button>
+                        
+                            <div class="wrapper23" style="z-index:1;margin:-50px 20px;background:white;border-radius: 15%;">
+                                <a class="reviews" style="position:relative;">[17]<br><p id="stationname25i" style="color: white;">>>></p></a>
+                                <div class="popup23" style="z-index:1;">
+                                <div><p style="color: black;font-size: 15;z-index:1;">Station:SC <br>Total IN:1000 <br>Pass:998 <br>Fail:2 <br>Last Stop: 3 mins</p></div>
+                                </div>
+                            </div>
+	                       
+                    <p style="margin: 120px 5px;"><img src="media/computer2.png" alt="" style="width:40px;height:40px;z-index: 1;margin:5px 50px;">
+
+                    </p>
+                    </div>
+                </div>
+          
+            </div>
+
+            <div class='wrapper'style="z-index: 73;">
+            
+                <div id="containerabcdefghi" class='container' >
+                    <div  class='box_front' style="background-color: #33CC33;">
+                        <img src="media/x2.png" alt="" style="width:120px;height:120px;margin: 10px 0px;">
+                    <p></p>
+                    </div>
+                    <div  class='box_bottom' style="background-color: #33CC33;">
+                        <img src="media/x2.png" alt="" style="width:120px;height:120px;margin: 10px 0px;">
+                    <p></p>
+                    </div>
+                </div>
+          
+            </div>
+
+            
+
+            
+            
+        <!--<div class='wrapper'>
+            
+                <div id="containerabcde" class='container'>
+                    <div  class='box_front'>
+                    <button id="btntest"  data-modal-target="#modal1" style="margin: 4px 28px;background: #20B886;border:none;z-index: 1;">
+                        <img src="media/robotarm2.png" alt="" style="width:40px;height:40px;z-index: 1;"></button>
+                    <p>Station 4 ></p>
+                    </div>
+                    <div  class='box_bottom' style="background:red;">
+                    <notificationpop id="displaypop4" style="position:absolute;display:none;margin:-50px 48px;">!</notificationpop>
+                    <button id="btntest"  data-modal-target="#modal1" style="margin: 4px 28px;background: red;border:none;z-index: 1;">
+                        <img src="media/robotarm2.png" alt="" style="width:40px;height:40px;z-index: 1;"></button>
+                        
+                    <p>[ERROR]</p>
+                    </div>
+                </div>
+          
+        </div>-->
+        
+        <!--<div class='wrapper'>
+            <div style="position:absolute;text-align: center;z-index: 1;margin: 175px 0px auto;font-family: Cambria;">
+                Station 31 >
+                </div>
+                <div  class='container'>
+                    <div  class='box_front'>
+                    <p>Front Box</p>
+                    <button id="btntest" style="margin:-10px 150px;">Info</button>
+                    </div>
+                    <div  class='box_bottom'>
+                    <p>Side Box</p>
+                    </div>
+                </div>
+          
+        </div>-->
+        
+
+    </div>
+    <button id="pressa" style="position: absolute;margin: 200px 20px;">flip</button>
+    <button id="pressb" style="position: absolute;margin: 200px 60px;">flip back</button>
+
+    
+
+    <!--<div class="flex-container" style="margin:-600px 700px;">
+        <div class="containera">
+            <h1a style="color:white;">Total Match</h1a>
+            <div class="chart">
+              <div class="part percent-75">
+                <div class="label">1</div>
+                <div class="bar red">
+                  <div class="label">75%</div>
+                </div>
+              </div>
+              <div class="part percent-1">
+                <div class="label">2</div>
+                <div class="bar grey">
+                  <div class="label">0%</div>
+                </div>
+              </div>
+              <div class="part percent-40">
+                <div class="label">3</div>
+                <div class="bar green">
+                  <div class="label">40%</div>
+                </div>
+              </div>
+              <div class="part percent-38">
+                <div class="label">4</div>
+                <div class="bar green">
+                  <div class="label">38%</div>
+                </div>
+              </div>
+              <div class="part percent-60">
+                <div class="label">5</div>
+                <div class="bar blue">
+                  <div class="label">60%</div>
+                </div>
+              </div>
+              <div class="part percent-80">
+                <div class="label">6</div>
+                <div class="bar green">
+                  <div class="label">80%</div>
+                </div>
+              </div>
+              <div class="part percent-50">
+                <div class="label">7</div>
+                <div class="bar blue">
+                  <div class="label">50%</div>
+                </div>
+              </div>
+              <div class="part percent-90">
+                <div class="label">8</div>
+                <div class="bar green">
+                  <div class="label">90%</div>
+                </div>
+              </div>
+              <div class="part percent-90">
+                <div class="label">9</div>
+                <div class="bar green">
+                  <div class="label">90%</div>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>-->
+    
+        <!--<div class="flex-container" style="position:relative; margin: auto 65px;">
+            <div style="text-align: center;">
+                Station 1 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </div>
+
+            <div style="text-align: center;">
+                Station 2 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </div>
+
+            <div style="text-align: center;">
+                Station 3 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </div> 
+        </div>-->
+       
+        
+        
+
+        <div class="modal" id="modal1">
+            <div class="modal-header">
+              <div class="title">Production Line L01</div>
+              <button data-close-button class="close-button">&times;</button>
+            </div>
+            
+            </div>
+        
+            
+            
+          <div id="overlay"></div>
+
+          
+    </body>
+    <script>
+                                                                                                      
+        function run(){
+            //document.getElementById("").style.transform.replace('', 'translateZ(125px)');
+            document.getElementById("runa").style.transform = "rotateY(90deg),translateZ(125px)";
+            document.getElementById("runb").style.animation = "boxFlip 2s infinite";
+            setInterval(function () {document.getElementById("runb").style.animation.play.state = "paused";}, 2000);
+            
+            //https://codepen.io/colebemis/pen/WNKdNj tomorrow change to this
+            
+        }
+         
+        document.getElementById('pressa').onclick = function() {
+            document.getElementById('containerstation1').classList.toggle('do-flip');
+            
+            
+            /*setTimeout(() => {  
+                document.getElementById('containerstation2').classList.toggle('do-flip');
+             }, 1000);
+            setTimeout(() => {  
+            document.getElementById('containerstation3').classList.toggle('do-flip');
+            }, 2000);
+            setTimeout(() => {  
+            document.getElementById('containerstation4').classList.toggle('do-flip');
+                setTimeout(() => {  
+                document.getElementById('displaypop4').style.display = "block";
+                }, 500);
+            }, 3000);
+            setTimeout(() => {  
+            document.getElementById('containerstation5').classList.toggle('do-flip');
+            }, 4000);
+            setTimeout(() => {  
+            document.getElementById('containerstation6').classList.toggle('do-flip');
+            }, 5000);
+            setTimeout(() => {  
+            document.getElementById('containerstation7').classList.toggle('do-flip');
+            }, 6000);
+            setTimeout(() => {  
+            document.getElementById('containerstation8').classList.toggle('do-flip');
+            }, 7000);*/
+            };
+
+        document.getElementById('pressb').onclick = function() {
+            document.getElementById('containerstation1').classList.toggle('back');
+            
+            /*document.getElementById('containerstation2').classList.toggle('back'); 
+            document.getElementById('containerstation3').classList.toggle('back'); 
+            document.getElementById('containerstation4').classList.toggle('back');
+            document.getElementById('containerstation5').classList.toggle('back');
+            document.getElementById('containerstation6').classList.toggle('back');
+            document.getElementById('containerstation7').classList.toggle('back');
+            document.getElementById('containerstation8').classList.toggle('back');
+            document.getElementById('displaypop4').style.display = "none";*/
+            };
+         
+            
+        //document.getElementById('btntest').onclick = function() {
+            //document.getElementById('containerabcde').classList.toggle('do-flip');
+            //};
+        var name= ["CUC","PANEL","MICIF BOARD","DW","BOARD","BRACKET","REAR COVER","SC","MULTILABEL","MIC","LED","SHOCKTEST","EXCITER","WB","PNL CHK1","PNL CHK2","HARMONY","PACK","PACK","PROMPT","IM","HIPOT"];
+        var sn = ["CUC9","PANEL1","MICIF BOARD2","DW3","BOARD3","BRACKET4","REAR COVER5","SC3","MULTILABEL4","MIC5","LED6","SHOCKTEST7","EXCITER8","WB10","PNL CHK 111","PNL CHK 212","HARMONY13","PACK 120","PACK 221","PROMPT22","IM29","HIPOT33"];
+        var obj = [3,2,4,5,6,7,8,9,0,9,8,6,7,5,7,5,7,5,7,4,6,4];
+        var fail= [2,3,2,3,2,3,2,3,2,3,2,3,2,3,2,3,2,3,2,3,2,3];
+        var pass =[998, 997, 998, 997, 998, 997, 998, 997, 998, 997, 998, 997, 998, 997, 998, 997, 998, 997, 998, 997, 998, 997];
+        var inp =[ 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000];
+        var namei= ["CUC","PANEL","MICIF BOARD","DW","BOARD","BRACKET","REAR COVER","SC","MULTILABEL","MIC","LED","SHOCKTEST","EXCITER","WB","PNL CHK1","PNL CHK2","HARMONY","PACK","PACK","PROMPT","IM","HIPOT"];
+        var a=1;
+        for(i=0;i<25;i++){
+            if(i!=25){
+                document.getElementById('stationname1').innerHTML = "CUC9";
+                document.getElementById("station1a").innerHTML = "Stat:"+sn[0];
+                document.getElementById("station1b").innerHTML = "Total IN:"+inp[0];
+                document.getElementById("station1c").innerHTML = "Pass : "+pass[0];
+                document.getElementById("station1d").innerHTML = "Fail: "+fail[0];
+                document.getElementById("station1e").innerHTML = "Last Stop : "+obj[0]+" mins";
+
+                document.getElementById("stationname"+i+"i").innerHTML = namei[0];
+                
+                console.log(sn[1]);
+            }
+        }
+    </script>
+
+<script>
+    setInterval(function () {
+        $("notificationpop").addClass("animatepop");
+        $("notificationpop")[0].addEventListener(
+            "animationend",
+        function () {
+        $("notificationpop").removeClass("animatepop");
+        },
+        false
+        );
+        }, 1000);
+
+</script>
+
+<script>
+    const serialButton = document.querySelector(".find-serial-btn");
+    const popup = document.querySelector(".popup");
+    const close = document.querySelector(".popup .close");
+
+    function closePopup() {
+      popup.classList.remove("clicked");
+    }
+
+    serialButton.onclick = function() {
+      
+      popup.classList.toggle("clicked");
+
+      document.onkeyup = function(e) {
+        if (e.keyCode === 27) {
+          closePopup();
+        }
+      }
+    }
+
+    close.onclick = closePopup;
+
+
+    
+
+</script>
+
+<script>
+    /*for (i = 1; i < 10; i++) {   
+            
+            $("#newlayout").append(
+    
+            '<div class="wrapper"style="z-index: 73;">'+
+            '<div id="containerabcdefghi" class="container">'+
+                '<div  class="box_front" style="background-color: #33CC33;">'+
+                '<img src="media/x2.png" alt="" style="width:120px;height:120px;margin: 10px 0px;">'+
+                '<p></p>'+
+                '</div>'+
+                '<div  class="box_bottom" style="background-color: #33CC33;">'+
+                '<img src="media/x2.png" alt="" style="width:120px;height:120px;margin: 10px 0px;">'+
+                '<p></p>'+
+            '</div>'+
+            '</div>'+
+      
+            '</div>'
+            );
+    
+                                                  
+    }*/
+
+
+                                
+</script>
+</html>

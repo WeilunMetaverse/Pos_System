@@ -1,0 +1,1119 @@
+<html>
+    <head>
+
+        <style>
+            
+            html {
+            height: 100%;
+
+            font-family: "Montserrat", sans-serif;
+            font-size: 110%;
+            background-color: #212534;
+            }
+
+            .container{
+
+                width:100.3%;
+                height:33%;
+                background:silver;
+                margin: auto -0.1%;
+                background-image: linear-gradient(90deg, #D0CECF 5%, #D0CECF 9.3%, #D7AFAF 9%, #D7AFAF 20%, #D7AFAF 26.8%,#D0CECF 26.7%, #D0CECF 70.5%,#D7AFAF 70%, #D7AFAF 73.5%,#D0CECF 73.5%,grey 100%);
+                /*background-image: linear-gradient(90deg, #D0CECF 5%, #D0CECF 9.3%, #D7AFAF 9%, #D7AFAF 20%, #D7AFAF 26.8%,#D0CECF 26.7%, #D0CECF 70.5%,#D7AFAF 70%, #D7AFAF 73.5%,#D0CECF 73.5%,grey 100%); this is for botder 1px*/
+                /*background-image: linear-gradient(90deg, #D0CECF 5%, #D0CECF 10.3%, #D7AFAF 10%, #D7AFAF 20%, #D7AFAF 29.7%,#D0CECF 29.7%, #D0CECF 81.3%,#D7AFAF 80%, #D7AFAF 84.5%,#D0CECF 82%,grey 100%); this is for border 4px*/
+                border-radius: 1em;
+                box-shadow: 2px 2px black;
+                transition: transform 0.5s ease, box-shadow 0.2s ease;
+                /*-webkit-box-reflect: below 0px linear-gradient(60deg, rgba(0,0,0,0.0), rgba(0,0,0,0.4));*/
+                /*-webkit-box-reflect: below 0.5vmin linear-gradient(180deg,transparent 0 50%, white 100%);*/
+            }
+            
+            .containersmall{
+                position:relative;
+                width:2.81%;
+                height:22%;
+                /**/
+                
+                /**/
+                left:-48.05%;
+                top:-61.8%;
+                font-size: 100%;
+                padding: 0;
+
+                list-style: none;
+
+                display: -webkit-box;
+                display: -moz-box;
+                display: -ms-flexbox;
+                display: -webkit-flex;
+                display: flex;
+                background-size: cover;
+                background-position: center;
+                -webkit-flex-flow: column wrap;
+                
+                
+            }
+
+            
+
+            .containersmall2{
+                position:relative;
+                width:2.811%;
+                height:22.7%;
+                margin: auto 5%;
+                
+                left:-12.2%;
+                top:-84.3%;
+                font-size: 100%;
+                padding: 0;
+                
+                list-style: none;
+
+                display: -webkit-box;
+                display: -moz-box;
+                display: -ms-flexbox;
+                display: -webkit-flex;
+                display: flex;
+                
+                -webkit-flex-flow: column wrap;
+                
+            }
+
+
+
+
+            .pcontainer{
+                border: 1px solid #0f4667;
+                border-bottom-left-radius: 15%;
+                border-bottom-right-radius: 15%;
+                font-size: 100%;
+                margin:auto 0%;
+                transition: green 2s ease-out;
+                -webkit-animation: red 1s infinite;
+                animation: green 1s infinite; 
+                color: rgb(88 199 250 / 0%);
+                background-color: #008D00;
+                box-shadow: -5px -5px 5px -5px var(--color1), 5px 5px 5px -5px var(--color2), -7px -7px 10px -5px transparent, 7px 7px 10px -5px transparent, 0 0 5px 0px rgba(255, 255, 255, 0), 0 55px 35px -20px rgba(0, 0, 0, 0.5);
+                transition: transform 0.5s ease, box-shadow 0.2s ease;
+            }
+
+            .stripcontainer{
+                width:103%;
+                height:10%;
+                margin:0px -103%;
+            }
+
+            .xcontainer{
+                padding-top: 10px;
+                border: 1px solid #0f4667;
+                background-image: url(media/xvariable.png);
+                background-size: 100% 100%;
+                font-size: 100%;
+                margin:auto 0%;
+                transition: green 2s ease-out;
+                -webkit-animation: red 1s infinite;
+                animation: green 1s infinite; 
+                color: rgb(88 199 250 / 0%);
+                background-color: #008D00;
+                box-shadow: -5px -5px 5px -5px var(--color1), 5px 5px 5px -5px var(--color2), -7px -7px 10px -5px transparent, 7px 7px 10px -5px transparent, 0 0 5px 0px rgba(255, 255, 255, 0), 0 55px 35px -20px rgba(0, 0, 0, 0.5);
+                transition: transform 0.5s ease, box-shadow 0.2s ease;
+            }
+
+
+            .pcontainer:hover,.xcontainer:hover {
+            box-shadow: -20px -20px 30px -25px var(--color1), 20px 20px 30px -25px var(--color2), -7px -7px 10px -5px var(--color1), 7px 7px 10px -5px var(--color2), 0 0 13px 4px rgba(255, 255, 255, 0.3), 0 55px 35px -20px rgba(0, 0, 0, 0.5);
+            }
+
+            .pcontainer.active:after,
+            .pcontainer:hover:after,
+            .xcontainer.active:after,
+            .xcontainer:hover:after {
+            filter: brightness(1) contrast(1);
+            opacity: 1;
+            }
+
+            .pcontainer.active,
+            .pcontainer:hover,
+            .xcontainer.active:after,
+            .xcontainer:hover:after {
+            -webkit-animation: none;
+                    animation: none;
+            transition: box-shadow 0.1s ease-out;
+            }
+
+            
+
+            .image{
+                position:relative;
+                width:70%;
+                height:70%;
+                border-radius: 20%;
+                left:12%;
+                top:13%;
+            }
+
+            .imageo{
+                position:relative;
+                width:55%;
+                height:55%;
+                border-radius: 20%;
+                left:24%;
+                top:27%;
+               
+
+            }
+
+            @media (max-width: 1026px) {
+                #image1 { display: none; }
+                #image2 { display: none; }
+                #image3 { display: none; }
+                #image4 { display: none; }
+                #image5 { display: none; }
+                #image6 { display: none; }
+                #image7 { display: none; }
+                #image8 { display: none; }
+                #reviews{ display: none; }
+                
+                #consmall {width:2.8%;}
+            }
+
+            @media (max-width: 1366px) {
+                .container {background-image: linear-gradient(90deg, #D0CECF 5%, #D0CECF 7.5%, #D7AFAF 5%, #D7AFAF 20%, #D7AFAF 27.2%,#D0CECF 27.2%, #D0CECF 71.8%,#D7AFAF 70%, #D7AFAF 74.8%,#D0CECF 73.5%,grey 100%);}
+            }
+
+            @media (max-height: 626px) {
+                #image1 { display: none; }
+                #image2 { display: none; }
+                #image3 { display: none; }
+                #image4 { display: none; }
+                #image5 { display: none; }
+                #image6 { display: none; }
+                #image7 { display: none; }
+                #image8 { display: none; }
+                #reviews{ display: none; }
+                
+                #consmall {width:2.8%;}
+            }
+
+
+            
+        
+
+        @-webkit-keyframes red {
+          0% { background-color: red; }
+          33% { background-color: black; }  
+          67% { background-color: red; }
+          100% { background-color: black; }
+        }
+
+        @keyframes red {
+          0% { background-color: red; }
+          33% { background-color: black; }  
+          67% { background-color: red; }
+          100% { background-color: black; }
+        }
+
+
+        @-webkit-keyframes redb {
+          0% { background-color: red; }
+          33% { background-color: #34495E; }  
+          67% { background-color: red; }
+          100% { background-color: #34495E; }
+        }
+
+        @keyframes redb {
+          0% { background-color: red; }
+          33% { background-color: #34495E; }  
+          67% { background-color: red; }
+          100% { background-color: #34495E; }
+        }
+
+        div.wrapper23 {    
+            position:relative;
+            top: 14%;
+
+            width: 30%;
+            height: 50%;
+            
+            margin:0% -40%;
+            background-color: transparent;
+            border-radius: 20%;
+            padding: 0%;  
+        }
+
+        div.popup23 {
+        display: none;
+        position: relative;
+        background-color: #fff;
+        background-size: 256px 256px;
+        word-wrap: break-word;
+        text-align: left;
+        text-shadow: none;
+        box-shadow: -5px -5px 5px -5px var(--color1), 5px 5px 5px -5px var(--color2), -7px -7px 10px -5px transparent, 7px 7px 10px -5px transparent, 0 0 5px 0px rgba(255, 255, 255, 0), 0 55px 35px -20px rgba(0, 0, 0, 0.5);
+        transition: transform 0.5s ease, box-shadow 0.2s ease;
+
+        }
+
+        div.popup233 {
+        display: none;
+        position: relative;
+        background-color: #fff;
+        background-size: 256px 256px;
+        word-wrap: break-word;
+        text-align: left;
+        text-shadow: none;
+        box-shadow: -5px -5px 5px -5px var(--color1), 5px 5px 5px -5px var(--color2), -7px -7px 10px -5px transparent, 7px 7px 10px -5px transparent, 0 0 5px 0px rgba(255, 255, 255, 0), 0 55px 35px -20px rgba(0, 0, 0, 0.5);
+        transition: transform 0.5s ease, box-shadow 0.2s ease;
+
+        }
+       
+        div.popup23:hover,
+        div.popup233:hover {
+        box-shadow: -20px -20px 30px -25px var(--color1), 20px 20px 30px -25px var(--color2), -7px -7px 10px -5px var(--color1), 7px 7px 10px -5px var(--color2), 0 0 13px 4px rgba(255, 255, 255, 0.3), 0 55px 35px -20px rgba(0, 0, 0, 0.5);
+        }
+
+        div.popup23.active:after,
+        div.popup23:hover:after,
+        div.popup233.active,
+        div.popup233:hover {
+        filter: brightness(1) contrast(1);
+        opacity: 1;
+        }
+
+        div.popup23.active,
+        div.popup23:hover,
+        div.popup233.active,
+        div.popup233:hover {
+        -webkit-animation: none;
+                animation: none;
+        transition: box-shadow 0.1s ease-out;
+        }
+
+        a.reviews {
+        left: 0px;
+        top:-8px;
+        font-size: auto;
+        color: white;
+        position: relative;
+        text-align: center;
+        z-index: 1;
+        text-decoration:none;
+        font-family: "Montserrat", sans-serif;
+        text-shadow: 1px 1px #F5DCAC;
+        }
+        
+        a.reviews:hover,
+        a:active {
+        color: blue;
+        }
+
+        .popup23 {
+        width: 100%;
+        width: 580px;
+        background: #fff;
+        border-radius: 0.4em;
+        z-index: 1;
+        padding-bottom: 0.5px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 0.5px;
+        }
+
+        .popup233 {
+        width: 100%;
+        left:-582px;
+        background: #fff;
+        border-radius: 0.4em;
+        z-index: 1;
+        padding-bottom: 0.5px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 0.5px;
+        }
+
+        .wrapper23:hover .popup23 {
+        display: block;
+        
+        }
+
+        .wrapper23:hover .popup233 {
+        display: block;
+        
+        }
+        .wrapper23:hover .reviews {
+        color: blue;
+        }
+
+        :root {
+        --color1: rgb(0, 231, 255);
+        --color2: rgb(255, 0, 231);
+        }
+
+        /*table, th, td {
+        border: 1px solid black;
+
+        font-family:"Montserrat", sans-serif;
+        text-decoration: none;
+        font-weight: none;
+        }
+        td{
+           color: blue;
+        }*/
+
+        .rwd-table {
+        margin: 5px -10px;
+        width:103.7%;
+        min-width: 300px;
+        font-size: 70%;
+        }
+        .rwd-table tr {
+        border-top: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+        }
+        .rwd-table th {
+        display: none;
+        }
+        .rwd-table td {
+        display: block;
+        }
+        .rwd-table td:first-child {
+        padding-top: 0;
+        }
+        .rwd-table td:last-child {
+        padding-bottom: 0;
+        }
+        .rwd-table td:before {
+        font-weight: bold;
+        width: 6.5em;
+        display: inline-block;
+        }
+        @media (min-width: 480px) {
+        .rwd-table td:before {
+            display: none;
+        }
+        }
+        .rwd-table th,
+        .rwd-table td {
+        text-align: left;
+        }
+        @media (min-width: 480px) {
+        .rwd-table th,
+        .rwd-table td {
+            display: table-cell;
+            padding: 0.25em 0.5em;
+        }
+        .rwd-table th:first-child,
+        .rwd-table td:first-child {
+            padding-left: 0;
+        }
+        .rwd-table th:last-child,
+        .rwd-table td:last-child {
+            padding-right: 0;
+        }
+        }
+
+        .rwd-table {
+        background: #34495e;
+        color: #fff;
+        border-radius: 0.4em;
+        overflow: hidden;
+        }
+
+        .rwd-table tr {
+        border-color: #46637f;
+        }
+        
+        @media (min-width: 480px) {
+        .rwd-table th,
+        .rwd-table td {
+            padding: 1em !important;
+        }
+        }
+        .rwd-table th,
+        .rwd-table td:before {
+        color: #dd5;
+        }
+
+        
+        
+        </style>
+    </head>
+    <body>
+       
+            
+       <div class="container">
+
+        <img id="map" class="container"  alt="" style="width:100%; height:100%;">
+        
+        <div id="consmall" class="containersmall" style="margin:auto auto;">
+        <p class="xcontainer" style="width:100%;height:100%;"></p>
+        <p class="pcontainer" style="width:100%;height:100%;background-color: black;">
+            <img id="robotimage1" class="image" src="media/robotarm.gif" alt="" style="margin:auto auto;">
+            <div id="statusalert1" class="stripcontainer" style="background-color: green;"></div>
+            <div class="wrapper23" style="background-color: transparent;"><a class="reviews">1
+                <div class="popup23" style="width: 550px;">
+                    <table class="rwd-table">
+                        <tr>
+                            <th>NAME</th>
+                            <th>TOTAL IN</th>
+                            <th>PASS</th>
+                            <th>FAIL</th>
+                            <th>LAST STOP</th>
+                            <th>STATUS</th>
+                          </tr>
+                          <tr>
+                            <td>CUC9</td>
+                            <td>1000</td>
+                            <td>997</td>
+                            <td>3</td>
+                            <td>3 mins</td>
+                            <td id="redalerttable1" style="background:green;color:white;border-radius:0.4em;">Run</td>
+                          </tr>
+                    </table>
+                </div></a></div>
+            
+        </p><!---CUC9 <br>Total In: 1000 <br> Pass : 997 <br> Fail : 3 <br> Last Stop : 3 mins-->
+        
+        <p class="pcontainer" style="width:100%;height:100%;background-color: black;">
+            <img id="robotimage2" class="image" src="media/robotarmrest.png" alt="" style="margin:auto auto;">
+            <div id="statusalert2" class="stripcontainer" style="background-color: yellow;"></div>
+            <div class="wrapper23" style="background-color: transparent;"><a class="reviews">2
+                <div class="popup23">
+                <table class="rwd-table">
+                    <tr>
+                        <th>NAME</th>
+                        <th>TOTAL IN</th>
+                        <th>PASS</th>
+                        <th>FAIL</th>
+                        <th>LAST STOP</th>
+                        <th>STATUS</th>
+                      </tr>
+                      <tr>
+                        <td>CUC9</td>
+                        <td>1000</td>
+                        <td>997</td>
+                        <td>3</td>
+                        <td>3 mins</td>
+                        <td id="redalerttable2" style="background:yellow;color:black;border-radius:0.4em;">Breaks</td>
+                      </tr>
+                </table>   
+            </div></a></div>
+        </p>
+        
+        <p class="pcontainer" style="width:100%;height:100%;background-color: black;">
+            <img id="robotimage3" class="image" src="media/robotarm.gif" alt="" style="margin:auto auto;">
+            <div id="statusalert3" class="stripcontainer" style="background-color: green;"></div>
+            <div class="wrapper23" style="background-color: transparent;"><a class="reviews">3
+                <div class="popup23">
+                    <table class="rwd-table">
+                        <tr>
+                            <th>NAME</th>
+                            <th>TOTAL IN</th>
+                            <th>PASS</th>
+                            <th>FAIL</th>
+                            <th>LAST STOP</th>
+                            <th>STATUS</th>
+                          </tr>
+                          <tr>
+                            <td>CUC9</td>
+                            <td>1000</td>
+                            <td>997</td>
+                            <td>3</td>
+                            <td>3 mins</td>
+                            <td id="redalerttable3" style="background:green;color:white;border-radius:0.4em;">Run</td>
+                          </tr>
+                    </table>
+                </div></a></div>
+        </p>
+        
+        <p  class="pcontainer" style="width:100%;height:100%;background-color: black;">
+           
+            <img id="robotimage4" class="image" src="media/robotarmstop.png" alt="" style="margin:auto auto;">
+            <div id="statusalert4" class="stripcontainer" style="background-color: green;"></div>
+            <div class="wrapper23" style="background-color: transparent;"><a class="reviews">4
+                
+                <div class="popup23" style="width: 580px;">
+                <table class="rwd-table">
+                    <tr>
+                        <th>NAME</th>
+                        <th>TOTAL IN</th>
+                        <th>PASS</th>
+                        <th>FAIL</th>
+                        <th>LAST STOP</th>
+                        <th>STATUS</th>
+                      </tr>
+                      <tr>
+                        <td>MICIF BOARD</td>
+                        <td>900</td>
+                        <td>750</td>
+                        <td>150</td>
+                        <td>10 mins</td>
+                        <td id="redalerttable4" style="background:red;color:white;border-radius:0.4em;">Error</td>
+                      </tr>
+                </table>
+                </div></a></div>
+        </p>
+        
+        <p class="pcontainer" style="width:100%;height:100%;background-color: black;">
+            <img id="robotimage5" class="image" src="media/robotarm.gif" alt="" style="margin:auto auto;">
+            <div id="statusalert5" class="stripcontainer" style="background-color: green;"></div>
+            <div class="wrapper23" style="background-color: transparent;"><a class="reviews">5
+                <div class="popup23">
+                    <table class="rwd-table">
+                        <tr>
+                            <th>NAME</th>
+                            <th>TOTAL IN</th>
+                            <th>PASS</th>
+                            <th>FAIL</th>
+                            <th>LAST STOP</th>
+                            <th>STATUS</th>
+                          </tr>
+                          <tr>
+                            <td>CUC9</td>
+                            <td>1000</td>
+                            <td>997</td>
+                            <td>3</td>
+                            <td>3 mins</td>
+                            <td id="redalerttable5" style="background:green;color:white;border-radius:0.4em;">Run</td>
+                          </tr>
+                    </table> 
+                </div></a></div>
+        </p>
+        
+        <p class="pcontainer" style="width:100%;height:100%;background-color: black;">
+            <img id="robotimage6" class="image" src="media/robotarm.gif" alt="" style="margin:auto auto;">
+            <div id="statusalert6" class="stripcontainer" style="background-color: green;"></div>
+            <div class="wrapper23" style="background-color: transparent;"><a class="reviews">6<div class="popup23">
+                <table class="rwd-table">
+                    <tr>
+                        <th>NAME</th>
+                        <th>TOTAL IN</th>
+                        <th>PASS</th>
+                        <th>FAIL</th>
+                        <th>LAST STOP</th>
+                        <th>STATUS</th>
+                      </tr>
+                      <tr>
+                        <td>CUC9</td>
+                        <td>1000</td>
+                        <td>997</td>
+                        <td>3</td>
+                        <td>3 mins</td>
+                        <td id="redalerttable6" style="background:green;color:white;border-radius:0.4em;">Run</td>
+                      </tr>
+                </table> 
+            </div></a></div>
+        </p>
+        
+        <p class="pcontainer" style="width:100%;height:100%;background-color: black;">
+            <img id="robotimage7" class="image" src="media/robotarmstop.png" alt="" style="margin:auto auto;">
+            <div id="statusalert7" class="stripcontainer" style="background-color: green;"></div>
+            <div class="wrapper23" style="background-color: transparent;"><a class="reviews">7
+                <div class="popup23">
+                    <table class="rwd-table">
+                        <tr>
+                            <th>NAME</th>
+                            <th>TOTAL IN</th>
+                            <th>PASS</th>
+                            <th>FAIL</th>
+                            <th>LAST STOP</th>
+                            <th>STATUS</th>
+                          </tr>
+                          <tr>
+                            <td>CUC9</td>
+                            <td>1000</td>
+                            <td>997</td>
+                            <td>3</td>
+                            <td>3 mins</td>
+                            <td id="redalerttable7" style="background:green;color:white;border-radius:0.4em;">Run</td>
+                          </tr>
+                    </table>  
+                </div></a></div>
+        </p>
+        
+        <p class="pcontainer" style="width:100%;height:100%;background-color: black;">
+            <img id="robotimage8" class="image" src="media/robotarm.gif" alt="" style="margin:auto auto;">
+            <div id="statusalert8" class="stripcontainer" style="background-color: green;"></div>
+            <div class="wrapper23" style="background-color: transparent;"><a class="reviews">8
+                <div class="popup23">
+                    <table class="rwd-table">
+                        <tr>
+                            <th>NAME</th>
+                            <th>TOTAL IN</th>
+                            <th>PASS</th>
+                            <th>FAIL</th>
+                            <th>LAST STOP</th>
+                            <th>STATUS</th>
+                          </tr>
+                          <tr>
+                            <td>CUC9</td>
+                            <td>1000</td>
+                            <td>997</td>
+                            <td>3</td>
+                            <td>3 mins</td>
+                            <td id="redalerttable8" style="background:green;color:white;border-radius:0.4em;">Run</td>
+                          </tr>
+                    </table> 
+                </div></a></div>
+        </p>
+        <p class="xcontainer" style="width:100%;height:100%;"></p>
+        <p class="xcontainer" style="width:100%;height:100%;"></p>
+           
+        <p class="pcontainer" style="width:100%;height:100%;background-color: black;">
+          <img id="robotimage9" class="imageo" src="media/operator.gif" alt="" style="margin:auto auto;">
+          <div id="statusalert9" class="stripcontainer" style="background-color: green;"></div>
+          <div class="wrapper23" style="background-color: transparent;"><a class="reviews">1
+              <div class="popup23" style="width: 580px;">
+              <table class="rwd-table">
+                  <tr>
+                      <th>NAME</th>
+                      <th>TOTAL IN</th>
+                      <th>PASS</th>
+                      <th>FAIL</th>
+                      <th>LAST STOP</th>
+                      <th>STATUS</th>
+                    </tr>
+                    <tr>
+                      <td>MICIF BOARD</td>
+                      <td>900</td>
+                      <td>750</td>
+                      <td>150</td>
+                      <td>10 mins</td>
+                      <td id="redalerttable9" style="background:green;color:white;border-radius:0.4em;">Run</td>
+                    </tr>
+              </table>
+              </div></a></div>
+      </p>
+      <p class="pcontainer" style="width:100%;height:100%;background-color: black;">
+          <img id="robotimage10" class="imageo" src="media/operator.gif" alt="" style="margin:auto auto;">
+          <div id="statusalert10" class="stripcontainer" style="background-color: green;"></div>
+          <div class="wrapper23" style="background-color: transparent;"><a class="reviews">2
+              <div class="popup23" style="width: 580px;">
+              <table class="rwd-table">
+                  <tr>
+                      <th>NAME</th>
+                      <th>TOTAL IN</th>
+                      <th>PASS</th>
+                      <th>FAIL</th>
+                      <th>LAST STOP</th>
+                      <th>STATUS</th>
+                    </tr>
+                    <tr>
+                      <td>MICIF BOARD</td>
+                      <td>900</td>
+                      <td>750</td>
+                      <td>150</td>
+                      <td>10 mins</td>
+                      <td id="redalerttable10" style="background:green;color:white;border-radius:0.4em;">Run</td>
+                    </tr>
+              </table>
+              </div></a></div>
+      </p>
+      <p class="pcontainer" style="width:100%;height:100%;background-color: black;">
+          <img id="robotimage11" class="image" src="media/robotarm.gif" alt="" style="margin:auto auto;">
+          <div id="statusalert11" class="stripcontainer" style="background-color: green;"></div>
+          <div class="wrapper23" style="background-color: transparent;"><a class="reviews">3
+              <div class="popup23" style="width: 580px;">
+              <table class="rwd-table">
+                  <tr>
+                      <th>NAME</th>
+                      <th>TOTAL IN</th>
+                      <th>PASS</th>
+                      <th>FAIL</th>
+                      <th>LAST STOP</th>
+                      <th>STATUS</th>
+                    </tr>
+                    <tr>
+                      <td>MICIF BOARD</td>
+                      <td>900</td>
+                      <td>750</td>
+                      <td>150</td>
+                      <td>10 mins</td>
+                      <td id="redalerttable11" style="background:green;color:white;border-radius:0.4em;">Run</td>
+                    </tr>
+              </table>
+              </div></a></div>
+      </p>
+      <p class="pcontainer" style="width:100%;height:100%;background-color: black;">
+          <img id="robotimage12" class="imageo" src="media/operator.gif" alt="" style="margin:auto auto;">
+          <div id="statusalert12" class="stripcontainer" style="background-color: green;"></div>
+          <div class="wrapper23" style="background-color: transparent;"><a class="reviews">4
+              <div class="popup23" style="width: 580px;">
+              <table class="rwd-table">
+                  <tr>
+                      <th>NAME</th>
+                      <th>TOTAL IN</th>
+                      <th>PASS</th>
+                      <th>FAIL</th>
+                      <th>LAST STOP</th>
+                      <th>STATUS</th>
+                    </tr>
+                    <tr>
+                      <td>MICIF BOARD</td>
+                      <td>900</td>
+                      <td>750</td>
+                      <td>150</td>
+                      <td>10 mins</td>
+                      <td id="redalerttable12" style="background:green;color:white;border-radius:0.4em;">Run</td>
+                    </tr>
+              </table>
+              </div></a></div>
+      </p>
+      <p class="pcontainer" style="width:100%;height:100%;background-color: black;">
+          <img id="robotimage13" class="imageo" src="media/operatorbreak.png" alt="" style="margin:auto auto;">
+          <div id="statusalert13" class="stripcontainer" style="background-color: grey;"></div>
+          <div class="wrapper23" style="background-color: transparent;"><a class="reviews">5
+              <div class="popup23" style="width: 580px;">
+              <table class="rwd-table">
+                  <tr>
+                      <th>NAME</th>
+                      <th>TOTAL IN</th>
+                      <th>PASS</th>
+                      <th>FAIL</th>
+                      <th>LAST STOP</th>
+                      <th>STATUS</th>
+                    </tr>
+                    <tr>
+                      <td>MICIF BOARD</td>
+                      <td>900</td>
+                      <td>750</td>
+                      <td>150</td>
+                      <td>10 mins</td>
+                      <td id="redalerttable13" style="background:grey;color:white;border-radius:0.4em;">Run</td>
+                    </tr>
+              </table>
+              </div></a></div>
+      </p>
+      <p class="pcontainer" style="width:100%;height:100%;background-color: black;">
+          <img id="robotimage14" class="image" src="media/robotarm.gif" alt="" style="margin:auto auto;">
+          <div id="statusalert14" class="stripcontainer" style="background-color: green;"></div>
+          <div class="wrapper23" style="background-color: transparent;"><a class="reviews">6
+              <div class="popup23" style="width: 580px;">
+              <table class="rwd-table">
+                  <tr>
+                      <th>NAME</th>
+                      <th>TOTAL IN</th>
+                      <th>PASS</th>
+                      <th>FAIL</th>
+                      <th>LAST STOP</th>
+                      <th>STATUS</th>
+                    </tr>
+                    <tr>
+                      <td>MICIF BOARD</td>
+                      <td>900</td>
+                      <td>750</td>
+                      <td>150</td>
+                      <td>10 mins</td>
+                      <td id="redalerttable14" style="background:green;color:white;border-radius:0.4em;">Run</td>
+                    </tr>
+              </table>
+              </div></a></div>
+      </p>
+      <p class="pcontainer" style="width:100%;height:100%;background-color: black;">
+          <img id="robotimage15" class="imageo" src="media/operator.gif" alt="" style="margin:auto auto;">
+          <div id="statusalert15" class="stripcontainer" style="background-color: green;"></div>
+          <div class="wrapper23" style="background-color: transparent;"><a class="reviews">7
+              <div class="popup23" style="width: 580px;">
+              <table class="rwd-table">
+                  <tr>
+                      <th>NAME</th>
+                      <th>TOTAL IN</th>
+                      <th>PASS</th>
+                      <th>FAIL</th>
+                      <th>LAST STOP</th>
+                      <th>STATUS</th>
+                    </tr>
+                    <tr>
+                      <td>MICIF BOARD</td>
+                      <td>900</td>
+                      <td>750</td>
+                      <td>150</td>
+                      <td>10 mins</td>
+                      <td id="redalerttable15" style="background:green;color:white;border-radius:0.4em;">Run</td>
+                    </tr>
+              </table>
+              </div></a></div>
+      </p>
+      <p class="pcontainer" style="width:100%;height:100%;background-color: black;">
+          <img id="robotimage16" class="imageo" src="media/operatorbreak.png" alt="" style="margin:auto auto;">
+          <div id="statusalert16" class="stripcontainer" style="background-color: green;"></div>
+          <div class="wrapper23" style="background-color: transparent;"><a class="reviews">8
+              <div class="popup23" style="width: 580px;">
+              <table class="rwd-table">
+                  <tr>
+                      <th>NAME</th>
+                      <th>TOTAL IN</th>
+                      <th>PASS</th>
+                      <th>FAIL</th>
+                      <th>LAST STOP</th>
+                      <th>STATUS</th>
+                    </tr>
+                    <tr>
+                      <td>MICIF BOARD</td>
+                      <td>900</td>
+                      <td>750</td>
+                      <td>150</td>
+                      <td>10 mins</td>
+                      <td id="redalerttable16" style="background:green;color:white;border-radius:0.4em;">Run</td>
+                    </tr>
+              </table>
+              </div></a></div>
+      </p>
+      <p class="pcontainer" style="width:100%;height:100%;background-color: black;">
+          <img id="robotimage17" class="image" src="media/robotarm.gif" alt="" style="margin:auto auto;">
+          <div id="statusalert17" class="stripcontainer" style="background-color: green;"></div>
+          <div class="wrapper23" style="background-color: transparent;"><a class="reviews">9
+              <div class="popup23" style="width: 580px;">
+              <table class="rwd-table">
+                  <tr>
+                      <th>NAME</th>
+                      <th>TOTAL IN</th>
+                      <th>PASS</th>
+                      <th>FAIL</th>
+                      <th>LAST STOP</th>
+                      <th>STATUS</th>
+                    </tr>
+                    <tr>
+                      <td>MICIF BOARD</td>
+                      <td>900</td>
+                      <td>750</td>
+                      <td>150</td>
+                      <td>10 mins</td>
+                      <td id="redalerttable17" style="background:green;color:white;border-radius:0.4em;">Run</td>
+                    </tr>
+              </table>
+              </div></a></div>
+      </p>
+      <p class="pcontainer" style="width:100%;height:100%;background-color: black;">
+
+          <img id="robotimage18" class="image" src="media/robotarm.gif" alt="" style="margin:auto auto;">
+          <div id="statusalert18" class="stripcontainer" style="background-color: green;"></div>
+          <div class="wrapper23" style="background-color: transparent;"><a class="reviews">10
+              <div class="popup23" style="width: 580px;">
+              <table class="rwd-table">
+                  <tr>
+                      <th>NAME</th>
+                      <th>TOTAL IN</th>
+                      <th>PASS</th>
+                      <th>FAIL</th>
+                      <th>LAST STOP</th>
+                      <th>STATUS</th>
+                    </tr>
+                    <tr>
+                      <td>MICIF BOARD</td>
+                      <td>900</td>
+                      <td>750</td>
+                      <td>150</td>
+                      <td>10 mins</td>
+                      <td id="redalerttable18" style="background:green;color:white;border-radius:0.4em;">Run</td>
+                    </tr>
+              </table>
+              </div></a></div>
+      </p>
+      <p class="pcontainer" style="width:100%;height:100%;background-color: black;">
+
+          <img id="robotimage19" class="image" src="media/robotarm.gif" alt="" style="margin:auto auto;">
+          <div id="statusalert19" class="stripcontainer" style="background-color: green;"></div>
+          <div class="wrapper23" style="background-color: transparent;"><a class="reviews">11
+              <div class="popup233" style="width: 580px;">
+              <table class="rwd-table">
+                  <tr>
+                      <th>NAME</th>
+                      <th>TOTAL IN</th>
+                      <th>PASS</th>
+                      <th>FAIL</th>
+                      <th>LAST STOP</th>
+                      <th>STATUS</th>
+                    </tr>
+                    <tr>
+                      <td>MICIF BOARD</td>
+                      <td>900</td>
+                      <td>750</td>
+                      <td>150</td>
+                      <td>10 mins</td>
+                      <td id="redalerttable19" style="background:green;color:white;border-radius:0.4em;">Run</td>
+                    </tr>
+              </table>
+              </div></a></div>
+      </p>
+      <p class="pcontainer" style="width:100%;height:100%;background-color: black;">
+
+          <img id="robotimage20" class="image" src="media/robotarm.gif" alt="" style="margin:auto auto;">
+          <div id="statusalert20" class="stripcontainer" style="background-color: green;"></div>
+          <div class="wrapper23" style="background-color: transparent;"><a class="reviews">12
+              <div class="popup233" style="width: 580px;">
+              <table class="rwd-table">
+                  <tr>
+                      <th>NAME</th>
+                      <th>TOTAL IN</th>
+                      <th>PASS</th>
+                      <th>FAIL</th>
+                      <th>LAST STOP</th>
+                      <th>STATUS</th>
+                    </tr>
+                    <tr>
+                      <td>MICIF BOARD</td>
+                      <td>900</td>
+                      <td>750</td>
+                      <td>150</td>
+                      <td>10 mins</td>
+                      <td id="redalerttable20" style="background:green;color:white;border-radius:0.4em;">Run</td>
+                    </tr>
+              </table>
+              </div></a></div>
+      </p>
+      <p class="pcontainer" style="width:100%;height:100%;background-color: black;">
+
+          <img id="robotimage21" class="image" src="media/robotarm.gif" alt="" style="margin:auto auto;">
+          <div id="statusalert21" class="stripcontainer" style="background-color: green;"></div>
+          <div class="wrapper23" style="background-color: transparent;"><a class="reviews">13
+              <div class="popup233" style="width: 580px;">
+              <table class="rwd-table">
+                  <tr>
+                      <th>NAME</th>
+                      <th>TOTAL IN</th>
+                      <th>PASS</th>
+                      <th>FAIL</th>
+                      <th>LAST STOP</th>
+                      <th>STATUS</th>
+                    </tr>
+                    <tr>
+                      <td>MICIF BOARD</td>
+                      <td>900</td>
+                      <td>750</td>
+                      <td>150</td>
+                      <td>10 mins</td>
+                      <td id="redalerttable21" style="background:green;color:white;border-radius:0.4em;">Run</td>
+                    </tr>
+              </table>
+              </div></a></div>
+      </p>
+      <p class="pcontainer" style="width:100%;height:100%;background-color: black;">
+
+          <img id="robotimage22" class="image" src="media/robotarm.gif" alt="" style="margin:auto auto;">
+          <div id="statusalert22" class="stripcontainer" style="background-color: green;"></div>
+          <div class="wrapper23" style="background-color: transparent;"><a class="reviews">14
+              <div class="popup233" style="width: 580px;">
+              <table class="rwd-table">
+                  <tr>
+                      <th>NAME</th>
+                      <th>TOTAL IN</th>
+                      <th>PASS</th>
+                      <th>FAIL</th>
+                      <th>LAST STOP</th>
+                      <th>STATUS</th>
+                    </tr>
+                    <tr>
+                      <td>MICIF BOARD</td>
+                      <td>900</td>
+                      <td>750</td>
+                      <td>150</td>
+                      <td>10 mins</td>
+                      <td id="redalerttable22" style="background:green;color:white;border-radius:0.4em;">Run</td>
+                    </tr>
+              </table>
+              </div></a></div>
+      </p>
+      <p class="pcontainer" style="width:100%;height:100%;background-color: black;">
+
+          <img id="robotimage23" class="image" src="media/robotarm.gif" alt="" style="margin:auto auto;">
+          <div id="statusalert23" class="stripcontainer" style="background-color: green;"></div>
+          <div class="wrapper23" style="background-color: transparent;"><a class="reviews">15
+              <div class="popup233" style="width: 580px;">
+              <table class="rwd-table">
+                  <tr>
+                      <th>NAME</th>
+                      <th>TOTAL IN</th>
+                      <th>PASS</th>
+                      <th>FAIL</th>
+                      <th>LAST STOP</th>
+                      <th>STATUS</th>
+                    </tr>
+                    <tr>
+                      <td>MICIF BOARD</td>
+                      <td>900</td>
+                      <td>750</td>
+                      <td>150</td>
+                      <td>10 mins</td>
+                      <td id="redalerttable23" style="background:green;color:white;border-radius:0.4em;">Run</td>
+                    </tr>
+              </table>
+              </div></a></div>
+      </p>
+      <p class="pcontainer" style="width:100%;height:100%;background-color: black;">
+
+          <img id="robotimage24" class="image" src="media/robotarm.gif" alt="" style="margin:auto auto;">
+          <div id="statusalert24" class="stripcontainer" style="background-color: green;"></div>
+          <div class="wrapper23" style="background-color: transparent;"><a class="reviews">16
+              <div class="popup233" style="width: 580px;">
+              <table class="rwd-table">
+                  <tr>
+                      <th>NAME</th>
+                      <th>TOTAL IN</th>
+                      <th>PASS</th>
+                      <th>FAIL</th>
+                      <th>LAST STOP</th>
+                      <th>STATUS</th>
+                    </tr>
+                    <tr>
+                      <td>MICIF BOARD</td>
+                      <td>900</td>
+                      <td>750</td>
+                      <td>150</td>
+                      <td>10 mins</td>
+                      <td id="redalerttable24" style="background:green;color:white;border-radius:0.4em;">Run</td>
+                    </tr>
+              </table>
+              </div></a></div>
+      </p>
+      
+      <p class="pcontainer" style="width:100%;height:100%;background-color: black;">
+
+          <img id="robotimage25" class="image" src="media/robotarm.gif" alt="" style="margin:auto auto;">
+          <div id="statusalert25" class="stripcontainer" style="background-color: green;"></div>
+          <div class="wrapper23" style="background-color: transparent;"><a class="reviews">17
+              <div class="popup233" style="width: 580px;">
+              <table class="rwd-table">
+                  <tr>
+                      <th>NAME</th>
+                      <th>TOTAL IN</th>
+                      <th>PASS</th>
+                      <th>FAIL</th>
+                      <th>LAST STOP</th>
+                      <th>STATUS</th>
+                    </tr>
+                    <tr>
+                      <td>MICIF BOARD</td>
+                      <td>900</td>
+                      <td>750</td>
+                      <td>150</td>
+                      <td>10 mins</td>
+                      <td id="redalerttable25" style="background:green;color:white;border-radius:0.4em;">Run</td>
+                    </tr>
+              </table>
+              </div></a></div>
+      </p>
+      <p class="xcontainer" style="width:100%;height:100%;"></p>
+      <p class="xcontainer" style="width:200%;height:100%;background-image: url(media/roller2noback.png);background-size: cover;"></p>
+      </div>
+        </div>
+
+    </body>
+
+    <script>
+
+      var a=1;
+      if(a==1){
+        for(i=1;i<26;i++){
+          
+        }
+      }
+         document.getElementById("statusalert4").style.animation = "red 1s infinite";
+         document.getElementById("statusalert7").style.animation = "red 1s infinite";
+         document.getElementById("statusalert14").style.animation = "red 1s infinite";
+         document.getElementById("redalerttable4").style.animation = "redb 1s infinite";
+         document.getElementById("redalerttable7").style.animation = "redb 1s infinite";
+         document.getElementById("redalerttable14").style.animation = "redb 1s infinite";
+         
+
+    </script>
+</html>

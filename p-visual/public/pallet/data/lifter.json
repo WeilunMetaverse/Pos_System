@@ -1,0 +1,28 @@
+[
+    {
+        "lifter":1,
+        "number":15000,
+        "cycle": 15002,
+        "autoserial":15018
+    },
+    {
+        "lifter":2,
+        "number":15330,
+        "cycle": 15332,
+        "autoserial":15348
+    },
+    {
+        "lifter":3,
+        "number":15400,
+        "cycle": 15402,
+        "autoserial":15418
+    },
+    {
+        "lifter":4,
+        "number":15970,
+        "cycle": 15972,
+        "autoserial":15988
+    }
+    
+    
+]

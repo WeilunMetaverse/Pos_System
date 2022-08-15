@@ -1,0 +1,110 @@
+[
+    {
+        "station":1,
+        "number":15430,
+        "cycle": 15432,
+        "autoserial":15448
+    },
+    {
+        "station":2,
+        "number":15460,
+        "cycle": 15462,
+        "autoserial":15478
+    },
+    {
+        "station":3,
+        "number":15490,
+        "cycle": 15492,
+        "autoserial":15508
+    },
+    {
+        "station":4,
+        "number":15520,
+        "cycle": 15522,
+        "autoserial":15538
+    },
+    {
+        "station":5,
+        "number":15550,
+        "cycle": 15552,
+        "autoserial":15568
+    },
+    {
+        "station":6,
+        "number":15580,
+        "cycle": 15582,
+        "autoserial":15598
+    },
+    {
+        "station":7,
+        "number":15610,
+        "cycle": 15612,
+        "autoserial":15628
+    },
+    {
+        "station":8,
+        "number":15640,
+        "cycle": 15642,
+        "autoserial":15658
+    },{
+        "station":9,
+        "number":15670,
+        "cycle": 15672,
+        "autoserial":15688
+    },
+    {
+        "station":10,
+        "number":15700,
+        "cycle": 15702,
+        "autoserial":15718
+    },
+    {
+        "station":11,
+        "number":15730,
+        "cycle": 15732,
+        "autoserial":15748
+    },
+    {
+        "station":12,
+        "number":15760,
+        "cycle": 15762,
+        "autoserial":15778
+    },
+    {
+        "station":13,
+        "number":15790,
+        "cycle": 15792,
+        "autoserial":15808
+    },
+    {
+        "station":14,
+        "number":15820,
+        "cycle": 15822,
+        "autoserial":15838
+    },
+    {
+        "station":15,
+        "number":15850,
+        "cycle": 15852,
+        "autoserial":15868
+    },
+    {
+        "station":16,
+        "number":15880,
+        "cycle": 15882,
+        "autoserial":15898
+    },
+    {
+        "station":17,
+        "number":15910,
+        "cycle": 15912,
+        "autoserial":15928
+    },
+    {
+        "station":18,
+        "number":15940,
+        "cycle": 15942,
+        "autoserial":15958
+    }
+    
+]

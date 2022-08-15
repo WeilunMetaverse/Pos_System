@@ -1,0 +1,48 @@
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+        }
+
+        .container{
+            width:910px;
+            height:1500px;
+            background: #222;
+            display:flex;
+            align-items: center;
+        }
+        
+           
+
+        div#container
+        {
+            width:max-width;
+            height:max-height;
+            overflow:auto;     /* if you don't want a scrollbar, set to hidden */
+            overflow-x:auto;  /* hides horizontal scrollbar on newer browsers */
+            overflow-y:hidden;
+
+            /* resize and min-height are optional, allows user to resize viewable area */
+            -webkit-resize:vertical; 
+            -moz-resize:vertical;
+            resize:vertical;
+            min-height:317px;
+        }
+
+        iframe#embed
+        {
+            width:3056px;       /*2800px set this to approximate width of entire page you're embedding */
+            height:610px;      /* determines where the bottom of the page cuts off */
+            margin-left:-835px; /* clipping left side of page */
+            margin-top:-110px;  /* clipping top of page */
+            overflow:auto;
+            scroll-behavior: smooth;
+
+            /* resize seems to inherit in at least Firefox */
+            -webkit-resize:none;
+            -moz-resize:none;
+            resize:none;
+        }    
+
+        

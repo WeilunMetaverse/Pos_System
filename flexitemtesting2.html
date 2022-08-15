@@ -1,0 +1,85 @@
+<html>
+    <head>
+        <style>
+            html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: 10px;
+}
+
+.wrapper {
+  width: 400px;
+  height: 400px;
+  margin: 5vh auto ;
+  display: grid;
+  grid-template-rows: 25% 25% 25% 25%;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-gap: 1rem;
+  grid-template-areas:
+    "box1 box1 box2 box2"
+    "box1 box1 box2 box2"
+    "box3 box3 box3 box3"
+    "box3 box3 box3 box3"
+    "box4 box4 box4 box4"
+    "box4 box4 box4 box4";
+}
+
+.wrapper .grid-box {
+  color: #BBBBBB;
+  font-size: 5rem;
+  font-family: sans-serif;;
+  background-color: #EEEEEE;
+  box-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, .12), 0 1px 2px rgba(0, 0, 0, .24);
+  transition: all 250ms;
+  animation: fadein 1s ease-out normal backwards;
+}
+
+.wrapper .grid-box:hover {
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 1.5rem 2.8rem rgba(0, 0, 0, .15), 0 1rem 1rem rgba(0, 0, 0, .15);
+  transform: translate(0, -0.5rem) scale(1.01);
+}
+
+.wrapper .element1 { grid-area: box1; animation-delay: 0; }
+.wrapper .element2 { grid-area: box2; animation-delay: 100ms; }
+.wrapper .element3 { grid-area: box3; animation-delay: 200ms; }
+.wrapper .element4 { grid-area: box4; animation-delay: 200ms; }
+.wrapper .element5 { grid-area: box5; animation-delay: 100ms; }
+.wrapper .element6 { grid-area: box6; animation-delay: 200ms; }
+.wrapper .element7 { grid-area: box7; animation-delay: 300ms; }
+.wrapper .element8 { grid-area: box8; animation-delay: 200ms; }
+.wrapper .element9 { grid-area: box9; animation-delay: 400ms; }
+.wrapper .element10 { grid-area: box10; animation-delay: 500ms; }
+
+@keyframes fadein {
+  0% { transform: scale(0); }
+  80% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.wrapper {
+  width: 400px;
+  height: 400px;
+  margin: 5vh auto ;
+  display: grid;
+  grid-template-rows: 40% 60%;
+
+
+}
+        </style>
+    </head>
+    <body>
+        <main class="wrapper">
+            <div class="grid-box element1">1</div>
+            <div class="grid-box element2">2</div>
+            <div class="grid-box element3">3</div>
+            <div class="grid-box element4">4</div>
+
+
+          </main>
+    </body>
+</html>

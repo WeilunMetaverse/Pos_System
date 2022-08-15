@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+        <link rel="stylesheet" href="testingcss.css">
+    </head>
+<body>
+
+    <!--<link rel="stylesheet" href="testingcss.css">-->
+    <div id="container">
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                  <div id="container">
+                <iframe id="embed" src="http://localhost:8080/ajax_with_php/" scrolling="no" alt="img"></iframe>
+                </div>
+            </div>
+              <div class="swiper-slide"><div id="container">
+                <iframe id="embed2" src="http://localhost:8080/ajax_with_php/" scrolling="no" alt="img"></iframe>
+                </div>
+            </div>
+              <div class="swiper-slide"><div id="container">
+                <iframe id="embed3" src="http://localhost:8080/ajax_with_php/" scrolling="no" alt="img"></iframe>
+                </div>
+            </div>
+
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+          
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+    </div>
+    
+
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>  
+    <script>
+        const swiper = new Swiper('.swiper', {
+          loop: true,
+          autoplay: {
+            delay: 10000,
+            disableOnInteraction: false,
+            },
+          // If we need pagination
+          pagination: {
+            el: '.swiper-pagination',
+          },
+  
+          // Navigation arrows
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+  
+        });
+      </script>
+</body>
+</html>

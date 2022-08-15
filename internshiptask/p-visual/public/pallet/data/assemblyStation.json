@@ -1,0 +1,63 @@
+[
+    {
+        "station":1,
+        "number":15030,
+        "cycle": 15032,
+        "autoserial":15048
+    },
+    {
+        "station":2,
+        "number":15060,
+        "cycle": 15062,
+        "autoserial":15078
+    },
+    {
+        "station":3,
+        "number":15090,
+        "cycle": 15092,
+        "autoserial":15108
+    },
+    {
+        "station":4,
+        "number":15120,
+        "cycle": 15122,
+        "autoserial":15138
+    },
+    {
+        "station":5,
+        "number":15150,
+        "cycle": 15152,
+        "autoserial":15168
+    },
+    {
+        "station":6,
+        "number":15180,
+        "cycle": 15182,
+        "autoserial":15198
+    },
+    {
+        "station":7,
+        "number":15210,
+        "cycle": 15212,
+        "autoserial":15228
+    },
+    {
+        "station":8,
+        "number":15240,
+        "cycle": 15242,
+        "autoserial":15258
+    },
+    {
+        "station":9,
+        "number":15270,
+        "cycle": 15272,
+        "autoserial":15288
+    },
+    {
+        "station":10,
+        "number":15300,
+        "cycle": 15302,
+        "autoserial":15318
+    }
+    
+]

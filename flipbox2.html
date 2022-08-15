@@ -1,0 +1,160 @@
+<html>
+    <head>
+
+        <style>
+          body {
+  margin: 0;
+  background: #fafafa;
+  font-family: 'Montserrat', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+p {
+  line-height: 1.4;
+  margin-bottom: 5px;
+}
+
+.find-serial-btn {
+  background: orange;
+  border: none;
+  color: white;
+  outline: none;
+  cursor: pointer;
+  padding: 12px 20px;
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+  border-radius: 50%;
+}
+
+.find-serial-btn:hover {
+  background: darkorange;
+}
+
+.btn-container {
+  width: 400px;
+  max-width: 95%;
+  margin: 60px auto 10px;
+  text-align: center;
+  position: relative;
+}
+
+.popup:after,
+.popup:before {
+  bottom: 100%;
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+.popup:after {
+  border-color: rgba(255, 255, 255, 0);
+  border-bottom-color: white;
+  border-width: 10px;
+  margin-left: -10px;
+}
+
+.popup:before {
+  border-color: rgba(0, 0, 0, 0);
+  border-bottom-color: #f0f0f0;
+  border-width: 11px;
+  margin-left: -11px;
+}
+
+.popup {
+  background: white;
+  color: #333;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .18);
+  margin-bottom: 10px;
+  padding: 30px 8px 8px;
+  text-align: left;
+  position: absolute;
+  top: 55px;
+  z-index: -100;
+  opacity: 0;
+  margin: auto 120px;
+}
+
+.clicked {
+  z-index: 100;
+  opacity: 1;
+  animation: .6s fadeInDown ease both;
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-25px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.popup .close {
+  position: absolute;
+  right: 10px;
+  top: -10px;
+  font-size: 40px;
+  cursor: pointer;
+  color: #777;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.popup .close:hover {
+  color: orange;
+  transition: .2s ease-in;
+}
+
+.popup img {
+  max-width: 100%;
+  margin: 0 auto;
+  display: block;
+}
+        </style>
+    </head>
+    <body>
+      <div class="btn-container">
+	
+        <button class="find-serial-btn" >POP</button>
+      
+        <div class="popup"  style="border:2px solid black;">
+          <span class="close" >&times;</span>
+      
+          <p  style="border:2px solid white;">L01_CUC9 <br> Actual Ouput : 100 <br> Type : MACS2 <br> [ERROR] : due to proscastination of 30 minutes</p>
+        </div>
+
+    </body>
+
+    <script>
+        const serialButton = document.querySelector(".find-serial-btn");
+        const popup = document.querySelector(".popup");
+        const close = document.querySelector(".popup .close");
+
+        function closePopup() {
+          popup.classList.remove("clicked");
+        }
+
+        serialButton.onclick = function() {
+          
+          popup.classList.toggle("clicked");
+
+          document.onkeyup = function(e) {
+            if (e.keyCode === 27) {
+              closePopup();
+            }
+          }
+        }
+
+        close.onclick = closePopup;
+
+
+    </script>
+</html>

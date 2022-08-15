@@ -1,0 +1,58 @@
+[
+    {
+      "name" : "table",
+      "type" : "A",
+      "typebackground" : "Green",
+      "owner" : "Jeff",
+      "rate": "50",
+      "available": true
+    },
+    {
+      "name" : "pen",
+      "type" : "B",
+      "typebackground" : "Blue",
+      "owner" : "Isaac",
+      "rate": "30",
+      "available": false
+    },
+    {
+      "name" : "phone",
+      "type" : "C",
+      "typebackground" : "Red",
+      "owner" : "David",
+      "rate": "1500",
+      "available": true
+    },
+    {
+      "name" : "chair",
+      "type" : "D",
+      "typebackground" : "Purple",
+      "owner" : "Nau",
+      "rate": "120",
+      "available": true
+    },
+    {
+      "name" : "water bottle",
+      "type" : "E",
+      "typebackground" : "Orange",
+      "owner" : "Estein",
+      "rate": "50",
+      "available": true
+    },
+    {
+      "name" : "????",
+      "type" : "F",
+      "typebackground" : "Teal",
+      "owner" : "Tesla",
+      "rate": "0",
+      "available": true
+    },
+    {
+      "name" : "SAN Switch",
+      "type" : "G",
+      "typebackground" : "Brown",
+      "owner" : "John",
+      "rate": "10000",
+      "available": true
+    }
+  ]

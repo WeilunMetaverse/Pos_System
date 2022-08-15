@@ -1,0 +1,999 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: #ccc;
+    font-family: sans-serif;
+}
+
+ul{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+ul li{
+    list-style: none;
+    margin: 0 5px;
+}
+
+ul li a1 .fa{
+    font-size: 20px; /*logo size*/
+    color: #333;
+    line-height: 20px; /*3d effect floating*/
+    transition: 0.5s;
+    padding-right: 14px; /*padding for logo right*/
+ 
+}
+
+ul li a1 span{
+    padding:0;
+    margin:0;
+    position: absolute;
+    top: 2px; /*padding for internal word */
+    color: #333;
+    letter-spacing: 4px;
+    transition: 0.5s;
+
+}
+
+ul li a1{
+    text-decoration: none;
+    display: absolute;
+    display: block;
+    width: 300px;
+    height: 25px;
+    background: #fff;
+    text-align: left;
+    padding-left: 20px;
+    transform: rotate(0deg) skewX(20deg) translate(0,0);
+    transition: 0.5;
+    box-shadow: -20px 20px 10px rgba(0,0,0,0.5);
+}
+
+ul li a1::before{
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: -20px;
+    height: 100%;
+    width: 20px;
+    background: #b1b1b1b1;
+    transform: 0.5s;
+    transform: rotate(0deg) skewY(-45deg);
+}
+
+ul li a1::after{
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: -10px;
+    height: 20px;
+    width: 100%;
+    background: #b1b1b1b1;
+    transform: 0.5s;
+    transform: rotate(0deg) skewX(-45deg);
+}
+
+ul li a1:hover{
+    transform:rotate(0deg) skew(25deg) translate(20px,-15px);
+    box-shadow: -50px 50px 50px rgba(0,0,0,0.5);
+}
+
+ul li:hover a1{
+    background: #000;
+}
+
+ul li:hover a1:before{
+    background: black;
+}
+
+ul li:hover a1:after{
+    background: #000;
+}
+
+ul li a2 .fa{
+    font-size: 20px; /*logo size*/
+    color: #333;
+    line-height: 20px; /*3d effect floating*/
+    transition: 0.5s;
+    padding-right: 14px; /*padding for logo right*/
+ 
+}
+
+ul li a2 span{
+    padding:0;
+    margin:0;
+    position: absolute;
+    top: 2px; /*padding for internal word */
+    color: #333;
+    letter-spacing: 4px;
+    transition: 0.5s;
+
+}
+
+ul li a2{
+    text-decoration: none;
+    display: absolute;
+    display: block;
+    width: 180px;
+    height: 25px;
+    background: #fff;
+    text-align: left;
+    padding-left: 20px;
+    transform: rotate(0deg) skewX(20deg) translate(0,0);
+    transition: 0.5;
+    box-shadow: -20px 20px 10px rgba(0,0,0,0.5);
+}
+
+ul li a2::before{
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: -20px;
+    height: 100%;
+    width: 20px;
+    background: #b1b1b1b1;
+    transform: 0.5s;
+    transform: rotate(0deg) skewY(-45deg);
+}
+
+ul li a2::after{
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: -10px;
+    height: 20px;
+    width: 100%;
+    background: #b1b1b1b1;
+    transform: 0.5s;
+    transform: rotate(0deg) skewX(-45deg);
+}
+
+ul li a2:hover{
+    transform:rotate(0deg) skew(25deg) translate(20px,-15px);
+    box-shadow: -50px 50px 50px rgba(0,0,0,0.5);
+}
+
+ul li:hover a2{
+    background: #000; 
+}
+
+ul li:hover a2:before{
+    background: black;
+}
+
+ul li:hover a2:after{
+    background: #000;
+}
+
+ul li a3 .fa{
+    font-size: 20px; /*logo size*/
+    color: #333;
+    line-height: 20px; /*3d effect floating*/
+    transition: 0.5s;
+    padding-right: 14px; /*padding for logo right*/
+ 
+}
+
+ul li a3 span{
+    padding:0;
+    margin:0;
+    position: absolute;
+    top: 2px; /*padding for internal word */
+    color: #333;
+    letter-spacing: 4px;
+    transition: 0.5s;
+
+}
+
+ul li a3{
+    text-decoration: none;
+    display: absolute;
+    display: block;
+    width: 370px;
+    height: 25px;
+    background: #fff;
+    text-align: left;
+    padding-left: 20px;
+    transform: rotate(0deg) skewX(20deg) translate(0,0);
+    transition: 0.5;
+    box-shadow: -20px 20px 10px rgba(0,0,0,0.5);
+}
+
+ul li a3::before{
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: -20px;
+    height: 100%;
+    width: 20px;
+    background: #b1b1b1b1;
+    transform: 0.5s;
+    transform: rotate(0deg) skewY(-45deg);
+}
+
+ul li a3::after{
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: -10px;
+    height: 20px;
+    width: 100%;
+    background: #b1b1b1b1;
+    transform: 0.5s;
+    transform: rotate(0deg) skewX(-45deg);
+}
+
+ul li a3:hover{
+    transform:rotate(0deg) skew(25deg) translate(20px,-15px);
+    box-shadow: -50px 50px 50px rgba(0,0,0,0.5);
+}
+
+ul li:hover a3{
+    background: #000;
+}
+
+ul li:hover a3:before{
+    background: black;
+}
+
+ul li:hover a3:after{
+    background: #000;
+}
+
+ul li a31 .fa{
+    font-size: 20px; /*logo size*/
+    color: #333;
+    line-height: 20px; /*3d effect floating*/
+    transition: 0.5s;
+    padding-right: 14px; /*padding for logo right*/
+ 
+}
+
+ul li a31 span{
+    padding:0;
+    margin:0;
+    position: absolute;
+    top: 2px; /*padding for internal word */
+    color: #333;
+    letter-spacing: 4px;
+    transition: 0.5s;
+
+}
+
+ul li a31{
+    text-decoration: none;
+    display: absolute;
+    display: block;
+    width: 236px;
+    height: 25px;
+    background: #fff;
+    text-align: left;
+    padding-left: 20px;
+    transform: rotate(0deg) skewX(20deg) translate(0,0);
+    transition: 0.5;
+    box-shadow: -20px 20px 10px rgba(0,0,0,0.5);
+}
+
+ul li a31::before{
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: -20px;
+    height: 100%;
+    width: 20px;
+    background: #b1b1b1b1;
+    transform: 0.5s;
+    transform: rotate(0deg) skewY(-45deg);
+}
+
+ul li a31::after{
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: -10px;
+    height: 20px;
+    width: 100%;
+    background: #b1b1b1b1;
+    transform: 0.5s;
+    transform: rotate(0deg) skewX(-45deg);
+}
+
+ul li a31:hover{
+    transform:rotate(0deg) skew(25deg) translate(20px,-15px);
+    box-shadow: -50px 50px 50px rgba(0,0,0,0.5);
+}
+
+ul li:hover a31{
+    background: #000;
+}
+
+ul li:hover a31:before{
+    background: black;
+}
+
+ul li:hover a31:after{
+    background: #000;
+}
+
+ul li a32 .fa{
+    font-size: 20px; /*logo size*/
+    color: #333;
+    line-height: 30px; /*3d effect floating*/
+    transition: 0.5s;
+    padding-right: 14px; /*padding for logo right*/
+ 
+}
+
+ul li a32 span{
+    padding:0;
+    margin:0;
+    position: absolute;
+    top: 10px; /*padding for internal word */
+    color: #333;
+    letter-spacing: 4px;
+    transition: 0.5s;
+
+}
+
+ul li a32{
+    text-decoration: none;
+    display: absolute;
+    display: block;
+    width: 230px;
+    height: 36px;
+    background: #fff;
+    text-align: left;
+    padding-left: 20px;
+    transform: rotate(0deg) skewX(20deg) translate(0,0);
+    transition: 0.5;
+    box-shadow: -20px 20px 10px rgba(0,0,0,0.5);
+}
+
+ul li a32::before{
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: -20px;
+    height: 100%;
+    width: 20px;
+    background: #b1b1b1b1;
+    transform: 0.5s;
+    transform: rotate(0deg) skewY(-45deg);
+}
+
+ul li a32::after{
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: -10px;
+    height: 20px;
+    width: 100%;
+    background: #b1b1b1b1;
+    transform: 0.5s;
+    transform: rotate(0deg) skewX(-45deg);
+}
+
+ul li a32:hover{
+    transform:rotate(0deg) skew(25deg) translate(20px,-15px);
+    box-shadow: -50px 50px 50px rgba(0,0,0,0.5);
+}
+
+ul li:hover a32{
+    background: #000;
+}
+
+ul li:hover a32:before{
+    background: black;
+}
+
+ul li:hover a32:after{
+    background: #000;
+}
+
+ul li a4 .fa{
+    font-size: 20px; /*logo size*/
+    color: #333;
+    line-height: 30px; /*3d effect floating*/
+    transition: 0.5s;
+    padding-right: 14px; /*padding for logo right*/
+ 
+}
+
+ul li a4 span{
+    padding:0;
+    margin:0;
+    position: absolute;
+    top: 10px; /*padding for internal word */
+    color: #333;
+    letter-spacing: 4px;
+    transition: 0.5s;
+
+}
+
+ul li a4{
+    text-decoration: none;
+    display: absolute;
+    display: block;
+    width: 320px;
+    height: 35px;
+    background: #fff;
+    text-align: left;
+    padding-left: 20px;
+    transform: rotate(72deg) skewX(-18deg) translate(0,0);
+    transition: 0.5;
+    box-shadow: -20px 20px 10px rgba(0,0,0,0.5);
+}
+
+ul li a4::before{
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: -20px;
+    height: 100%;
+    width: 20px;
+    background: #b1b1b1b1;
+    transform: 0.5s;
+    transform: rotate(0deg) skewY(-45deg);
+}
+
+ul li a4::after{
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: -10px;
+    height: 20px;
+    width: 100%;
+    /*background:#b1b1b1b1;*/
+    transform: 0.5s;
+    transform: rotate(0deg) skewX(-45deg);
+}
+
+ul li a4:hover{
+    transform:rotate(72deg) skew(-18deg) translate(-20px,15px);
+    box-shadow: -50px 50px 50px rgba(0,0,0,0.5);
+}
+
+ul li:hover a4{
+    background: #000;
+}
+
+ul li:hover a4:before{
+    background: black;
+}
+
+ul li:hover a4:after{
+    background: #000;
+}
+
+ul li a41 .fa{
+    font-size: 20px; /*logo size*/
+    color: #333;
+    line-height: 30px; /*3d effect floating*/
+    transition: 0.5s;
+    padding-right: 14px; /*padding for logo right*/
+ 
+}
+
+ul li a41 span{
+    padding:0;
+    margin:0;
+    position: absolute;
+    top: 10px; /*padding for internal word */
+    color: #333;
+    letter-spacing: 4px;
+    transition: 0.5s;
+
+}
+
+ul li a41{
+    text-decoration: none;
+    display: absolute;
+    display: block;
+    width: 320px;
+    height: 35px;
+    background: #fff;
+    text-align: left;
+    padding-left: 20px;
+    transform: rotate(72deg) skewX(-18deg) translate(0,0);
+    transition: 0.5;
+    box-shadow: -20px 20px 10px rgba(0,0,0,0.5);
+}
+
+ul li a41::before{
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: -20px;
+    height: 100%;
+    width: 20px;
+    background: #b1b1b1b1;
+    transform: 0.5s;
+    transform: rotate(0deg) skewY(-45deg);
+}
+
+ul li a41::after{
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: -10px;
+    height: 20px;
+    width: 100%;
+    background:#b1b1b1b1;
+    transform: 0.5s;
+    transform: rotate(0deg) skewX(-45deg);
+}
+
+ul li a41:hover{
+    transform:rotate(72deg) skew(-18deg) translate(-20px,15px);
+    box-shadow: -50px 50px 50px rgba(0,0,0,0.5);
+}
+
+ul li:hover a41{
+    background: #000;
+}
+
+ul li:hover a41:before{
+    background: black;
+}
+
+ul li:hover a41:after{
+    background: #000;
+}
+
+ul li a5 .fa{
+    font-size: 20px; /*logo size*/
+    color: #333;
+    line-height: 22px; /*3d effect floating*/
+    transition: 0.5s;
+    padding-right: 14px; /*padding for logo right*/
+ 
+}
+
+ul li a5 span{
+    padding:0;
+    margin:0;
+    position: absolute;
+    top: 3px; /*padding for internal word */
+    color: #333;
+    letter-spacing: 4px;
+    transition: 0.5s;
+
+}
+
+ul li a5{
+    text-decoration: none;
+    display: absolute;
+    display: block;
+    width: 180px;
+    height: 35px;
+    background: #fff;
+    text-align: left;
+    padding-left: 20px;
+    transform: rotate(72deg) skewX(-20deg) translate(0,0);
+    transition: 0.5;
+    box-shadow: -20px 20px 10px rgba(0,0,0,0.5);
+}
+
+ul li a5::before{
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: -20px;
+    height: 100%;
+    width: 20px;
+    background:#b1b1b1b1;
+    transform: 0.5s;
+    transform: rotate(0deg) skewY(-45deg);
+}
+
+ul li a5::after{
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: -10px;
+    height: 20px;
+    width: 100%;
+    /*background:#b1b1b1b1;*/
+    transform: 0.5s;
+    transform: rotate(0deg) skewX(-45deg);
+}
+
+ul li a5:hover{
+    transform:rotate(72deg) skew(-20deg) translate(-20px,15px);
+    box-shadow: -50px 50px 50px rgba(0,0,0,0.5);
+}
+
+ul li:hover a5{
+    background: #000;
+}
+
+ul li:hover a5:before{
+    background: black;
+}
+
+ul li:hover a5:after{
+    background: #000;
+}
+
+ul li a6 .fa{
+    font-size: 20px; /*logo size*/
+    color: #333;
+    line-height: 22px; /*3d effect floating*/
+    transition: 0.5s;
+    padding-right: 14px; /*padding for logo right*/
+ 
+}
+
+ul li a6 span{
+    padding:0;
+    margin:0;
+    position: absolute;
+    top: 3px; /*padding for internal word */
+    color: #333;
+    letter-spacing: 4px;
+    transition: 0.5s;
+
+}
+
+ul li a6{
+    text-decoration: none;
+    display: absolute;
+    display: block;
+    width: 180px;
+    height: 30px;
+    background: #fff;
+    text-align: left;
+    padding-left: 20px;
+    transform: rotate(72deg) skewX(-20deg) translate(0,0);
+    transition: 0.5;
+    box-shadow: -20px 20px 10px rgba(0,0,0,0.5);
+}
+
+ul li a6::before{
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: -20px;
+    height: 100%;
+    width: 20px;
+    background:#b1b1b1b1;
+    transform: 0.5s;
+    transform: rotate(0deg) skewY(-45deg);
+}
+
+ul li a6::after{
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: -10px;
+    height: 20px;
+    width: 100%;
+    /*background:#b1b1b1b1;*/
+    transform: 0.5s;
+    transform: rotate(0deg) skewX(-45deg);
+}
+
+ul li a6:hover{
+    transform:rotate(72deg) skew(-20deg) translate(-20px,15px);
+    box-shadow: -50px 50px 50px rgba(0,0,0,0.5);
+}
+
+ul li:hover a6{
+    background: #000;
+}
+
+ul li:hover a6:before{
+    background: black;
+}
+
+ul li:hover a6:after{
+    background: #000;
+}
+
+ul li a61 .fa{
+    font-size: 20px; /*logo size*/
+    color: #333;
+    line-height: 22px; /*3d effect floating*/
+    transition: 0.5s;
+    padding-right: 14px; /*padding for logo right*/
+ 
+}
+
+ul li a61 span{
+    padding:0;
+    margin:0;
+    position: absolute;
+    top: 3px; /*padding for internal word */
+    color: #333;
+    letter-spacing: 4px;
+    transition: 0.5s;
+
+}
+
+ul li a61{
+    text-decoration: none;
+    display: absolute;
+    display: block;
+    width: 180px;
+    height: 30px;
+    background: #fff;
+    text-align: left;
+    padding-left: 20px;
+    transform: rotate(72deg) skewX(-20deg) translate(0,0);
+    transition: 0.5;
+    box-shadow: -20px 20px 10px rgba(0,0,0,0.5);
+}
+
+ul li a61::before{
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: -20px;
+    height: 100%;
+    width: 20px;
+    background:#b1b1b1b1;
+    transform: 0.5s;
+    transform: rotate(0deg) skewY(-45deg);
+}
+
+ul li a61::after{
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: -10px;
+    height: 20px;
+    width: 100%;
+    background:#b1b1b1b1;
+    transform: 0.5s;
+    transform: rotate(0deg) skewX(-45deg);
+}
+
+ul li a61:hover{
+    transform:rotate(72deg) skew(-20deg) translate(-20px,15px);
+    box-shadow: -50px 50px 50px rgba(0,0,0,0.5);
+}
+
+ul li:hover a61{
+    background: #000;
+}
+
+ul li:hover a61:before{
+    background: black;
+}
+
+ul li:hover a61:after{
+    background: #000;
+}
+
+ul li a7 .fa{
+    font-size: 20px; /*logo size*/
+    color: #333;
+    line-height: 22px; /*3d effect floating*/
+    transition: 0.5s;
+    padding-right: 14px; /*padding for logo right*/
+ 
+}
+
+ul li a7 span{
+    padding:0;
+    margin:0;
+    position: absolute;
+    top: 3px; /*padding for internal word */
+    color: #333;
+    letter-spacing: 4px;
+    transition: 0.5s;
+
+}
+
+ul li a7{
+    text-decoration: none;
+    display: absolute;
+    display: block;
+    width: 180px;
+    height: 25px;
+    background: #fff;
+    text-align: left;
+    padding-left: 20px;
+    transform: rotate(72deg) skewX(-20deg) translate(0,0);
+    transition: 0.5;
+    box-shadow: -20px 20px 10px rgba(0,0,0,0.5);
+}
+
+ul li a7::before{
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: -20px;
+    height: 100%;
+    width: 20px;
+    background:#b1b1b1b1;
+    transform: 0.5s;
+    transform: rotate(0deg) skewY(-45deg);
+}
+
+ul li a7::after{
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: -10px;
+    height: 20px;
+    width: 100%;
+    /*background:#b1b1b1b1;*/
+    transform: 0.5s;
+    transform: rotate(0deg) skewX(-45deg);
+}
+
+ul li a7:hover{
+    transform:rotate(72deg) skew(-20deg) translate(-20px,15px);
+    box-shadow: -50px 50px 50px rgba(0,0,0,0.5);
+}
+
+ul li:hover a7{
+    background: #000;
+}
+
+ul li:hover a7:before{
+    background: black;
+}
+
+ul li:hover a7:after{
+    background: #000;
+}
+
+ul li a8 .fa{
+    font-size: 20px; /*logo size*/
+    color: #333;
+    line-height: 22px; /*3d effect floating*/
+    transition: 0.5s;
+    padding-right: 14px; /*padding for logo right*/
+ 
+}
+
+ul li a8 span{
+    padding:0;
+    margin:0;
+    position: absolute;
+    top: 3px; /*padding for internal word */
+    color: #333;
+    letter-spacing: 4px;
+    transition: 0.5s;
+
+}
+
+ul li a8{
+    text-decoration: none;
+    display: absolute;
+    display: block;
+    width: 350px;
+    height: 25px;
+    background: #fff;
+    text-align: left;
+    padding-left: 20px;
+    transform: rotate(72deg) skewX(-20deg) translate(0,0);
+    transition: 0.5;
+    box-shadow: -20px 20px 10px rgba(0,0,0,0.5);
+}
+
+ul li a8::before{
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: -20px;
+    height: 100%;
+    width: 20px;
+    background:#b1b1b1b1;
+    transform: 0.5s;
+    transform: rotate(0deg) skewY(-45deg);
+}
+
+ul li a8::after{
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: -10px;
+    height: 20px;
+    width: 100%;
+    
+    transform: 0.5s;
+    transform: rotate(0deg) skewX(-45deg);
+}
+
+ul li a8:hover{
+    transform:rotate(72deg) skew(-20deg) translate(-20px,15px);
+    box-shadow: -50px 50px 50px rgba(0,0,0,0.5);
+}
+
+ul li:hover a8{
+    background: #000;
+}
+
+ul li:hover a8:before{
+    background: black;
+}
+
+ul li:hover a8:after{
+    background: #000;
+}
+
+ul li a9 .fa{
+    font-size: 20px; /*logo size*/
+    color: #333;
+    line-height: 20px; /*3d effect floating*/
+    transition: 0.5s;
+    padding-right: 14px; /*padding for logo right*/
+ 
+}
+
+ul li a9 span{
+    padding:0;
+    margin:0;
+    position: absolute;
+    top: 2px; /*padding for internal word */
+    color: #333;
+    letter-spacing: 4px;
+    transition: 0.5s;
+
+}
+
+ul li a9{
+    text-decoration: none;
+    display: absolute;
+    display: block;
+    width: 180px;
+    height: 25px;
+    background: #fff;
+    text-align: left;
+    padding-left: 20px;
+    transform: rotate(0deg) skewX(20deg) translate(0,0);
+    transition: 0.5;
+    box-shadow: -20px 20px 10px rgba(0,0,0,0.5);
+}
+
+ul li a9::before{
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: -20px;
+    height: 100%;
+    width: 20px;
+    background: #b1b1b1b1;
+    transform: 0.5s;
+    transform: rotate(0deg) skewY(-45deg);
+}
+
+ul li a9::after{
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: -10px;
+    height: 20px;
+    width: 100%;
+    background: #b1b1b1b1;
+    transform: 0.5s;
+    transform: rotate(0deg) skewX(-45deg);
+}
+
+ul li a9:hover{
+    transform:rotate(0deg) skew(20deg) translate(20px,-15px);
+    box-shadow: -50px 50px 50px rgba(0,0,0,0.5);
+}
+
+ul li:hover a9{
+    background: #000;
+}
+
+ul li:hover a9:before{
+    background: black;
+}
+
+ul li:hover a9:after{
+    background: #000;
+}

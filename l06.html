@@ -1,0 +1,1923 @@
+<html>
+
+<head>
+
+
+</head>
+<title>
+Line 06+
+</title>
+<style>
+    .text111 {
+    position: relative;
+
+
+    text-transform: uppercase;
+    font-family: verdana;
+    font-size: 250%;
+    font-weight: bold;
+    color: #f5f5f5;
+    /*text-shadow: 
+    1px 1px 1px #919191,
+        1px 2px 1px #919191,
+        1px 3px 1px #919191,
+        1px 4px 1px #919191,
+        1px 5px 1px #919191,
+        1px 6px 1px #919191,
+        1px 7px 1px #919191,
+        1px 8px 1px #919191,
+        1px 9px 1px #919191,
+        1px 10px 1px #919191,
+    1px 18px 6px rgba(16,16,16,0.4),
+    1px 22px 10px rgba(16,16,16,0.2),
+    1px 25px 35px rgba(16,16,16,0.2),
+    1px 30px 60px rgba(16,16,16,0.4); */
+    }
+  </style>
+<style>
+
+.btnforsvg {
+  width: 90%;
+  height: 50px;
+  border-radius: 0.4em; /*50px*/
+  cursor: pointer;
+  overflow: hidden;
+  background: grey;
+  color: #232323;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  transition: width 0.2s ease-in-out;
+  transform: translate(-50%, -50%);
+}
+
+.btnforsvg:hover {
+  width: 150px;
+  height:150px;
+  top:50px;
+  border: 2px solid #232323;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.5);
+  z-index: 199 !important;
+}
+
+.btnforsvg:hover .text {
+  opacity: 1;
+  top: 0;
+}
+
+.btnforsvg .icon {
+  width: 60px;
+  height: 60px;
+
+  margin:60% 0%;
+  display: inline-block;
+}
+
+.btnforsvg .icon img {
+  width: 40px;
+  height: 30px;
+}
+
+.btnforsvg .text {
+  position: relative;
+  top: 10px;
+  text-align: center;
+  opacity: 0;
+  line-height: 60px;
+  transition: top 0.4s ease-in-out 0.3s, opacity 0.2s ease-in-out 0.3s;
+}
+
+
+</style>
+<style>
+
+.container{
+
+    height:100%;
+    width:100.3%;
+    margin: auto -0.1%;
+    background-color:lightgrey;
+    border-radius: 1em;
+    display:flex;
+}
+
+.containersmall{
+    position:relative; 
+     width:100%; 
+     height:80%; 
+      top:20%;
+      left:0.1%;
+     font-size: 100%; 
+     display:flex;
+     
+     
+    
+}
+
+.containersmall1{
+    position:relative; 
+
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    
+    -webkit-flex-flow: column wrap;
+    
+     
+    
+}
+
+.boxyellow{
+    position:relative;
+    height:30%;
+    width:2.5%;
+    background-color:yellow;
+    margin-top:40px;
+    border:0.1px solid black;
+    box-shadow: -5px -5px 5px -5px var(--color1), 5px 5px 5px -5px var(--color2), -7px -7px 10px -5px transparent, 7px 7px 10px -5px transparent, 0 0 5px 0px rgba(255, 255, 255, 0), 0 55px 35px -20px rgba(0, 0, 0, 0.5);
+                transition: transform 0.5s ease, box-shadow 0.2s ease;
+    
+}
+.boxblue{
+    position:relative;
+    height:40%;
+    width:2.5%;
+    background-color:lightblue;
+    margin-top:20px;
+    border:0.1px solid black;
+    box-shadow: -5px -5px 5px -5px var(--color1), 5px 5px 5px -5px var(--color2), -7px -7px 10px -5px transparent, 7px 7px 10px -5px transparent, 0 0 5px 0px rgba(255, 255, 255, 0), 0 55px 35px -20px rgba(0, 0, 0, 0.5);
+                transition: transform 0.5s ease, box-shadow 0.2s ease;
+}
+.boxgrey{
+    position:relative;
+    height:30%;
+    width:2.5%;
+    background-color:grey;
+    margin-top:40px;
+    border:0.1px solid black;
+    box-shadow: -5px -5px 5px -5px var(--color1), 5px 5px 5px -5px var(--color2), -7px -7px 10px -5px transparent, 7px 7px 10px -5px transparent, 0 0 5px 0px rgba(255, 255, 255, 0), 0 55px 35px -20px rgba(0, 0, 0, 0.5);
+                transition: transform 0.5s ease, box-shadow 0.2s ease;
+}
+.boxlifter{
+    position:relative;
+    height:30%;
+    width:3%;
+    background-color:green;
+    margin-top:40px;
+    border:0.1px solid black;
+    box-shadow: -5px -5px 5px -5px var(--color1), 5px 5px 5px -5px var(--color2), -7px -7px 10px -5px transparent, 7px 7px 10px -5px transparent, 0 0 5px 0px rgba(255, 255, 255, 0), 0 55px 35px -20px rgba(0, 0, 0, 0.5);
+                transition: transform 0.5s ease, box-shadow 0.2s ease;
+    
+}
+.boxliftershort{
+    position:relative;
+    height:25%;
+    width:4%;
+    background-color:green;
+    margin-top:40px;
+    border:0.1px solid black;
+    box-shadow: -5px -5px 5px -5px var(--color1), 5px 5px 5px -5px var(--color2), -7px -7px 10px -5px transparent, 7px 7px 10px -5px transparent, 0 0 5px 0px rgba(255, 255, 255, 0), 0 55px 35px -20px rgba(0, 0, 0, 0.5);
+                transition: transform 0.5s ease, box-shadow 0.2s ease;
+}
+.boxbeige{
+    position:relative;
+    height:20%;
+    width:2.5%;
+    background-color:#E8D4AD;
+    margin-top:40px;
+    border:0.1px solid black;
+    box-shadow: -5px -5px 5px -5px var(--color1), 5px 5px 5px -5px var(--color2), -7px -7px 10px -5px transparent, 7px 7px 10px -5px transparent, 0 0 5px 0px rgba(255, 255, 255, 0), 0 55px 35px -20px rgba(0, 0, 0, 0.5);
+                transition: transform 0.5s ease, box-shadow 0.2s ease;
+}
+
+/*.boxbeige:hover,
+.boxliftershort:hover,
+.boxlifter:hover,
+.boxgrey:hover,
+.boxblue:hover,
+.boxyellow:hover
+ {
+            box-shadow: -20px -20px 30px -25px var(--color1), 20px 20px 30px -25px var(--color2), -7px -7px 10px -5px var(--color1), 7px 7px 10px -5px var(--color2), 0 0 13px 4px rgba(255, 255, 255, 0.3), 0 55px 35px -20px rgba(0, 0, 0, 0.5);
+            }*/
+
+a{
+  position: absolute;
+  top: 20%;
+  width: 100%;
+  text-align: center;
+  font-size: 17px;
+  word-wrap: break-word;
+}
+img {
+  width: 100%;
+  height: 100%;
+  font-size: 18px;
+  object-fit: fill;
+}
+
+
+.card {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+}
+.card + .card {
+  margin-left: 30px;
+}
+.card .card__front,
+.card .card__back {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position:absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 1px 2px 4px #333;
+  height: 98%;
+  width: 98%;
+  transition: transform 1s;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+.card:not(.card--flipped) .card__back {
+  transform: rotateY(180deg);
+}
+.card.card--flipped .card__front {
+  transform: rotateY(180deg);
+}
+
+
+</style>
+
+
+<style>
+    div.wrapperstation23 {    
+            position:relative;
+            top:-35%;
+
+            width: 25%;
+            height: 10%;
+            
+            background-color: black;
+            border-radius: 20%;
+            padding: 0%;  
+        }
+    div.popupstation23 {
+        display: none;
+        position: relative;
+        background-color: #fff;
+        background-size: 256px 256px;
+        word-wrap: break-word;
+        text-align: left;
+        text-shadow: none;
+        box-shadow: -5px -5px 5px -5px var(--color1), 5px 5px 5px -5px var(--color2), -7px -7px 10px -5px transparent, 7px 7px 10px -5px transparent, 0 0 5px 0px rgba(255, 255, 255, 0), 0 55px 35px -20px rgba(0, 0, 0, 0.5);
+        transition: transform 0.5s ease, box-shadow 0.2s ease;
+        z-index: 399 !important;
+        }
+
+        div.popupstation233 {
+        display: none;
+        position: relative;
+        background-color: #fff;
+        background-size: 256px 256px;
+        word-wrap: break-word;
+        text-align: left;
+        text-shadow: none;
+        box-shadow: -5px -5px 5px -5px var(--color1), 5px 5px 5px -5px var(--color2), -7px -7px 10px -5px transparent, 7px 7px 10px -5px transparent, 0 0 5px 0px rgba(255, 255, 255, 0), 0 55px 35px -20px rgba(0, 0, 0, 0.5);
+        transition: transform 0.5s ease, box-shadow 0.2s ease;
+        z-index: 399 !important;
+        }
+       
+        div.popupstation23:hover,
+        div.popupstation233:hover {
+        box-shadow: -20px -20px 30px -25px var(--color1), 20px 20px 30px -25px var(--color2), -7px -7px 10px -5px var(--color1), 7px 7px 10px -5px var(--color2), 0 0 13px 4px rgba(255, 255, 255, 0.3), 0 55px 35px -20px rgba(0, 0, 0, 0.5);
+        }
+
+        div.popupstation23.active:after,
+        div.popupstation23:hover:after,
+        div.popupstation233.active,
+        div.popupstation233:hover {
+        filter: brightness(1) contrast(1);
+        opacity: 1;
+        }
+
+        div.popupstation23.active,
+        div.popupstation23:hover,
+        div.popupstation233.active,
+        div.popupstation233:hover {
+        -webkit-animation: none;
+                animation: none;
+        transition: box-shadow 0.1s ease-out;
+        }
+
+        a.reviews {
+        margin: auto -30%;
+        top:-75%;
+        width:100%;
+        font-size: 60%;
+        padding:0%;
+        color: black;
+        position: relative;
+        text-align: center;
+        z-index: 1;
+        text-decoration:none;
+        font-family: "Montserrat", sans-serif;
+        text-shadow: 1px 1px #F5DCAC;
+        }
+        
+        a.reviews:hover,
+        a:active {
+        color: blue;
+        z-index: 200;
+        }
+
+        .popupstation23 {
+        width: 100%;
+        width: 580px;
+        left:-50%;
+        top: 10%;
+        background: #fff;
+        border-radius: 0.4em;
+        z-index: 1;
+        padding-bottom: 0.5px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 0.5px;
+        }
+
+        .popupstation233 {
+        width: 100%;
+        width: 580px;
+        left:-550px;
+        top: 10%;
+        background: #fff;
+        border-radius: 0.4em;
+        z-index: 1;
+        padding-bottom: 0.5px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 0.5px;
+        }
+
+        .wrapperstation23:hover .popupstation23 {
+        display: block;
+        
+        }
+
+        .wrapperstation23:hover .popupstation233 {
+        display: block;
+        
+        }
+        .wrapperstation23:hover .reviews {
+        color: blue;
+        }
+
+        :root {
+        --color1: rgb(0, 231, 255);
+        --color2: rgb(255, 0, 231);
+        }
+
+        .rwd-table {
+        margin: 5px -10px;
+        width:103.7%;
+        min-width: 300px;
+        font-size: 70%;
+        }
+        .rwd-table tr {
+        border-top: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+        }
+        .rwd-table th {
+        display: none;
+        }
+        .rwd-table td {
+        display: block;
+        }
+        .rwd-table td:first-child {
+        padding-top: 0;
+        }
+        .rwd-table td:last-child {
+        padding-bottom: 0;
+        }
+        .rwd-table td:before {
+        font-weight: bold;
+        width: 6.5em;
+        display: inline-block;
+        }
+        @media (min-width: 480px) {
+        .rwd-table td:before {
+            display: none;
+        }
+        }
+        .rwd-table th,
+        .rwd-table td {
+        text-align: left;
+        }
+        @media (min-width: 480px) {
+        .rwd-table th,
+        .rwd-table td {
+            display: table-cell;
+            padding: 0.25em 0.5em;
+        }
+        .rwd-table th:first-child,
+        .rwd-table td:first-child {
+            padding-left: 0;
+        }
+        .rwd-table th:last-child,
+        .rwd-table td:last-child {
+            padding-right: 0;
+        }
+        }
+
+        .rwd-table {
+        background: #34495e;
+        color: #fff;
+        border-radius: 0.4em;
+        overflow: hidden;
+        }
+
+        .rwd-table tr {
+        border-color: #46637f;
+        }
+        
+        @media (min-width: 480px) {
+        .rwd-table th,
+        .rwd-table td {
+            padding: 1em !important;
+        }
+        }
+        .rwd-table th,
+        .rwd-table td:before {
+        color: #dd5;
+        }
+
+        .containerstrip{
+            position: absolute;
+            margin-top:-52%;
+
+            width:100%;
+            height:15px;
+            background-color: green;
+
+        }
+    
+</style>
+<body>
+    <div class="containersmall1" style="position:absolute;width:60%;height:20%;background-color:lightgrey;left:25%;top:70%;padding: 1%;">
+        <p style="color: blue;font-size: 100%;font-family: Montserrat, sans-serif;border: 2px dotted black;text-align:center;" >
+            <img src="media/computer3grey.jpg" alt="" style="width:50px;height:50px;padding: 0%;">
+            <span class="text111" style="color: blue;font-size: 120%;">Network/CPU 1</span>
+        </p>
+        <p style="color: blue;font-size: 100%;font-family: Montserrat, sans-serif;border: 2px dotted black;">
+            <img src="media/barcode2.png" alt="" style="width:50px;height:50px;padding: 0%;">
+            <span class="text111" style="color: blue;font-size: 120%;">Scanner</span>
+        </p>
+        <p style="color: blue;font-size: 100%;font-family: Montserrat, sans-serif;border: 2px dotted black;">
+            <img src="media/screwdriver.png" alt="" style="width:50px;height:50px;padding: 0%;">
+            <span class="text111" style="color: blue;font-size: 120%;">Screw Driver</span>
+        </p>
+        <p style="color: blue;font-size: 100%;font-family: Montserrat, sans-serif;border: 2px dotted black;">
+            <img src="media/tape.png" alt="" style="width:50px;height:50px;padding: 0%;">
+            <span class="text111" style="color: blue;font-size: 120%;">Tape Dispenser</span>
+        </p>
+        <p style="color: blue;font-size: 100%;font-family: Montserrat, sans-serif;border: 2px dotted black;">
+            <img src="media/star.png" alt="" style="width:50px;height:50px;padding: 0%;">
+            <span class="text111" style="color: blue;font-size: 120%;">E-SOP Network & Electrical point</span>
+        
+        </p>
+
+        
+        </div>
+
+        
+   <div class="container">    
+        
+        <div class="containersmall">
+        <div class="boxlifter">
+         <img src="media/xvariable.png" alt=""> 
+        </div>
+        <div class="boxyellow">
+
+                
+            <div id="flip00" class="card" onclick="run(this)">
+                
+                <div class="card__front" style="color: black;background-color: grey;">
+                    <a style="transform: rotate();top:60%;text-align: left;place-content: CUC9;">
+                    
+                    
+                        
+                            <div class="btnforsvg" style=""><img src="media/robotarm.gif" alt="" style="">
+                              <div class="icon"></div>
+                              <div class="text"><img src="media/robotarm.gif" alt="" style="width:80%;height:80%;"></div>
+                            </div>
+                          
+                    
+                    
+                    
+                    
+                   
+                        <div class="wrapperstation23" style="background-color: transparent;" ><a class="reviews">1
+                            <div class="popupstation23">
+                                <table class="rwd-table" style="font-size:130%;">
+                                    <tr>
+                                        <th>NAME</th>
+                                        <th>TOTAL IN</th>
+                                        <th>PASS</th>
+                                        <th>FAIL</th>
+                                        <th>LAST STOP</th>
+                                        <th>STATUS</th>
+                                      </tr>
+                                      <tr>
+                                        <td>CUC9</td>
+                                        <td>1000</td>
+                                        <td>997</td>
+                                        <td>3</td>
+                                        <td>3 mins</td>
+                                        <td id="redalerttable5" style="background:green;color:white;border-radius:0.4em;">Run</td>
+                                      </tr>
+                                </table> 
+                            </div></a></div>
+                    </div>
+                <div class="card__back"  style="background-color: white;">
+                    <div style="text-align:center;"></div>
+                    
+                    
+
+                </div>
+              </div>
+              
+            
+              <script>
+                function run(self){
+                    self.classList.toggle('card--flipped');
+                }
+               
+              </script>
+            
+        </a>
+        </div>
+        <div class="boxgrey">
+        <div id="flip0" class="card" onclick="run(this)">
+            <div class="card__front" style="color: black;background-color: grey;">
+                
+                <a style="transform: rotate();top:60%;text-align: left;place-content: CUC9;">
+                
+                    <div class="btnforsvg" ><img src="media/robotarm.gif" alt="" style="z-index:1;">
+                        <div class="icon"></div>
+                        <div class="text"><img src="media/robotarm.gif" alt="" style="width:80%;height:80%;"></div>
+                      </div>
+                </a>
+                    <div class="wrapperstation23" style="background-color: transparent;"><a class="reviews" >2
+                        <div class="popupstation23">
+                            <table class="rwd-table" style="font-size:130%;">
+                                <tr>
+                                    <th>NAME</th>
+                                    <th>TOTAL IN</th>
+                                    <th>PASS</th>
+                                    <th>FAIL</th>
+                                    <th>LAST STOP</th>
+                                    <th>STATUS</th>
+                                  </tr>
+                                  <tr>
+                                    <td>CUC9</td>
+                                    <td>1000</td>
+                                    <td>997</td>
+                                    <td>3</td>
+                                    <td>3 mins</td>
+                                    <td id="redalerttable5" style="background:green;color:white;border-radius:0.4em;">Run</td>
+                                  </tr>
+                            </table> 
+                        </div></a></div>
+                </div>
+            <div class="card__back"  style="background-color: white;">
+                <div style="text-align:center;"></div>
+                
+                
+
+            </div>
+          </div>
+          
+        
+        </div>
+        <div class="boxblue">
+        <a style="font-size: 13px;transform:rotate(-90deg);margin:80% -250%;width:600%;"> LS JIG STRUCTURE</a>
+        </div>
+        <div class="boxgrey">
+        <div id="flip1" class="card" onclick="run(this)">
+            <div class="card__front" style="color: black;background-color: grey;">
+                
+                <a style="transform: rotate();top:60%;text-align: left;place-content: CUC9;">
+                
+                    <div class="btnforsvg"><img src="media/robotarm.gif" alt="">
+                        <div class="icon"></div>
+                        <div class="text"><img src="media/robotarm.gif" alt="" style="width:80%;height:80%;"></div>
+                      </div>
+                    
+                
+                </a>
+                    <div class="wrapperstation23" style="background-color: transparent;"><a class="reviews">4
+                        <div class="popupstation23">
+                            <table class="rwd-table" style="font-size:130%;">
+                                <tr>
+                                    <th>NAME</th>
+                                    <th>TOTAL IN</th>
+                                    <th>PASS</th>
+                                    <th>FAIL</th>
+                                    <th>LAST STOP</th>
+                                    <th>STATUS</th>
+                                  </tr>
+                                  <tr>
+                                    <td>CUC9</td>
+                                    <td>1000</td>
+                                    <td>997</td>
+                                    <td>3</td>
+                                    <td>3 mins</td>
+                                    <td id="redalerttable5" style="background:green;color:white;border-radius:0.4em;">Run</td>
+                                  </tr>
+                            </table> 
+                        </div></a></div>
+                </div>
+            <div class="card__back"  style="background-color: white;">
+                <div style="text-align:center;"></div>
+                
+                
+
+            </div>
+          </div>
+        </div>
+        <div class="boxgrey">
+        <div id="flip2" class="card" onclick="run(this)">
+            <div class="card__front" style="color: black;background-color: grey;">
+                
+                <a style="transform: rotate();top:60%;text-align: left;place-content: CUC9;">
+                
+                    <div class="btnforsvg" style=""><img src="media/robotarm.gif" alt="" style="">
+                        <div class="icon"></div>
+                        <div class="text"><img src="media/robotarm.gif" alt="" style="width:80%;height:80%;"></div>
+                      </div>
+                    </a>
+                    <div class="wrapperstation23" style="background-color: transparent;"><a class="reviews">5
+                        <div class="popupstation23">
+                            <table class="rwd-table" style="font-size:130%;">
+                                <tr>
+                                    <th>NAME</th>
+                                    <th>TOTAL IN</th>
+                                    <th>PASS</th>
+                                    <th>FAIL</th>
+                                    <th>LAST STOP</th>
+                                    <th>STATUS</th>
+                                  </tr>
+                                  <tr>
+                                    <td>CUC9</td>
+                                    <td>1000</td>
+                                    <td>997</td>
+                                    <td>3</td>
+                                    <td>3 mins</td>
+                                    <td id="redalerttable5" style="background:green;color:white;border-radius:0.4em;">Run</td>
+                                  </tr>
+                            </table> 
+                        </div></a></div>
+                </div>
+            <div class="card__back"  style="background-color: white;">
+                <div style="text-align:center;"><img src="media/barcode2.png" alt="" style="width:75%;height:20%;">
+                    <img src="media/computer3.png" alt="" style="width:70%;height:20%;"></div>
+                
+                
+
+            </div>
+          </div>
+        </div>
+        <div class="boxgrey">
+        <div id="flip3" class="card" onclick="run(this)">
+            <div class="card__front" style="color: black;background-color: grey;">
+                
+                <a style="transform: rotate();top:60%;text-align: left;place-content: CUC9;">
+                    <div class="btnforsvg" style=""><img src="media/robotarm.gif" alt="" style="">
+                        <div class="icon"></div>
+                        <div class="text"><img src="media/robotarm.gif" alt="" style="width:80%;height:80%;"></div>
+                      </div>
+                    
+                
+                </a>
+                    <div class="wrapperstation23" style="background-color: transparent;"><a class="reviews">6
+                        <div class="popupstation23">
+                            <table class="rwd-table" style="font-size:130%;">
+                                <tr>
+                                    <th>NAME</th>
+                                    <th>TOTAL IN</th>
+                                    <th>PASS</th>
+                                    <th>FAIL</th>
+                                    <th>LAST STOP</th>
+                                    <th>STATUS</th>
+                                  </tr>
+                                  <tr>
+                                    <td>CUC9</td>
+                                    <td>1000</td>
+                                    <td>997</td>
+                                    <td>3</td>
+                                    <td>3 mins</td>
+                                    <td id="redalerttable5" style="background:green;color:white;border-radius:0.4em;">Run</td>
+                                  </tr>
+                            </table> 
+                        </div></a></div>
+                </div>
+            <div class="card__back"  style="background-color: white;">
+                <div style="text-align:center;"></div>
+                
+                
+
+            </div>
+          </div>
+        </div>
+        <div class="boxyellow">
+        <div id="flip4" class="card" onclick="run(this)">
+            <div class="card__front" style="color: black;background-color: yellow;">
+                
+                <a style="transform: rotate();top:60%;text-align: left;place-content: CUC9;">
+                    
+                    <div class="btnforsvg" style="background-color: yellow;"><img src="media/operator.gif" alt="" style="width:80%;height:80%;margin:20% 22%;">
+                        <div class="icon"></div>
+                        <div class="text"></div>
+                      </div>
+                    
+                    </a>
+                    <div class="wrapperstation23" style="background-color: transparent;"><a class="reviews">7
+                        <div class="popupstation23">
+                            <table class="rwd-table" style="font-size:130%;">
+                                <tr>
+                                    <th>NAME</th>
+                                    <th>TOTAL IN</th>
+                                    <th>PASS</th>
+                                    <th>FAIL</th>
+                                    <th>LAST STOP</th>
+                                    <th>STATUS</th>
+                                  </tr>
+                                  <tr>
+                                    <td>CUC9</td>
+                                    <td>1000</td>
+                                    <td>997</td>
+                                    <td>3</td>
+                                    <td>3 mins</td>
+                                    <td id="redalerttable5" style="background:green;color:white;border-radius:0.4em;">Run</td>
+                                  </tr>
+                            </table> 
+                        </div></a></div>
+                </div>
+            <div class="card__back"  style="background-color: white;">
+                <div style="text-align:center;"></div>
+                
+                
+
+            </div>
+          </div>
+        </div>
+        <div class="boxgrey">
+        <div id="flip5" class="card" onclick="run(this)">
+            <div class="card__front" style="color: black;background-color: grey;">
+                
+                <a style="transform: rotate();top:60%;text-align: left;place-content: CUC9;">
+                    <div class="btnforsvg" style=""><img src="media/robotarm.gif" alt="" style="">
+                        <div class="icon"></div>
+                        <div class="text"><img src="media/robotarm.gif" alt="" style="width:80%;height:80%;"></div>
+                      </div>
+                
+                </a>
+                    <div class="wrapperstation23" style="background-color: transparent;"><a class="reviews">8
+                        <div class="popupstation23">
+                            <table class="rwd-table" style="font-size:130%;">
+                                <tr>
+                                    <th>NAME</th>
+                                    <th>TOTAL IN</th>
+                                    <th>PASS</th>
+                                    <th>FAIL</th>
+                                    <th>LAST STOP</th>
+                                    <th>STATUS</th>
+                                  </tr>
+                                  <tr>
+                                    <td>CUC9</td>
+                                    <td>1000</td>
+                                    <td>997</td>
+                                    <td>3</td>
+                                    <td>3 mins</td>
+                                    <td id="redalerttable5" style="background:green;color:white;border-radius:0.4em;">Run</td>
+                                  </tr>
+                            </table> 
+                        </div></a></div>
+                </div>
+            <div class="card__back"  style="background-color: white;">
+                <div style="text-align:center;"></div>
+                
+                
+
+            </div>
+          </div>
+        </div>
+        <div class="boxyellow">
+        <div id="flip6" class="card" onclick="run(this)">
+            <div class="card__front" style="color: black;background-color: yellow;">
+                
+                <a style="transform: rotate();top:60%;text-align: left;place-content: CUC9;">
+                    <div class="btnforsvg" style="background-color: yellow;"><img src="media/robotarm.gif" alt="" style="">
+                        <div class="icon"></div>
+                        <div class="text"><img src="media/robotarm.gif" alt="" style="width:80%;height:80%;"></div>
+                      </div>
+                
+                </a>
+                    <div class="wrapperstation23" style="background-color: transparent;"><a class="reviews">9
+                        <div class="popupstation23">
+                            <table class="rwd-table" style="font-size:130%;">
+                                <tr>
+                                    <th>NAME</th>
+                                    <th>TOTAL IN</th>
+                                    <th>PASS</th>
+                                    <th>FAIL</th>
+                                    <th>LAST STOP</th>
+                                    <th>STATUS</th>
+                                  </tr>
+                                  <tr>
+                                    <td>CUC9</td>
+                                    <td>1000</td>
+                                    <td>997</td>
+                                    <td>3</td>
+                                    <td>3 mins</td>
+                                    <td id="redalerttable5" style="background:green;color:white;border-radius:0.4em;">Run</td>
+                                  </tr>
+                            </table> 
+                        </div></a></div>
+                </div>
+            <div class="card__back"  style="background-color: white;">
+                <div style="text-align:center;"></div>
+                
+                
+
+            </div>
+          </div>
+        </div>
+        <div class="boxgrey" style="width:3.5%">
+        <div id="flip7" class="card" onclick="run(this)">
+            <div class="card__front" style="color: black;background-color: grey;">
+                
+                <a style="transform: rotate();top:60%;text-align: left;place-content: CUC9;">
+                    <div class="btnforsvg" style=""><img src="media/operator.gif" alt="" style="width:80%;height:80%;margin:20% 29%;">
+                        <div class="icon"></div>
+                        <div class="text"></div>
+                      </div>
+                </a>
+                    <div class="wrapperstation23" style="background-color: transparent;"><a class="reviews">10
+                        <div class="popupstation23">
+                            <table class="rwd-table" style="font-size:130%;">
+                                <tr>
+                                    <th>NAME</th>
+                                    <th>TOTAL IN</th>
+                                    <th>PASS</th>
+                                    <th>FAIL</th>
+                                    <th>LAST STOP</th>
+                                    <th>STATUS</th>
+                                  </tr>
+                                  <tr>
+                                    <td>CUC9</td>
+                                    <td>1000</td>
+                                    <td>997</td>
+                                    <td>3</td>
+                                    <td>3 mins</td>
+                                    <td id="redalerttable5" style="background:green;color:white;border-radius:0.4em;">Run</td>
+                                  </tr>
+                            </table> 
+                        </div></a></div>
+                </div>
+            <div class="card__back"  style="background-color: white;">
+                <div style="text-align:center;"><img src="media/barcode2.png" alt="" style="width:75%;height:20%;">
+                    <img src="media/computer3.png" alt="" style="width:70%;height:20%;"></div>
+                
+                
+
+            </div>
+          </div>
+        </div>
+        <div class="boxgrey">
+        <div id="flip8" class="card" onclick="run(this)">
+            <div class="card__front" style="color: black;background-color: grey;">
+                
+                <a style="transform: rotate();top:60%;text-align: left;place-content: CUC9;">
+                    <div class="btnforsvg" style=""><img src="media/robotarm.gif" alt="" style="">
+                        <div class="icon"></div>
+                        <div class="text"><img src="media/robotarm.gif" alt="" style="width:80%;height:80%;"></div>
+                      </div>
+                </a>
+                    <div class="wrapperstation23" style="background-color: transparent;"><a class="reviews">11
+                        <div class="popupstation23">
+                            <table class="rwd-table" style="font-size:130%;">
+                                <tr>
+                                    <th>NAME</th>
+                                    <th>TOTAL IN</th>
+                                    <th>PASS</th>
+                                    <th>FAIL</th>
+                                    <th>LAST STOP</th>
+                                    <th>STATUS</th>
+                                  </tr>
+                                  <tr>
+                                    <td>CUC9</td>
+                                    <td>1000</td>
+                                    <td>997</td>
+                                    <td>3</td>
+                                    <td>3 mins</td>
+                                    <td id="redalerttable5" style="background:green;color:white;border-radius:0.4em;">Run</td>
+                                  </tr>
+                            </table> 
+                        </div></a></div>
+                </div>
+            <div class="card__back"  style="background-color: white;">
+                <div style="text-align:center;"></div>
+                
+                
+
+            </div>
+          </div>
+        </div>
+        <div class="boxgrey">
+        <div id="flip9" class="card" onclick="run(this)">
+            <div class="card__front" style="color: black;background-color: grey;">
+                
+                <a style="transform: rotate();top:60%;text-align: left;place-content: CUC9;">
+                    <div class="btnforsvg" style=""><img src="media/robotarm.gif" alt="" style="">
+                        <div class="icon"></div>
+                        <div class="text"><img src="media/robotarm.gif" alt="" style="width:80%;height:80%;"></div>
+                      </div>
+                </a>
+                    <div class="wrapperstation23" style="background-color: transparent;"><a class="reviews">12
+                        <div class="popupstation23">
+                            <table class="rwd-table" style="font-size:130%;">
+                                <tr>
+                                    <th>NAME</th>
+                                    <th>TOTAL IN</th>
+                                    <th>PASS</th>
+                                    <th>FAIL</th>
+                                    <th>LAST STOP</th>
+                                    <th>STATUS</th>
+                                  </tr>
+                                  <tr>
+                                    <td>CUC9</td>
+                                    <td>1000</td>
+                                    <td>997</td>
+                                    <td>3</td>
+                                    <td>3 mins</td>
+                                    <td id="redalerttable5" style="background:green;color:white;border-radius:0.4em;">Run</td>
+                                  </tr>
+                            </table> 
+                        </div></a></div>
+                </div>
+            <div class="card__back"  style="background-color: white;">
+                <div style="text-align:center;"></div>
+                
+                
+
+            </div>
+          </div>
+        </div>
+        <div class="boxgrey">
+        <div id="flip10" class="card" onclick="run(this)">
+            <div class="card__front" style="color: black;background-color: red;">
+                
+                <a style="transform: rotate();top:60%;text-align: left;place-content: CUC9;">
+                    <div class="btnforsvg" style="background-color: red;"><img src="media/robotarmframe/frame_25_delay-0.04s.gif" alt="" style="">
+                        <div class="icon"></div>
+                        <div class="text"></div>
+                      </div>
+                    </a>
+                    <div class="wrapperstation23" style="background-color: transparent;"><a class="reviews">13
+                        <div class="popupstation23">
+                            <table class="rwd-table" style="font-size:130%;">
+                                <tr>
+                                    <th>NAME</th>
+                                    <th>TOTAL IN</th>
+                                    <th>PASS</th>
+                                    <th>FAIL</th>
+                                    <th>LAST STOP</th>
+                                    <th>STATUS</th>
+                                  </tr>
+                                  <tr>
+                                    <td>CUC9</td>
+                                    <td>1000</td>
+                                    <td>997</td>
+                                    <td>3</td>
+                                    <td>3 mins</td>
+                                    <td id="redalerttable5" style="background:green;color:white;border-radius:0.4em;">Run</td>
+                                  </tr>
+                            </table> 
+                        </div></a></div>
+                </div>
+            <div class="card__back"  style="background-color: white;">
+                <div style="text-align:center;"></div>
+                
+                
+
+            </div>
+          </div>
+        </div>
+        <div class="boxgrey" style="width:3.5%">
+        <div id="flip11" class="card" onclick="run(this)">
+            <div class="card__front" style="color: black;background-color: red;">
+                
+                <a style="transform: rotate();top:60%;text-align: left;place-content: CUC9;">
+                    <div class="btnforsvg" style="background-color: red;"><img src="media/robotarmstop.png" alt="" style="">
+                        <div class="icon"></div>
+                        <div class="text"></div>
+                      </div>    
+                
+                </a>
+                    <div class="wrapperstation23" style="background-color: transparent;"><a class="reviews">14
+                        <div class="popupstation23">
+                            <table class="rwd-table" style="font-size:130%;">
+                                <tr>
+                                    <th>NAME</th>
+                                    <th>TOTAL IN</th>
+                                    <th>PASS</th>
+                                    <th>FAIL</th>
+                                    <th>LAST STOP</th>
+                                    <th>STATUS</th>
+                                  </tr>
+                                  <tr>
+                                    <td>CUC9</td>
+                                    <td>1000</td>
+                                    <td>997</td>
+                                    <td>3</td>
+                                    <td>3 mins</td>
+                                    <td id="redalerttable5" style="background:green;color:white;border-radius:0.4em;">Run</td>
+                                  </tr>
+                            </table> 
+                        </div></a></div>
+                </div>
+            <div class="card__back"  style="background-color: white;">
+                <div style="text-align:center;"><img src="media/barcode2.png" alt="" style="width:75%;height:20%;">
+                    <img src="media/computer3.png" alt="" style="width:70%;height:20%;"></div>
+                
+                
+
+            </div>
+          </div>
+        </div>
+        <div class="boxlifter">
+         <img src="media/xvariable.png" alt=""> 
+        </div>
+        <div class="boxlifter">
+         <img src="media/xvariable.png" alt=""> 
+        </div>
+        <div class="boxgrey">
+        <div id="flip12" class="card" onclick="run(this)">
+            <div class="card__front" style="color: black;background-color: grey;">
+                
+                <a style="transform: rotate();top:60%;text-align: left;place-content: CUC9;">
+                    <div class="btnforsvg" style=""><img src="media/robotarm.gif" alt="" style="">
+                        <div class="icon"></div>
+                        <div class="text"><img src="media/robotarm.gif" alt="" style="width:80%;height:80%;"></div>
+                      </div>
+                </a>
+                    <div class="wrapperstation23" style="background-color: transparent;"><a class="reviews">1
+                        <div class="popupstation23">
+                            <table class="rwd-table" style="font-size:130%;">
+                                <tr>
+                                    <th>NAME</th>
+                                    <th>TOTAL IN</th>
+                                    <th>PASS</th>
+                                    <th>FAIL</th>
+                                    <th>LAST STOP</th>
+                                    <th>STATUS</th>
+                                  </tr>
+                                  <tr>
+                                    <td>CUC9</td>
+                                    <td>1000</td>
+                                    <td>997</td>
+                                    <td>3</td>
+                                    <td>3 mins</td>
+                                    <td id="redalerttable5" style="background:green;color:white;border-radius:0.4em;">Run</td>
+                                  </tr>
+                            </table> 
+                        </div></a></div>
+                </div>
+            <div class="card__back"  style="background-color: white;">
+                <div style="text-align:center;"><img src="media/barcode2.png" alt="" style="width:75%;height:20%;">
+                    <img src="media/computer3.png" alt="" style="width:70%;height:20%;"></div>
+                
+                
+
+            </div>
+          </div>
+        </div>
+        <div class="boxgrey" style="width:3.5%">
+        <div id="flip13" class="card" onclick="run(this)">
+            <div class="card__front" style="color: black;background-color: red;">
+                
+                <a style="transform: rotate();top:60%;text-align: left;place-content: CUC9;">
+                    <div class="btnforsvg" style="background-color: red;"><img src="media/robotarmframe/frame_23_delay-0.04s.gif" alt="" style="">
+                        <div class="icon"></div>
+                        <div class="text"></div>
+                      </div>
+                    </a>
+                    <div class="wrapperstation23" style="background-color: transparent;"><a class="reviews">2
+                        <div class="popupstation23">
+                            <table class="rwd-table" style="font-size:130%;">
+                                <tr>
+                                    <th>NAME</th>
+                                    <th>TOTAL IN</th>
+                                    <th>PASS</th>
+                                    <th>FAIL</th>
+                                    <th>LAST STOP</th>
+                                    <th>STATUS</th>
+                                  </tr>
+                                  <tr>
+                                    <td>CUC9</td>
+                                    <td>1000</td>
+                                    <td>997</td>
+                                    <td>3</td>
+                                    <td>3 mins</td>
+                                    <td id="redalerttable5" style="background:green;color:white;border-radius:0.4em;">Run</td>
+                                  </tr>
+                            </table> 
+                        </div></a></div>
+                </div>
+            <div class="card__back"  style="background-color: white;">
+                <div style="text-align:center;"></div>
+                
+                
+
+            </div>
+          </div>
+        </div>
+        <div class="boxgrey">
+        <div id="flip14" class="card" onclick="run(this)">
+            <div class="card__front" style="color: black;background-color: grey;">
+                
+                <a style="transform: rotate();top:60%;text-align: left;place-content: CUC9;"><div class="btnforsvg" style=""><img src="media/robotarm.gif" alt="" style="">
+                    <div class="icon"></div>
+                    <div class="text"><img src="media/robotarm.gif" alt="" style="width:80%;height:80%;"></div>
+                  </div>
+                </a>
+                    <div class="wrapperstation23" style="background-color: transparent;"><a class="reviews">3
+                        <div class="popupstation23">
+                            <table class="rwd-table" style="font-size:130%;">
+                                <tr>
+                                    <th>NAME</th>
+                                    <th>TOTAL IN</th>
+                                    <th>PASS</th>
+                                    <th>FAIL</th>
+                                    <th>LAST STOP</th>
+                                    <th>STATUS</th>
+                                  </tr>
+                                  <tr>
+                                    <td>CUC9</td>
+                                    <td>1000</td>
+                                    <td>997</td>
+                                    <td>3</td>
+                                    <td>3 mins</td>
+                                    <td id="redalerttable5" style="background:green;color:white;border-radius:0.4em;">Run</td>
+                                  </tr>
+                            </table> 
+                        </div></a></div>
+                </div>
+            <div class="card__back"  style="background-color: white;">
+                <div style="text-align:center;"><img src="media/barcode2.png" alt="" style="width:75%;height:20%;">
+                    <img src="media/computer3.png" alt="" style="width:70%;height:20%;"></div>
+                
+                
+
+            </div>
+          </div>
+        </div>
+        <div class="boxgrey">
+        <div id="flip15" class="card" onclick="run(this)">
+            <div class="card__front" style="color: black;background-color: grey;">
+                
+                <a style="transform: rotate();top:60%;text-align: left;place-content: CUC9;"><div class="btnforsvg" style=""><img src="media/robotarm.gif" alt="" style="">
+                    <div class="icon"></div>
+                    <div class="text"><img src="media/robotarm.gif" alt="" style="width:80%;height:80%;"></div>
+                  </div>
+                </a>
+                    <div class="wrapperstation23" style="background-color: transparent;"><a class="reviews">4
+                        <div class="popupstation23">
+                            <table class="rwd-table" style="font-size:130%;">
+                                <tr>
+                                    <th>NAME</th>
+                                    <th>TOTAL IN</th>
+                                    <th>PASS</th>
+                                    <th>FAIL</th>
+                                    <th>LAST STOP</th>
+                                    <th>STATUS</th>
+                                  </tr>
+                                  <tr>
+                                    <td>CUC9</td>
+                                    <td>1000</td>
+                                    <td>997</td>
+                                    <td>3</td>
+                                    <td>3 mins</td>
+                                    <td id="redalerttable5" style="background:green;color:white;border-radius:0.4em;">Run</td>
+                                  </tr>
+                            </table> 
+                        </div></a></div>
+                </div>
+            <div class="card__back"  style="background-color: white;">
+                <div style="text-align:center;"><img src="media/barcode2.png" alt="" style="width:75%;height:20%;">
+                    <img src="media/computer3.png" alt="" style="width:70%;height:20%;"></div>
+                
+                
+
+            </div>
+          </div>
+        </div>
+        <div class="boxgrey">
+        <div id="flip16" class="card" onclick="run(this)">
+            <div class="card__front" style="color: black;background-color: grey;">
+                
+                <a style="transform: rotate();top:60%;text-align: left;place-content: CUC9;">
+                    <div class="btnforsvg" style=""><img src="media/robotarm.gif" alt="" style="">
+                        <div class="icon"></div>
+                        <div class="text"><img src="media/robotarm.gif" alt="" style="width:80%;height:80%;"></div>
+                      </div>
+                    </a>
+                    <div class="wrapperstation23" style="background-color: transparent;"><a class="reviews">5
+                        <div class="popupstation23">
+                            <table class="rwd-table" style="font-size:130%;">
+                                <tr>
+                                    <th>NAME</th>
+                                    <th>TOTAL IN</th>
+                                    <th>PASS</th>
+                                    <th>FAIL</th>
+                                    <th>LAST STOP</th>
+                                    <th>STATUS</th>
+                                  </tr>
+                                  <tr>
+                                    <td>CUC9</td>
+                                    <td>1000</td>
+                                    <td>997</td>
+                                    <td>3</td>
+                                    <td>3 mins</td>
+                                    <td id="redalerttable5" style="background:green;color:white;border-radius:0.4em;">Run</td>
+                                  </tr>
+                            </table> 
+                        </div></a></div>
+                </div>
+            <div class="card__back"  style="background-color: white;">
+                <div style="text-align:center;"><img src="media/barcode2.png" alt="" style="width:75%;height:20%;">
+                    <img src="media/computer3.png" alt="" style="width:70%;height:20%;"></div>
+                
+                
+
+            </div>
+          </div>
+        </div>
+        <div class="boxgrey">
+        <div id="flip17" class="card" onclick="run(this)">
+            <div class="card__front" style="color: black;background-color: grey;">
+                
+                <a style="transform: rotate();top:60%;text-align: left;place-content: CUC9;">
+                    <div class="btnforsvg" style=""><img src="media/robotarm.gif" alt="" style="">
+                        <div class="icon"></div>
+                        <div class="text"><img src="media/robotarm.gif" alt="" style="width:80%;height:80%;"></div>
+                      </div>
+                    </a>
+                    <div class="wrapperstation23" style="background-color: transparent;"><a class="reviews">6
+                        <div class="popupstation23">
+                            <table class="rwd-table" style="font-size:130%;">
+                                <tr>
+                                    <th>NAME</th>
+                                    <th>TOTAL IN</th>
+                                    <th>PASS</th>
+                                    <th>FAIL</th>
+                                    <th>LAST STOP</th>
+                                    <th>STATUS</th>
+                                  </tr>
+                                  <tr>
+                                    <td>CUC9</td>
+                                    <td>1000</td>
+                                    <td>997</td>
+                                    <td>3</td>
+                                    <td>3 mins</td>
+                                    <td id="redalerttable5" style="background:green;color:white;border-radius:0.4em;">Run</td>
+                                  </tr>
+                            </table> 
+                        </div></a></div>
+                </div>
+            <div class="card__back"  style="background-color: white;">
+                <div style="text-align:center;">
+                    <img src="media/computer3.png" alt="" style="width:70%;height:20%;"></div>
+                
+                
+
+            </div>
+          </div>
+        </div>
+        <div class="boxgrey">
+        <div id="flip18" class="card" onclick="run(this)">
+            <div class="card__front" style="color: black;background-color: grey;">
+                
+                <a style="transform: rotate();top:60%;text-align: left;place-content: CUC9;">
+                    <div class="btnforsvg" style=""><img src="media/robotarm.gif" alt="" style="">
+                        <div class="icon"></div>
+                        <div class="text"><img src="media/robotarm.gif" alt="" style="width:80%;height:80%;"></div>
+                      </div>
+                    </a>
+                    <div class="wrapperstation23" style="background-color: transparent;"><a class="reviews">7
+                        <div class="popupstation23">
+                            <table class="rwd-table" style="font-size:130%;">
+                                <tr>
+                                    <th>NAME</th>
+                                    <th>TOTAL IN</th>
+                                    <th>PASS</th>
+                                    <th>FAIL</th>
+                                    <th>LAST STOP</th>
+                                    <th>STATUS</th>
+                                  </tr>
+                                  <tr>
+                                    <td>CUC9</td>
+                                    <td>1000</td>
+                                    <td>997</td>
+                                    <td>3</td>
+                                    <td>3 mins</td>
+                                    <td id="redalerttable5" style="background:green;color:white;border-radius:0.4em;">Run</td>
+                                  </tr>
+                            </table> 
+                        </div></a></div>
+                </div>
+            <div class="card__back"  style="background-color: white;">
+                <div style="text-align:center;"><img src="media/barcode2.png" alt="" style="width:75%;height:20%;">
+                    <img src="media/computer3.png" alt="" style="width:70%;height:20%;"></div>
+                
+                
+
+            </div>
+          </div>
+        </div>
+        <div class="boxgrey">
+        <div id="flip19" class="card" onclick="run(this)">
+            <div class="card__front" style="color: black;background-color: grey;">
+                
+                <a style="transform: rotate();top:60%;text-align: left;place-content: CUC9;">
+                    <div class="btnforsvg" style=""><img src="media/robotarm.gif" alt="" style="">
+                        <div class="icon"></div>
+                        <div class="text"><img src="media/robotarm.gif" alt="" style="width:80%;height:80%;"></div>
+                      </div>
+                
+                </a>
+                    <div class="wrapperstation23" style="background-color: transparent;"><a class="reviews">8
+                        <div class="popupstation23">
+                            <table class="rwd-table" style="font-size:130%;">
+                                <tr>
+                                    <th>NAME</th>
+                                    <th>TOTAL IN</th>
+                                    <th>PASS</th>
+                                    <th>FAIL</th>
+                                    <th>LAST STOP</th>
+                                    <th>STATUS</th>
+                                  </tr>
+                                  <tr>
+                                    <td>CUC9</td>
+                                    <td>1000</td>
+                                    <td>997</td>
+                                    <td>3</td>
+                                    <td>3 mins</td>
+                                    <td id="redalerttable5" style="background:green;color:white;border-radius:0.4em;">Run</td>
+                                  </tr>
+                            </table> 
+                        </div></a></div>
+                </div>
+            <div class="card__back"  style="background-color: white;">
+                <div style="text-align:center;">
+                    <img src="media/computer3.png" alt="" style="width:70%;height:20%;"></div>
+                
+                
+
+            </div>
+          </div>
+        </div>
+        <div class="boxgrey">
+        <div id="flip20" class="card" onclick="run(this)">
+            <div class="card__front" style="color: black;background-color: grey;">
+                
+                <a style="transform: rotate();top:60%;text-align: left;place-content: CUC9;">
+                    <div class="btnforsvg" style=""><img src="media/robotarm.gif" alt="" style="">
+                        <div class="icon"></div>
+                        <div class="text"><img src="media/robotarm.gif" alt="" style="width:80%;height:80%;"></div>
+                      </div>
+                
+                </a>
+                    <div class="wrapperstation23" style="background-color: transparent;"><a class="reviews">9
+                        <div class="popupstation23">
+                            <table class="rwd-table" style="font-size:130%;">
+                                <tr>
+                                    <th>NAME</th>
+                                    <th>TOTAL IN</th>
+                                    <th>PASS</th>
+                                    <th>FAIL</th>
+                                    <th>LAST STOP</th>
+                                    <th>STATUS</th>
+                                  </tr>
+                                  <tr>
+                                    <td>CUC9</td>
+                                    <td>1000</td>
+                                    <td>997</td>
+                                    <td>3</td>
+                                    <td>3 mins</td>
+                                    <td id="redalerttable5" style="background:green;color:white;border-radius:0.4em;">Run</td>
+                                  </tr>
+                            </table> 
+                        </div></a></div>
+                </div>
+            <div class="card__back"  style="background-color: white;">
+                <div style="text-align:center;"><img src="media/barcode2.png" alt="" style="width:75%;height:20%;">
+                    </div>
+                
+                
+
+            </div>
+          </div>
+        </div>
+        <div class="boxgrey">
+        <div id="flip21" class="card" onclick="run(this)">
+            <div class="card__front" style="color: black;background-color: grey;">
+                
+                <a style="transform: rotate();top:60%;text-align: left;place-content: CUC9;">
+                    <div class="btnforsvg" style=""><img src="media/robotarm.gif" alt="" style="">
+                        <div class="icon"></div>
+                        <div class="text"><img src="media/robotarm.gif" alt="" style="width:80%;height:80%;"></div>
+                      </div>
+                
+                
+                </a>
+                    <div class="wrapperstation23" style="background-color: transparent;"><a class="reviews" style="font-size:60%;">10
+                        <div class="popupstation23" >
+                            <table class="rwd-table" style="font-size:130%;">
+                                <tr>
+                                    <th>NAME</th>
+                                    <th>TOTAL IN</th>
+                                    <th>PASS</th>
+                                    <th>FAIL</th>
+                                    <th>LAST STOP</th>
+                                    <th>STATUS</th>
+                                  </tr>
+                                  <tr>
+                                    <td>CUC9</td>
+                                    <td>1000</td>
+                                    <td>997</td>
+                                    <td>3</td>
+                                    <td>3 mins</td>
+                                    <td id="redalerttable5" style="background:green;color:white;border-radius:0.4em;">Run</td>
+                                  </tr>
+                            </table> 
+                        </div></a></div>
+                </div>
+            <div class="card__back"  style="background-color: white;">
+                <div style="text-align:center;"></div>
+                
+                
+
+            </div>
+          </div>
+        </div>
+        <div class="boxlifter">
+         <img src="media/xvariable.png" alt=""> 
+        </div>
+        <div class="boxlifter" style="height:20%;">
+         <img src="media/xvariable.png" alt=""> 
+        </div>
+        <div class="boxbeige">
+        <div id="flip22" class="card" onclick="run(this)">
+            <div class="card__front" style="color: black;background-color: E8D4AD;">
+                
+                <a style="transform: rotate();top:65%;text-align: left;place-content: CUC9;">
+                    <div class="btnforsvg" style="margin:0% 0%;background-color: #E8D4AD;">
+                        <img src="media/robotarm.gif" alt="" style="width:70%;height:50%;margin:30% 20%;">
+                        <div class="icon"></div>
+                        <div class="text"></div>
+                      </div>
+
+
+                </a>
+                    <div class="wrapperstation23" style="background-color: transparent;"><a class="reviews" style="top:-150%;">1
+                        <div class="popupstation233">
+                            <table class="rwd-table" style="font-size:130%;">
+                                <tr>
+                                    <th>NAME</th>
+                                    <th>TOTAL IN</th>
+                                    <th>PASS</th>
+                                    <th>FAIL</th>
+                                    <th>LAST STOP</th>
+                                    <th>STATUS</th>
+                                  </tr>
+                                  <tr>
+                                    <td>CUC9</td>
+                                    <td>1000</td>
+                                    <td>997</td>
+                                    <td>3</td>
+                                    <td>3 mins</td>
+                                    <td id="redalerttable5" style="background:green;color:white;border-radius:0.4em;">Run</td>
+                                  </tr>
+                            </table> 
+                        </div></a></div>
+                </div>
+            <div class="card__back"  style="background-color: white;">
+                <div style="text-align:center;"></div>
+                
+                
+
+            </div>
+          </div>
+        </div>
+        <div class="boxbeige">
+        <div id="flip23" class="card" onclick="run(this)">
+            <div class="card__front" style="color: black;background-color: E8D4AD;">
+                
+                <a style="transform: rotate();top:65%;text-align: left;place-content: CUC9;">
+                    <div class="btnforsvg" style="margin:0% 0%;background-color: #E8D4AD;">
+                        <img src="media/robotarm.gif" alt="" style="width:70%;height:50%;margin:30% 20%;">
+                        <div class="icon"></div>
+                        <div class="text"></div>
+                      </div>
+                    </a>
+                    <div class="wrapperstation23" style="background-color: transparent;"><a class="reviews" style="top:-150%;">2
+                        <div class="popupstation233">
+                            <table class="rwd-table" style="font-size:130%;">
+                                <tr>
+                                    <th>NAME</th>
+                                    <th>TOTAL IN</th>
+                                    <th>PASS</th>
+                                    <th>FAIL</th>
+                                    <th>LAST STOP</th>
+                                    <th>STATUS</th>
+                                  </tr>
+                                  <tr>
+                                    <td>CUC9</td>
+                                    <td>1000</td>
+                                    <td>997</td>
+                                    <td>3</td>
+                                    <td>3 mins</td>
+                                    <td id="redalerttable5" style="background:green;color:white;border-radius:0.4em;">Run</td>
+                                  </tr>
+                            </table> 
+                        </div></a></div>
+                </div>
+            <div class="card__back"  style="background-color: white;">
+                <div style="text-align:center;"></div>
+                
+                
+
+            </div>
+          </div>
+        </div>
+        <div class="boxbeige">
+        <div id="flip24" class="card" onclick="run(this)">
+            <div class="card__front" style="color: black;background-color: E8D4AD;">
+                
+                <a style="transform: rotate();top:65%;text-align: left;place-content: CUC9;">
+                    <div class="btnforsvg" style="margin:0% 0%;background-color: #E8D4AD;">
+                        <img src="media/robotarm.gif" alt="" style="width:70%;height:50%;margin:30% 20%;">
+                        <div class="icon"></div>
+                        <div class="text"></div>
+                      </div>
+                    
+                    </a>
+                    <div class="wrapperstation23" style="background-color: transparent;"><a class="reviews" style="top:-150%;">3
+                        <div class="popupstation233">
+                            <table class="rwd-table" style="font-size:130%;">
+                                <tr>
+                                    <th>NAME</th>
+                                    <th>TOTAL IN</th>
+                                    <th>PASS</th>
+                                    <th>FAIL</th>
+                                    <th>LAST STOP</th>
+                                    <th>STATUS</th>
+                                  </tr>
+                                  <tr>
+                                    <td>CUC9</td>
+                                    <td>1000</td>
+                                    <td>997</td>
+                                    <td>3</td>
+                                    <td>3 mins</td>
+                                    <td id="redalerttable5" style="background:green;color:white;border-radius:0.4em;">Run</td>
+                                  </tr>
+                            </table> 
+                        </div></a></div>
+                </div>
+            <div class="card__back"  style="background-color: white;">
+                <div style="text-align:center;"></div>
+                
+                
+
+            </div>
+          </div>
+        </div>
+        <div class="boxbeige">
+        <div id="flip25" class="card" onclick="run(this)">
+            <div class="card__front" style="color: black;background-color: E8D4AD;">
+                
+                <a style="transform: rotate();top:65%;text-align: left;place-content: CUC9;">
+                    <div class="btnforsvg" style="margin:0% 0%;background-color: #E8D4AD;">
+                        <img src="media/robotarm.gif" alt="" style="width:70%;height:50%;margin:30% 20%;">
+                        <div class="icon"></div>
+                        <div class="text"></div>
+                      </div>
+                </a>
+                    <div class="wrapperstation23" style="background-color: transparent;"><a class="reviews" style="top:-150%;">4
+                        <div class="popupstation233">
+                            <table class="rwd-table" style="font-size:130%;">
+                                <tr>
+                                    <th>NAME</th>
+                                    <th>TOTAL IN</th>
+                                    <th>PASS</th>
+                                    <th>FAIL</th>
+                                    <th>LAST STOP</th>
+                                    <th>STATUS</th>
+                                  </tr>
+                                  <tr>
+                                    <td>CUC9</td>
+                                    <td>1000</td>
+                                    <td>997</td>
+                                    <td>3</td>
+                                    <td>3 mins</td>
+                                    <td id="redalerttable5" style="background:green;color:white;border-radius:0.4em;">Run</td>
+                                  </tr>
+                            </table> 
+                        </div></a></div>
+                </div>
+            <div class="card__back"  style="background-color: white;">
+                <div style="text-align:center;"><img src="media/barcode2.png" alt="" style="width:55%;height:15%;">
+                    <img src="media/computer3.png" alt=""style="width:55%;height:15%;"></div>
+                
+                
+
+            </div>
+          </div>
+        </div>
+        <div class="boxbeige">
+        <div id="flip26" class="card" onclick="run(this)">
+            <div class="card__front" style="color: black;background-color: E8D4AD;">
+                
+                <a style="transform: rotate();top:65%;text-align: left;place-content: CUC9;">
+                    <div class="btnforsvg" style="margin:0% 0%;background-color: #E8D4AD;">
+                        <img src="media/robotarm.gif" alt="" style="width:70%;height:50%;margin:30% 20%;">
+                        <div class="icon"></div>
+                        <div class="text"></div>
+                      </div>
+                    </a>
+                    <div class="wrapperstation23" style="background-color: transparent;"><a class="reviews" style="top:-150%;">5
+                        <div class="popupstation233">
+                            <table class="rwd-table" style="font-size:130%;">
+                                <tr>
+                                    <th>NAME</th>
+                                    <th>TOTAL IN</th>
+                                    <th>PASS</th>
+                                    <th>FAIL</th>
+                                    <th>LAST STOP</th>
+                                    <th>STATUS</th>
+                                  </tr>
+                                  <tr>
+                                    <td>CUC9</td>
+                                    <td>1000</td>
+                                    <td>997</td>
+                                    <td>3</td>
+                                    <td>3 mins</td>
+                                    <td id="redalerttable5" style="background:green;color:white;border-radius:0.4em;">Run</td>
+                                  </tr>
+                            </table> 
+                        </div></a></div>
+                </div>
+            <div class="card__back"  style="background-color: white;">
+                <div style="text-align:center;"></div>
+                
+                
+
+            </div>
+          </div>
+        </div>
+        <div class="boxbeige">
+        <div id="flip27" class="card" onclick="run(this)">
+            <div class="card__front" style="color: black;background-color: E8D4AD;">
+                
+                <a style="transform: rotate();top:65%;text-align: left;place-content: CUC9;">
+                    <div class="btnforsvg" style="margin:0% 0%;background-color: #E8D4AD;">
+                        <img src="media/robotarm.gif" alt="" style="width:70%;height:50%;margin:30% 20%;">
+                        <div class="icon"></div>
+                        <div class="text"></div>
+                      </div>
+                    
+                    </a>
+                    <div class="wrapperstation23" style="background-color: transparent;"><a class="reviews" style="top:-150%;">6
+                        <div class="popupstation233">
+                            <table class="rwd-table" style="font-size:130%;">
+                                <tr>
+                                    <th>NAME</th>
+                                    <th>TOTAL IN</th>
+                                    <th>PASS</th>
+                                    <th>FAIL</th>
+                                    <th>LAST STOP</th>
+                                    <th>STATUS</th>
+                                  </tr>
+                                  <tr>
+                                    <td>CUC9</td>
+                                    <td>1000</td>
+                                    <td>997</td>
+                                    <td>3</td>
+                                    <td>3 mins</td>
+                                    <td id="redalerttable5" style="background:green;color:white;border-radius:0.4em;">Run</td>
+                                  </tr>
+                            </table> 
+                        </div></a></div>
+                </div>
+            <div class="card__back"  style="background-color: white;">
+                <div style="text-align:center;"></div>
+                
+                
+
+            </div>
+          </div>
+        </div>
+        <div class="boxbeige">
+        <div id="flip28" class="card" onclick="run(this)">
+            <div class="card__front" style="color: black;background-color: E8D4AD;">
+                
+                <a style="transform: rotate();top:65%;text-align: left;place-content: CUC9;">
+                    <div class="btnforsvg" style="margin:0% 0%;background-color: #E8D4AD;">
+                        <img src="media/robotarm.gif" alt="" style="width:70%;height:50%;margin:30% 20%;">
+                        <div class="icon"></div>
+                        <div class="text"></div>
+                      </div>
+                    </a>
+                    <div class="wrapperstation23" style="background-color: transparent;"><a class="reviews" style="top:-150%;">7
+                        <div class="popupstation233">
+                            <table class="rwd-table" style="font-size:130%;">
+                                <tr>
+                                    <th>NAME</th>
+                                    <th>TOTAL IN</th>
+                                    <th>PASS</th>
+                                    <th>FAIL</th>
+                                    <th>LAST STOP</th>
+                                    <th>STATUS</th>
+                                  </tr>
+                                  <tr>
+                                    <td>CUC9</td>
+                                    <td>1000</td>
+                                    <td>997</td>
+                                    <td>3</td>
+                                    <td>3 mins</td>
+                                    <td id="redalerttable5" style="background:green;color:white;border-radius:0.4em;">Run</td>
+                                  </tr>
+                            </table> 
+                        </div></a></div>
+                </div>
+            <div class="card__back"  style="background-color: white;">
+                <div style="text-align:center;"></div>
+                
+                
+
+            </div>
+          </div>
+        </div>
+        <div class="boxbeige">
+        <div id="flip29" class="card" onclick="run(this)">
+            <div class="card__front" style="color: black;background-color: E8D4AD;">
+                
+                <a style="transform: rotate();top:65%;text-align: left;place-content: CUC9;">
+                    <div class="btnforsvg" style="margin:0% 0%;background-color: #E8D4AD;">
+                        <img src="media/robotarm.gif" alt="" style="width:70%;height:50%;margin:30% 20%;">
+                        <div class="icon"></div>
+                        <div class="text"></div>
+                      </div>
+                    </a>
+                    <div class="wrapperstation23" style="background-color: transparent;"><a class="reviews" style="top:-150%;">8
+                        <div class="popupstation233">
+                            <table class="rwd-table" style="font-size:130%;">
+                                <tr>
+                                    <th>NAME</th>
+                                    <th>TOTAL IN</th>
+                                    <th>PASS</th>
+                                    <th>FAIL</th>
+                                    <th>LAST STOP</th>
+                                    <th>STATUS</th>
+                                  </tr>
+                                  <tr>
+                                    <td>CUC9</td>
+                                    <td>1000</td>
+                                    <td>997</td>
+                                    <td>3</td>
+                                    <td>3 mins</td>
+                                    <td id="redalerttable5" style="background:green;color:white;border-radius:0.4em;">Run</td>
+                                  </tr>
+                            </table> 
+                        </div></a></div>
+                </div>
+            <div class="card__back"  style="background-color: white;">
+                <div style="text-align:center;"></div>
+                
+                
+
+            </div>
+          </div>
+        </div>
+        <div class="boxbeige">
+        <div id="flip30" class="card" onclick="run(this)">
+            <div class="card__front" style="color: black;background-color: E8D4AD;">
+                
+                <a style="transform: rotate();top:65%;text-align: left;place-content: CUC9;">
+                    <div class="btnforsvg" style="margin:0% 0%;background-color: #E8D4AD;">
+                        <img src="media/robotarm.gif" alt="" style="width:70%;height:50%;margin:30% 20%;">
+    
+                      </div>
+                    </a>
+                    <div class="wrapperstation23" style="background-color: transparent;"><a class="reviews" style="top:-150%;">9
+                        <div class="popupstation233">
+                            <table class="rwd-table" style="font-size:130%;">
+                                <tr>
+                                    <th>NAME</th>
+                                    <th>TOTAL IN</th>
+                                    <th>PASS</th>
+                                    <th>FAIL</th>
+                                    <th>LAST STOP</th>
+                                    <th>STATUS</th>
+                                  </tr>
+                                  <tr>
+                                    <td>CUC9</td>
+                                    <td>1000</td>
+                                    <td>997</td>
+                                    <td>3</td>
+                                    <td>3 mins</td>
+                                    <td id="redalerttable5" style="background:green;color:white;border-radius:0.4em;">Run</td>
+                                  </tr>
+                            </table> 
+                        </div></a></div>
+                </div>
+            <div class="card__back"  style="background-color: white;">
+                <div style="text-align:center;"><img src="media/barcode2.png" alt="" style="width:55%;height:15%;">
+                    <img src="media/computer3.png" alt="" style="width:55%;height:15%;"></div>
+                
+                
+
+            </div>
+          </div>
+        </div>
+        <div class="boxlifter" style="height:20%;">
+         <img src="media/xvariable.png" alt=""> 
+        </div>
+        
+            <div class="boxbeige" style="background-image: url(media/roller2.JPG);background-size: cover;width:5%;">
+                <a></a>
+                </div>
+                <div class="boxblue" style="height:40%;">
+                    <a style="transform: rotate(-90deg);width:200%;top:40%;left:-45%;font-size: 100%;font-family: Montserrat, sans-serif;">PP BAND</a>
+                    </div>
+       </div>
+
+      
+    </div>
+    
+</body>
+
+</html>
+
+<script>
+    
+
+
+        /*setInterval(*/function run(){
+            document.getElementById("flip00").classList.toggle('card--flipped');
+            document.getElementById("flip0").classList.toggle('card--flipped');
+            document.getElementById("flip1").classList.toggle('card--flipped');
+            document.getElementById("flip2").classList.toggle('card--flipped');
+            document.getElementById("flip3").classList.toggle('card--flipped');
+            document.getElementById("flip4").classList.toggle('card--flipped');
+            document.getElementById("flip5").classList.toggle('card--flipped');
+            document.getElementById("flip6").classList.toggle('card--flipped');
+            document.getElementById("flip7").classList.toggle('card--flipped');
+            document.getElementById("flip8").classList.toggle('card--flipped');
+            document.getElementById("flip9").classList.toggle('card--flipped');
+            document.getElementById("flip10").classList.toggle('card--flipped');
+            document.getElementById("flip11").classList.toggle('card--flipped');
+            document.getElementById("flip12").classList.toggle('card--flipped');
+            document.getElementById("flip13").classList.toggle('card--flipped');
+            document.getElementById("flip14").classList.toggle('card--flipped');
+            document.getElementById("flip15").classList.toggle('card--flipped');
+            document.getElementById("flip16").classList.toggle('card--flipped');
+            document.getElementById("flip17").classList.toggle('card--flipped');
+            document.getElementById("flip18").classList.toggle('card--flipped');
+            document.getElementById("flip19").classList.toggle('card--flipped');
+            document.getElementById("flip20").classList.toggle('card--flipped');
+            document.getElementById("flip21").classList.toggle('card--flipped');
+            document.getElementById("flip22").classList.toggle('card--flipped');
+            document.getElementById("flip23").classList.toggle('card--flipped');
+            document.getElementById("flip24").classList.toggle('card--flipped');
+            document.getElementById("flip25").classList.toggle('card--flipped');
+            document.getElementById("flip26").classList.toggle('card--flipped');
+            document.getElementById("flip27").classList.toggle('card--flipped');
+            document.getElementById("flip28").classList.toggle('card--flipped');
+            document.getElementById("flip29").classList.toggle('card--flipped');
+            document.getElementById("flip30").classList.toggle('card--flipped');
+        }/*,10000);*/
+    
+
+    
+</script>

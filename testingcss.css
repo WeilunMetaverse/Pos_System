@@ -1,0 +1,107 @@
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+        }
+
+        .container{
+            width:910px;
+            height:1500px;
+            background: #222;
+            display:flex;
+            align-items: center;
+        }
+
+        .swiper{
+            width: 1010px;
+            height: fit-content;
+            
+        }
+
+        
+
+        .swiper-slide img{
+            width:100%;
+            
+        }
+
+        .swiper-button-prev {
+            background: none;
+              position: absolute;
+              content: '\f137';
+              font-family: "Font Awesome 5 Free";
+              font-weight: bold;
+              color: #fff;
+              margin-top: 10px;
+        }
+        .swiper-button-next {
+            background: none;
+              position: absolute;
+              content: '\f138';
+              font-family: "Font Awesome 5 Free";
+              font-weight: bold;
+              color: #fff;
+              margin-top: 10px;
+          }
+        
+           
+
+        div#container
+        {
+            width:max-width;
+            height:max-height;
+            /*overflow:scroll;     /* if you don't want a scrollbar, set to hidden */
+            overflow-x:hidden;   /* hides horizontal scrollbar on newer browsers */
+
+            /* resize and min-height are optional, allows user to resize viewable area */
+            -webkit-resize:vertical; 
+            -moz-resize:vertical;
+            resize:vertical;
+            min-height:317px;
+        }
+
+        iframe#embed
+        {
+            width:1847px;       /* set this to approximate width of entire page you're embedding */
+            height:930px;      /* determines where the bottom of the page cuts off */
+            margin-left:-835px; /* clipping left side of page */
+            margin-top:-110px;  /* clipping top of page */
+            overflow:hidden;
+            scroll-behavior: none;
+
+            /* resize seems to inherit in at least Firefox */
+            -webkit-resize:none;
+            -moz-resize:none;
+            resize:none;
+        }    
+
+        iframe#embed2
+        {
+            width:1847px;       /* set this to approximate width of entire page you're embedding */
+            height:1820px;      /* determines where the bottom of the page cuts off */
+            margin-left:-835px; /* clipping left side of page */
+            margin-top:-1000px;  /* clipping top of page */
+            overflow:hidden;
+            scroll-behavior: none;
+
+            /* resize seems to inherit in at least Firefox */
+            -webkit-resize:none;
+            -moz-resize:none;
+            resize:none;
+        }    
+
+        iframe#embed3
+        {
+            width:1847px;       /* set this to approximate width of entire page you're embedding */
+            height:2710px;      /* determines where the bottom of the page cuts off */
+            margin-left:-835px; /* clipping left side of page */
+            margin-top:-1890px;  /* clipping top of page */
+            overflow:hidden;
+            scroll-behavior: none;
+
+            /* resize seems to inherit in at least Firefox */
+            -webkit-resize:none;
+            -moz-resize:none;
+            resize:none;
+        } 
