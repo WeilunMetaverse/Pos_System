@@ -196,7 +196,7 @@ if (!$_SESSION["username"]) {
 				<li><a href="productionlayout.php" type="a" class="fill">Dashboard</a></li>
 				<li><a href="../internshiptask/index.php" type="a" class="fill">Production Line</a></li>
 				<li><a href="productionlayout.php" type="a" class="fill">Account</a></li>
-				<li><a href="empty_page.php" type="a" class="fill">empty_page</a></li>
+				<li><a href="Purchase1.php" type="a" class="fill">Purchase1_page</a></li>
 				<li><a href="Purchase.php" type="a" class="fill">Purchase_page</a></li>
 				<li></li>
 				<li></li>
