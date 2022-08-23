@@ -291,13 +291,79 @@ button {
   color: whitesmoke;
 }
   </style>
+
+  <style>
+    h2 {
+  font-weight: normal;
+}
+input:focus {
+  outline: none;
+}
+.list-container {
+  width: 30%;
+  margin: 0 auto;
+  padding: 5px;
+}
+.item {
+  width: 100%;
+  background: #fff;
+  border-bottom: none;
+  padding: 10px 0;
+  text-align: left;
+  margin: 5px 0;
+  color: #666;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2), 0 25px 50px 0 rgba(0,0,0,0.1);
+}
+.item .done-check {
+  width: 5%;
+  margin-left: 10px;
+}
+.item label {
+  width: 90%;
+}
+.item .delete {
+  float: right;
+  margin-right: 5px;
+  display: none;
+}
+.item:hover .delete {
+  display: inline;
+}
+.item.done {
+  text-decoration: line-through;
+}
+.new-input {
+  width: 100%;
+  height: 35px;
+  padding: 10px;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2), 0 25px 50px 0 rgba(0,0,0,0.1);
+}
+
+  </style>
    </head>
 
    <body>
 
       
    <div class="top" style="background:red;">
-      <div class="containerboxfortop">Sales Order</div>
+      <div class="containerboxfortop"><div data-role="page">
+  <div data-role="header">
+  </div>
+
+  <div data-role="main" class="ui-content">
+    <form method="post" action="#">
+      <fieldset class="ui-field-contain">
+        <select name="opt" id="opt" data-native-menu="false">
+        
+        </select>
+      </fieldset>
+    </form>
+  </div>
+</div></div>
       <div class="containerboxfortop">Sales Person</div>
       <div class="containerboxfortop">Customer Name</div>
       <div class="containerboxfortop">Complete Order</div>
@@ -346,7 +412,7 @@ button {
       <main>
         <p>Menu 1 for Set Food</p>
         <div class="internalcontentitem">
-         <div class="internalcontentboxsize" style="background-image:url(media/chickenchop.jpeg);background-size: cover;">Chicken Chop</div>
+         <div class="internalcontentboxsize" style="background-image:url(media/chickenchop.jpeg);background-size: cover;"><button id="chickenchop">click</button></div>
          <div class="internalcontentboxsize" style="background-image:url(media/nasilemak.jfif);background-size: cover;">Nasi Lemak</div>
          <div class="internalcontentboxsize" style="">Wan Tan Mee</div>
          <div class="internalcontentboxsize" style="background-image:url(media/wedges.jpg);background-size: cover;">Fries Wedges</div>
@@ -408,7 +474,21 @@ button {
    
    </div>
    <br>
-   <div class="containerboxmiddle">right middle</div>
+   <div class="containerboxmiddle">
+    <!-- today update here 23/08/2022 -->
+    <div class="list-container">
+  <div class="list">
+    <!-- <div class="item">
+      <input class="done-check" type="checkbox" />
+      <label>Item 1</label>
+      <span class="delete">x</span>
+    </div> -->
+  </div>
+  <!-- <input class="new-input" type="text" placeholder="What needs to be done?" /> -->
+</div>
+<button id="checkout">Check</button>
+   </div>
+   
    
 
 
@@ -464,5 +544,55 @@ $("#timePicker").flatpickr({
 $(".resetDate").flatpickr({
     wrap: true,
     weekNumbers: true,
+});
+</script>
+
+<script>
+  for(i=1;i<=5;i++){
+  $("#opt").append('<option >Option '+i+'</option>')};
+  $("#chickenchop").click(function(){
+    $('.list').append('<div class="item">' +
+      '<input class="done-check" type="checkbox" />' +
+      '<label>Chicken Chop'+
+      '<button id="addition">+</button>'+
+      '+<button id="">-</button>'+
+      '</label>' +
+      '<span class="delete">x</span>' +
+      '</div>');
+      
+      
+  });
+
+  $("#checkout").click(function(){
+    $('.list').empty();
+  })
+  // $('.list').append('<div class="item">' +
+      // '<input class="done-check" type="checkbox" />' +
+      // '<label>' + $(this).val() + '</label>' +
+      // '<span class="delete">x</span>' +
+      // '</div>');
+      // $(this).val("chickenchop");
+  $(function() {
+  
+  // enter add item
+  $('.new-input').keypress(function (e) {
+    if (e.which == 13) {
+      
+    }
+  });
+  
+  // delete
+  $('.list').on('click', '.delete', function(e) {
+    $(this).parent().remove();
+  });
+
+
+  
+  // check done
+  $('.list').on('change', '.done-check', function(e) {
+    $(this).parent().toggleClass('done', this.checked)
+  });
+  
+
 });
 </script>
